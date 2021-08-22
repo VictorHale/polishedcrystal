@@ -44,7 +44,6 @@ BattleCommandPointers:
 	command freezetarget
 	command paralyzetarget
 	command selfdestruct
-	command payday
 	command conversion
 	command resetstats
 	command roar
@@ -100,7 +99,6 @@ BattleCommandPointers:
 	command damagecalc
 	command safeguard
 	command checksafeguard
-	command getmagnitude
 	command batonpass
 	command pursuit
 	command clearhazards

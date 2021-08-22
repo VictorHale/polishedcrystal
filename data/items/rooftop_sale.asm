@@ -4,7 +4,7 @@ RooftopSaleData1:
 	dbw GREAT_BALL,    500
 	dbw SUPER_POTION,  500
 	dbw FULL_HEAL,     300
-	dbw REVIVE,       1200
+	dbw FAIRYS,       1200
 	db -1
 
 RooftopSaleData2:

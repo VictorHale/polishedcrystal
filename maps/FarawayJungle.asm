@@ -24,9 +24,28 @@ FarawayJungleMew:
 	cry MEW
 	pause 15
 	closetext
-	loadwildmon MEW, 30
+	loadwildmon MEW, 50
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
 	startbattle
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, PSYSTRIKE
+	loadmem wPartyMon6Moves+1, MOONBLAST
+	loadmem wPartyMon6Moves+2, POWER_GEM
+	loadmem wPartyMon6Moves+3, ELDINS_WRATH
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	disappear FARAWAYJUNGLE_MEW
 	setevent EVENT_FARAWAY_JUNGLE_MEW
 	reloadmapafterbattle

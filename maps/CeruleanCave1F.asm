@@ -31,7 +31,7 @@ CeruleanCave1F_MapScriptHeader:
 	def_object_events
 	itemball_event  7,  6, BIG_NUGGET, 1, EVENT_CERULEAN_CAVE_1F_BIG_NUGGET
 	itemball_event  9, 17, FULL_RESTORE, 1, EVENT_CERULEAN_CAVE_1F_FULL_RESTORE
-	itemball_event 14,  2, MAX_REVIVE, 1, EVENT_CERULEAN_CAVE_1F_MAX_REVIVE
+	itemball_event 14,  2, GREAT_FAIRY, 1, EVENT_CERULEAN_CAVE_1F_GREAT_FAIRY
 
 CeruleanCave1FTileScript:
 	checkscene

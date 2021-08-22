@@ -115,14 +115,14 @@ JackStompTriviaText:
 	line "more powerful."
 	done
 
-JackGustTriviaText:
+JackFaroresWindTriviaText:
 	text "Did you know…?"
 
 	para "If your opponent"
 	line "is Flying, your"
 
-	para "Gust becomes much"
-	line "more powerful."
+	para "Farore's Wind is"
+	line "much stronger."
 	done
 
 JackTwisterTriviaText:
@@ -145,13 +145,13 @@ JackEarthquakeTriviaText:
 	line "more powerful."
 	done
 
-JackMagnitudeTriviaText:
+JackEldinsWrathTriviaText:
 	text "Did you know…?"
 
 	para "If your opponent"
 	line "uses Dig, your"
 
-	para "Magnitude becomes"
+	para "Eldin's Wrath becomes"
 	line "more powerful."
 	done
 

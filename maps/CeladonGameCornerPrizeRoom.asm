@@ -146,7 +146,26 @@ CeladonGameCornerPokemonVendor:
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	givepoke MR__MIME, 10
+	givepoke MR__MIME, 10, LIGHT_CLAY
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_SPD_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, REFLECT
+	loadmem wPartyMon6Moves+1, PSYSTRIKE
+	loadmem wPartyMon6Moves+2, MOONBLAST
+	loadmem wPartyMon6Moves+3, ELDINS_WRATH
+	loadmem wPartyMon6PP+0, 20
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext CeladonPrizeRoom_NotEnoughRoomText
 	setval MR__MIME
 	special Special_GameCornerPrizeMonCheckDex
@@ -163,7 +182,26 @@ CeladonGameCornerPokemonVendor:
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	givepoke EEVEE, 20
+	givepoke EEVEE, 20, EXPERT_BELT
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, CALM_MIND
+	loadmem wPartyMon6Moves+1, HYPER_VOICE
+	loadmem wPartyMon6Moves+2, MOONBLAST
+	loadmem wPartyMon6Moves+3, ELDINS_WRATH
+	loadmem wPartyMon6PP+0, 20
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext CeladonPrizeRoom_NotEnoughRoomText
 	setval EEVEE
 	special Special_GameCornerPrizeMonCheckDex
@@ -180,7 +218,26 @@ CeladonGameCornerPokemonVendor:
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	givepoke PORYGON, 30
+	givepoke PORYGON, 30, EXPERT_BELT
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $fe
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_1 | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, SPORE
+	loadmem wPartyMon6Moves+1, CONVERSION
+	loadmem wPartyMon6Moves+2, TRI_ATTACK
+	loadmem wPartyMon6Moves+3, ELDINS_WRATH
+	loadmem wPartyMon6PP+0, 15
+	loadmem wPartyMon6PP+1, 30
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext CeladonPrizeRoom_NotEnoughRoomText
 	setval PORYGON
 	special Special_GameCornerPrizeMonCheckDex

@@ -83,7 +83,7 @@ MoveEffectsPointers:
 	dw DreamEater
 	dw Roar
 	dw Conversion
-	dw PayDay
+	dw Snarl
 	dw TriAttack
 	dw SuperFang
 	dw Transform
@@ -119,7 +119,7 @@ MoveEffectsPointers:
 	dw Attract
 	dw Return
 	dw SacredFire
-	dw Magnitude
+	dw EldinsWrath
 	dw BatonPass
 	dw Pursuit
 	dw RapidSpin
@@ -131,7 +131,7 @@ MoveEffectsPointers:
 	dw MirrorCoat
 	dw Earthquake
 	dw FutureSight
-	dw Gust
+	dw AerialAce
 	dw Stomp
 	dw SolarBeam
 	dw Thunder
@@ -155,4 +155,9 @@ MoveEffectsPointers:
 	dw LowKick
 	dw BrickBreak
 	dw TrickRoom
+	dw JabusFrost
+	dw FaroresWind
+	dw PsychoCut
+	dw Dazzlingleam
+	dw ToxicHit
 	assert_table_length NUM_MOVE_EFECTS

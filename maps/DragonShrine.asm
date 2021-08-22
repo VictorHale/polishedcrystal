@@ -188,10 +188,48 @@ DragonShrineElder1Script:
 	waitbutton
 	checkevent EVENT_ANSWERED_DRAGON_MASTER_QUIZ_WRONG
 	iftrue .NoExtremeSpeed
-	givepoke DRATINI, NO_FORM, 15, SITRUS_BERRY, ULTRA_BALL, EXTREMESPEED
+	givepoke DRATINI, NO_FORM, 15, FEATHER, ULTRA_BALL
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_ATK_UP_SATK_DOWN
+	loadmem wPartyMon6Moves+0, EXTREMESPEED
+	loadmem wPartyMon6Moves+1, DRAGON_CLAW
+	loadmem wPartyMon6Moves+2, AERIAL_ACE
+	loadmem wPartyMon6Moves+3, GILDED_SLASH
+	loadmem wPartyMon6PP+0, 5
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	sjump .FinishElderScript
 .NoExtremeSpeed
-	givepoke DRATINI, NO_FORM, 15, SITRUS_BERRY, ULTRA_BALL
+	givepoke DRATINI, NO_FORM, 15, FEATHER, ULTRA_BALL
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_ATK_UP_SATK_DOWN
+	loadmem wPartyMon6Moves+0, DRAGON_DANCE
+	loadmem wPartyMon6Moves+1, DRAGON_CLAW
+	loadmem wPartyMon6Moves+2, AERIAL_ACE
+	loadmem wPartyMon6Moves+3, GILDED_SLASH
+	loadmem wPartyMon6PP+0, 20
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 .FinishElderScript
 	iffalse_jumpopenedtext DragonShrinePartyAndBoxFullText
 	setevent EVENT_GOT_DRATINI

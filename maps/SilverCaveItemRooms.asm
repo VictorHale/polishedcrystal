@@ -12,6 +12,6 @@ SilverCaveItemRooms_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	itemball_event 14, 33, MAX_REVIVE, 1, EVENT_SILVER_CAVE_ITEM_ROOMS_MAX_REVIVE
+	itemball_event 14, 33, GREAT_FAIRY, 1, EVENT_SILVER_CAVE_ITEM_ROOMS_GREAT_FAIRY
 	itemball_event 13, 23, FULL_RESTORE, 1, EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE
 

@@ -30,7 +30,7 @@ ScaryCave1F_MapScriptHeader:
 	itemball_event  4,  9, DUSK_STONE, 1, EVENT_SCARY_CAVE_1F_DUSK_STONE
 	itemball_event 33, 19, HYPER_POTION, 1, EVENT_SCARY_CAVE_1F_HYPER_POTION
 	itemball_event 28, 23, MAX_REPEL, 1, EVENT_SCARY_CAVE_1F_MAX_REPEL
-	itemball_event  3, 29, REVIVE, 1, EVENT_SCARY_CAVE_1F_REVIVE
+	itemball_event  3, 29, FAIRYS, 1, EVENT_SCARY_CAVE_1F_FAIRYS
 
 	object_const_def
 	const SCARYCAVE1F_MIRA

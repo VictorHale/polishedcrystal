@@ -31,4 +31,6 @@ KeyItemNames::
 	li "SilphScope2"
 	li "Apricorn Box"
 	li "Type Chart"
+	li "Sword"
+	li "Gauntlets"
 	assert_list_length NUM_KEY_ITEMS + 1

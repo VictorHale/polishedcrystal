@@ -84,7 +84,7 @@ ResetWRAM_NotPlus:
 
 	ld hl, wMoney
 	xor a
-	assert START_MONEY < $10000
+	assert START_MONEY < $9000000
 	ld [hli], a
 	ld a, HIGH(START_MONEY)
 	ld [hli], a
@@ -553,6 +553,36 @@ Continue_DisplayGameTime:
 	jmp PrintNum
 
 ProfElmSpeech:
+
+if !DEF(DEBUG)
+
+	ld hl, .list1
+	ld de, wNumItems
+	ld bc, .list1_end - .list1
+	call CopyBytes
+	
+	ld hl, .list2
+	ld de, wNumMedicine
+	ld bc, .list2_end - .list2
+	call CopyBytes
+
+
+	ld hl, .list3
+	ld de, wNumBalls
+	ld bc, .list3_end - .list3
+	call CopyBytes
+
+	ld hl, .list4
+	ld de, wNumBerries
+	ld bc, .list4_end - .list4
+	call CopyBytes
+
+	ld hl, .list5
+	ld de, wNumPCItems
+	ld bc, .list5_end - .list5
+	call CopyBytes
+endc
+
 	farcall InitClock
 	ld c, 31
 	call FadeToBlack
@@ -645,6 +675,185 @@ endc
 
 	ld hl, ElmText7
 	jmp PrintText
+
+if !DEF(DEBUG)
+;this forces Items into the inventory
+.list1
+	db 28 ; # items
+	db SHIELD, 99
+	db FEATHER, 99
+	db LIGHT_BALL, 99
+	db KINGS_ROCK, 99
+	db METAL_COAT, 99
+	db RAZOR_FANG, 99
+	db RAZOR_CLAW, 99
+	db AIR_BALLOON, 98
+	db FOCUS_SASH, 99
+	db LEFTOVERS, 99
+	db LIGHT_CLAY, 99
+	db GRIP_CLAW, 99
+	db DAMP_ROCK, 99
+	db HEAT_ROCK, 99
+	db SMOOTH_ROCK, 99
+	db ICY_ROCK, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db MULCH, 98
+	db -1 ;end of list
+.list1_end
+
+;this forces Medicine into the inventory
+.list2
+	db 28 ; # items
+	db MAX_POTION, 99
+	db FULL_RESTORE, 99
+	db MAX_ELIXIR, 99
+	db PP_MAX, 99
+	db SACRED_ASH, 99
+	db HP_UP, 99
+	db HP_UP, 99
+	db HP_UP, 99
+	db PROTEIN, 99
+	db PROTEIN, 99
+	db PROTEIN, 99
+	db IRON, 99
+	db IRON, 99
+	db IRON, 99
+	db CALCIUM, 99
+	db CALCIUM, 99
+	db CALCIUM, 99
+	db ZINC, 99
+	db ZINC, 99
+	db ZINC, 99
+	db CARBOS, 99
+	db CARBOS, 99
+	db CARBOS, 99
+	db RARE_CANDY, 99
+	db RARE_CANDY, 99
+	db RARE_CANDY, 99
+	db RARE_CANDY, 99
+	db RARE_CANDY, 99
+	db -1 ;end of list
+.list2_end
+
+;this forces Balls into the inventory
+.list3
+	db 20 ; # items
+	db MASTER_BALL, 99
+	db QUICK_BALL, 99
+	db DUSK_BALL, 99
+	db FRIEND_BALL, 99
+	db LEVEL_BALL, 99
+	db ULTRA_BALL, 99
+	db TIMER_BALL, 99
+	db REPEAT_BALL, 99
+	db DREAM_BALL, 99
+	db HEAL_BALL, 99
+	db NEST_BALL, 99
+	db NET_BALL, 99
+	db DIVE_BALL, 99
+	db LURE_BALL, 99
+	db MOON_BALL, 99
+	db HEAVY_BALL, 99
+	db LOVE_BALL, 99
+	db LUXURY_BALL, 99
+	db CHERISH_BALL , 99
+	db PREMIER_BALL , 99
+	db -1 ;end of list
+.list3_end
+
+;this forces Berries into the inventory
+.list4
+	db 31 ; # items
+	db CHERI_BERRY, 90
+	db CHESTO_BERRY, 90
+	db PECHA_BERRY, 90
+	db RAWST_BERRY, 90
+	db ASPEAR_BERRY, 90
+	db LEPPA_BERRY, 90
+	db ORAN_BERRY, 90
+	db PERSIM_BERRY, 90
+	db LUM_BERRY, 90
+	db SITRUS_BERRY, 90
+	db FIGY_BERRY, 90
+	db POMEG_BERRY, 90
+	db KELPSY_BERRY, 90
+	db QUALOT_BERRY, 90
+	db HONDEW_BERRY, 90
+	db GREPA_BERRY, 90
+	db TAMATO_BERRY , 90
+	db LIECHI_BERRY , 90
+	db GANLON_BERRY , 90
+	db SALAC_BERRY , 90
+	db PETAYA_BERRY , 90
+	db APICOT_BERRY , 90
+	db LANSAT_BERRY , 90
+	db STARF_BERRY , 90
+	db ENIGMA_BERRY , 90
+	db CUSTAP_BERRY , 90
+	db JABOCA_BERRY , 90
+	db ROWAP_BERRY , 90
+	db KEE_BERRY , 90
+	db MARANGABERRY , 90
+	db BERRY_JUICE, 99
+	db -1 ;end of list
+.list4_end
+
+;this forces various types of Items into Player's PC
+.list5
+	db 39 ; # items
+	db PP_MAX, 99
+	db HP_UP, 15
+	db PROTEIN, 15
+	db IRON, 15
+	db CALCIUM, 15
+	db ZINC, 15
+	db CARBOS, 15
+	db ABILITY_CAP, 99
+	db ABILITYPATCH, 99
+	db MAX_REPEL, 99
+	db MOGMA_MITTS, 99
+	db LUCKY_EGG, 99
+	db EXP_SHARE, 99
+	db AMULET_COIN, 99
+	db NECKLACE, 99
+	db LEAF_STONE, 99
+	db FIRE_STONE, 99
+	db WATER_STONE, 99
+	db THUNDERSTONE, 99
+	db MOON_STONE, 99
+	db SUN_STONE, 99
+	db DUSK_STONE, 99
+	db DAWN_STONE, 99
+	db SHINY_STONE, 99
+	db ICE_STONE, 99
+	db ODD_SOUVENIR, 99
+	db SILVER_LEAF, 99
+	db GOLD_LEAF, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db BIG_NUGGET, 99
+	db -1 ;end of list,
+.list5_end
+endc
+	ret
 
 ElmText1:
 	text_far _ElmText1
@@ -791,7 +1000,7 @@ ShrinkPlayer:
 	ld [wMusicFadeIDLo], a
 	ld [wMusicFadeIDHi], a
 
-	ld de, SFX_ESCAPE_ROPE
+	ld de, SFX_MOGMA_MITTS
 	call PlaySFX
 
 	ld c, 16

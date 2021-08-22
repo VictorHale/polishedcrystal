@@ -68,7 +68,7 @@ HealPartyMon:
 
 	ld a, [wInitialOptions]
 	bit NUZLOCKE_MODE, a
-	jr z, .Revive
+	jr z, .Fairy
 	ld a, [bc]
 	push hl
 	ld h, b
@@ -78,7 +78,7 @@ HealPartyMon:
 	pop hl
 	ret z
 
-.Revive:
+.Fairy:
 	ld a, [hli]
 	ld [bc], a
 	inc bc

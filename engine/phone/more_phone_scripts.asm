@@ -995,7 +995,7 @@ UnknownScript_0xa069a:
 	sjump PhoneScript_HangupText_Male
 
 UnknownScript_0xa06a2:
-	farwritetext JackGustTriviaText
+	farwritetext JackFaroresWindTriviaText
 	promptbutton
 	sjump PhoneScript_HangupText_Male
 
@@ -1010,7 +1010,7 @@ UnknownScript_0xa06b2:
 	sjump PhoneScript_HangupText_Male
 
 UnknownScript_0xa06ba:
-	farwritetext JackMagnitudeTriviaText
+	farwritetext JackEldinsWrathTriviaText
 	promptbutton
 	sjump PhoneScript_HangupText_Male
 

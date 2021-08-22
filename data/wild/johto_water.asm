@@ -3,35 +3,35 @@
 	def_water_wildmons RUINS_OF_ALPH_OUTSIDE
 	db 2 percent ; encounter rate
 	wildmon 15, WOOPER
-	wildmon 20, QUAGSIRE
-	wildmon 15, QUAGSIRE
+	wildmon 16, TOTODILE
+	wildmon 15, TOTODILE
 	end_water_wildmons
 
 	def_water_wildmons UNION_CAVE_1F
 	db 2 percent ; encounter rate
 	wildmon 15, WOOPER
-	wildmon 20, QUAGSIRE
-	wildmon 15, QUAGSIRE
+	wildmon 16, TOTODILE
+	wildmon 15, TOTODILE
 	end_water_wildmons
 
 	def_water_wildmons UNION_CAVE_B1F_NORTH
 	db 2 percent ; encounter rate
 	wildmon 15, WOOPER
-	wildmon 20, QUAGSIRE
-	wildmon 15, QUAGSIRE
+	wildmon 16, TOTODILE
+	wildmon 15, TOTODILE
 	end_water_wildmons
 
 	def_water_wildmons UNION_CAVE_B1F_SOUTH
 	db 2 percent ; encounter rate
 	wildmon 15, WOOPER
-	wildmon 20, QUAGSIRE
-	wildmon 15, QUAGSIRE
+	wildmon 16, TOTODILE
+	wildmon 15, TOTODILE
 	end_water_wildmons
 
 	def_water_wildmons UNION_CAVE_B2F
 	db 4 percent ; encounter rate
 	wildmon 15, TENTACOOL
-	wildmon 20, QUAGSIRE
+	wildmon 20, CROCONAW
 	wildmon 20, TENTACRUEL
 	end_water_wildmons
 

@@ -55,7 +55,7 @@ TeamRocketBaseB1F_MapScriptHeader:
 	bg_event 24,  5, BGEVENT_UP, TeamRocketBaseB1FSecurityCamera
 	bg_event 20, 11, BGEVENT_JUMPSTD, teamrocketoath
 	bg_event 21, 11, BGEVENT_JUMPSTD, teamrocketoath
-	bg_event  3, 11, BGEVENT_ITEM + REVIVE, EVENT_TEAM_ROCKET_BASE_B1F_HIDDEN_REVIVE
+	bg_event  3, 11, BGEVENT_ITEM + FAIRYS, EVENT_TEAM_ROCKET_BASE_B1F_HIDDEN_FAIRYS
 
 	def_object_events
 	object_event  0,  0, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_SECURITY_GRUNTS

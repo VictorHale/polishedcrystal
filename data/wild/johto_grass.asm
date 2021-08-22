@@ -1380,16 +1380,16 @@
 	wildmon 4, CATERPIE
 	wildmon 4, PIDGEY
 	wildmon 3, WEEDLE
-	wildmon 4, SUNKERN
-	wildmon 4, SUNKERN
+	wildmon 4, CYNDAQUIL
+	wildmon 4, CYNDAQUIL
 	; day
 	wildmon 3, PIDGEY
 	wildmon 3, CATERPIE
 	wildmon 4, CATERPIE
 	wildmon 4, PIDGEY
 	wildmon 3, WEEDLE
-	wildmon 4, SUNKERN
-	wildmon 4, SUNKERN
+	wildmon 4, CYNDAQUIL
+	wildmon 4, CYNDAQUIL
 	; nite
 	wildmon 3, SPINARAK
 	wildmon 3, HOOTHOOT
@@ -1408,16 +1408,16 @@
 	wildmon 5, BELLSPROUT
 	wildmon 5, PIDGEY
 	wildmon 4, WEEDLE
-	wildmon 5, SUNKERN
-	wildmon 5, SUNKERN
+	wildmon 5, CYNDAQUIL
+	wildmon 5, CYNDAQUIL
 	; day
 	wildmon 4, PIDGEY
 	wildmon 4, CATERPIE
 	wildmon 5, BELLSPROUT
 	wildmon 5, PIDGEY
 	wildmon 4, WEEDLE
-	wildmon 5, SUNKERN
-	wildmon 5, SUNKERN
+	wildmon 5, CYNDAQUIL
+	wildmon 5, CYNDAQUIL
 	; nite
 	wildmon 4, SPINARAK
 	wildmon 4, POLIWAG
@@ -1436,16 +1436,16 @@
 	wildmon 7, BELLSPROUT
 	wildmon 6, MAREEP
 	wildmon 7, MAREEP
-	wildmon 6, SUNKERN
-	wildmon 7, SUNKERN
+	wildmon 6, CHIKORITA
+	wildmon 7, CHIKORITA
 	; day
 	wildmon 4, EKANS, ARBOK_JOHTO_FORM
 	wildmon 5, RATTATA
 	wildmon 7, BELLSPROUT
 	wildmon 6, MAREEP
 	wildmon 7, MAREEP
-	wildmon 6, SUNKERN
-	wildmon 7, SUNKERN
+	wildmon 6, CHIKORITA
+	wildmon 7, CHIKORITA
 	; nite
 	wildmon 4, WOOPER
 	wildmon 5, RATTATA
@@ -1508,8 +1508,8 @@
 	wildmon 12, HOOTHOOT
 	wildmon 10, ABRA
 	wildmon 12, JIGGLYPUFF
-	wildmon 10, DITTO
-	wildmon 10, DITTO
+	wildmon 10, TYROGUE
+	wildmon 10, TYROGUE
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
@@ -1536,7 +1536,7 @@
 	wildmon 13, PSYDUCK
 	wildmon 10, ABRA
 	wildmon 12, JIGGLYPUFF
-	wildmon 10, DITTO
+	wildmon 10, TYROGUE
 	wildmon 12, YANMA
 	end_grass_wildmons
 

@@ -13,7 +13,7 @@ DarkCaveBlackthornEntrance_MapScriptHeader:
 
 	def_object_events
 	object_event  7,  3, SPRITE_PHARMACIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DarkCaveBlackthornEntrancePharmacistScript, -1
-	itemball_event 21, 24, REVIVE, 1, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_REVIVE
+	itemball_event 21, 24, FAIRYS, 1, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_FAIRYS
 	tmhmball_event  7, 22, TM_DARK_PULSE, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_TM_DARK_PULSE
 
 DarkCaveBlackthornEntrancePharmacistScript:

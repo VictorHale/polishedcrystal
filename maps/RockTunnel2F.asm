@@ -15,7 +15,7 @@ RockTunnel2F_MapScriptHeader:
 	def_object_events
 	object_event  8, 12, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RockTunnel2FElectrode, EVENT_ROCK_TUNNEL_2F_ELECTRODE
 	itemball_event  2, 23, THUNDERSTONE, 1, EVENT_ROCK_TUNNEL_2F_THUNDERSTONE
-	tmhmball_event 25,  9, TM_THUNDER_WAVE, EVENT_ROCK_TUNNEL_2F_TM_THUNDER_WAVE
+	tmhmball_event 25,  9, TM_PLASTIZE, EVENT_ROCK_TUNNEL_2F_TM_PLASTIZE
 	itemball_event 21,  3, ELECTIRIZER, 1, EVENT_ROCK_TUNNEL_2F_ELECTIRIZER
 	strengthboulder_event 12, 2
 	strengthboulder_event 12, 3

@@ -14,7 +14,7 @@ VictoryRoad1F_MapScriptHeader:
 
 	def_object_events
 	object_event 12,  6, SPRITE_VETERAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerVeteranmMatt, -1
-	itemball_event 14,  2, MAX_REVIVE, 1, EVENT_VICTORY_ROAD_1F_MAX_REVIVE
+	itemball_event 14,  2, GREAT_FAIRY, 1, EVENT_VICTORY_ROAD_1F_GREAT_FAIRY
 	itemball_event 17,  2, FULL_HEAL, 1, EVENT_VICTORY_ROAD_1F_FULL_HEAL
 
 GenericTrainerVeteranmMatt:

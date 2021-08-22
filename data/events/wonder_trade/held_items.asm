@@ -21,12 +21,12 @@ WonderTradeBaseItems:
 WonderTradeRareItems:
 	db ABILITY_CAP
 	db LUCKY_EGG
-	db EVIOLITE
+	db BRACELET
 	db LEFTOVERS
 	db RARE_CANDY
 	db ABILITY_CAP
 	db LUCKY_EGG
-	db EVIOLITE
+	db SHIELD
 	db LEFTOVERS
 	db RARE_CANDY
 	db ABILITY_CAP

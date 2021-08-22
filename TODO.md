@@ -203,7 +203,7 @@ Some of these may never be added; they're just suggestions.
 * Use Mart interface for selling decorations, with a red sidebar
 * Make Eggs use their Pokémon's palette
 
-There are some features that I do *not* ever plan to add to Polished Crystal:
+There are some features that I do *not* ever plan to add to Polished Rupee:
 
 * All 802 Pokémon
 * A third region with badges

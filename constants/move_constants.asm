@@ -8,10 +8,10 @@
 	const NO_MOVE      ; $00
 	const ACROBATICS   ; $01
 	const KARATE_CHOP  ; $02
-	const DOUBLE_SLAP  ; $03
-	const AERIAL_ACE   ; $04
+	const SKY_UPPERCUT ; $03
+	const FARORES_WIND ; $04
 	const DRAGON_CLAW  ; $05
-	const PAY_DAY      ; $06
+	const SNARL        ; $06
 	const FIRE_PUNCH   ; $07
 	const ICE_PUNCH    ; $08
 	const THUNDERPUNCH ; $09
@@ -21,7 +21,7 @@
 	const AIR_SLASH    ; $0d
 	const SWORDS_DANCE ; $0e
 	const CUT          ; $0f
-	const GUST         ; $10
+	const AERIAL_ACE   ; $10
 	const WING_ATTACK  ; $11
 	const SUCKER_PUNCH ; $12
 	const FLY          ; $13
@@ -67,7 +67,7 @@
 	const BLIZZARD     ; $3b
 	const PSYBEAM      ; $3c
 	const BUBBLE_BEAM  ; $3d
-	const AURORA_BEAM  ; $3e
+	const JABUS_FROST  ; $3e
 	const HYPER_BEAM   ; $3f
 	const PECK         ; $40
 	const DRILL_PECK   ; $41
@@ -131,7 +131,7 @@
 	const GUNK_SHOT    ; $7b
 	const VENOSHOCK    ; $7c
 	const EARTH_POWER  ; $7d
-	const FIRE_BLAST   ; $7e
+	const SOLAR_FLARE   ; $7e
 	const WATERFALL    ; $7f
 	const ICICLE_CRASH ; $80
 	const SWIFT        ; $81
@@ -151,10 +151,10 @@
 	const BRAVE_BIRD   ; $8f
 	const TRANSFORM    ; $90
 	const WATER_PULSE  ; $91
-	const DIZZY_PUNCH  ; $92
+	const PLASTIZE     ; $92
 	const SPORE        ; $93
 	const FLASH        ; $94
-	const EXTRASENSORY ; $95
+	const PSYCHO_CUT   ; $95
 	const SPLASH       ; $96
 	const DRAGON_DANCE ; $97
 	const CRABHAMMER   ; $98
@@ -227,7 +227,7 @@
 	const SAFEGUARD    ; $db
 	const PAIN_SPLIT   ; $dc
 	const SACRED_FIRE  ; $dd
-	const MAGNITUDE    ; $de
+	const ELDINS_WRATH ; $de
 	const DYNAMICPUNCH ; $df
 	const MEGAHORN     ; $e0
 	const DRAGONBREATH ; $e1
@@ -237,7 +237,7 @@
 	const RAPID_SPIN   ; $e5
 	const SHADOW_CLAW  ; $e6
 	const IRON_TAIL    ; $e7
-	const METAL_CLAW   ; $e8
+	const GILDED_SLASH ; $e8
 	const AURA_SPHERE  ; $e9
 	const HEALINGLIGHT ; $ea
 	const HURRICANE    ; $eb

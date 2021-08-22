@@ -48,8 +48,8 @@ ItemEffects:
 	dw HealStatusEffect   ; ICE_HEAL
 	dw HealStatusEffect   ; FULL_HEAL
 	dw FullRestore        ; FULL_RESTORE
-	dw ReviveEffect       ; REVIVE
-	dw ReviveEffect       ; MAX_REVIVE
+	dw FairyEffect        ; FAIRYS
+	dw FairyEffect        ; GREAT_FAIRY
 	dw RestorePPEffect    ; ETHER
 	dw RestorePPEffect    ; MAX_ETHER
 	dw RestorePPEffect    ; ELIXIR
@@ -68,7 +68,6 @@ ItemEffects:
 	dw RestoreHPEffect    ; LEMONADE
 	dw RestoreHPEffect    ; MOOMOO_MILK
 	dw HealStatusEffect   ; RAGECANDYBAR
-	dw HealStatusEffect   ; PEWTERCRUNCH
 	dw SacredAsh          ; SACRED_ASH
 	dw EnergyPowder       ; ENERGYPOWDER
 	dw EnergyRoot         ; ENERGY_ROOT
@@ -85,7 +84,7 @@ ItemEffects:
 	dw RepelEffect        ; REPEL
 	dw RepelEffect        ; SUPER_REPEL
 	dw RepelEffect        ; MAX_REPEL
-	dw EscapeRope         ; ESCAPE_ROPE
+	dw MogmaMitts         ; MOGMA_MITTS
 	dw PokeDoll           ; POKE_DOLL
 	dw AbilityCap         ; ABILITY_CAP
 	dw EvoStoneEffect     ; LEAF_STONE
@@ -150,7 +149,7 @@ ItemEffects:
 	dw IsntTheTimeMessage ; BLACKGLASSES
 	dw IsntTheTimeMessage ; PINK_BOW
 	dw IsntTheTimeMessage ; BRIGHTPOWDER
-	dw IsntTheTimeMessage ; SCOPE_LENS
+	dw IsntTheTimeMessage ; HAWKEYE
 	dw IsntTheTimeMessage ; QUICK_CLAW
 	dw IsntTheTimeMessage ; KINGS_ROCK
 	dw IsntTheTimeMessage ; FOCUS_BAND
@@ -166,13 +165,15 @@ ItemEffects:
 	dw IsntTheTimeMessage ; LUCKY_PUNCH
 	dw IsntTheTimeMessage ; METAL_POWDER
 	dw IsntTheTimeMessage ; QUICK_POWDER
+	dw IsntTheTimeMessage ; FEATHER
+	dw IsntTheTimeMessage ; BRACELET
 	dw IsntTheTimeMessage ; ARMOR_SUIT
 	dw IsntTheTimeMessage ; AIR_BALLOON
 	dw IsntTheTimeMessage ; ASSAULT_VEST
 	dw IsntTheTimeMessage ; BIG_ROOT
 	dw IsntTheTimeMessage ; BINDING_BAND
 	dw IsntTheTimeMessage ; DESTINY_KNOT
-	dw IsntTheTimeMessage ; EVIOLITE
+	dw IsntTheTimeMessage ; SHIELD
 	dw IsntTheTimeMessage ; EXPERT_BELT
 	dw IsntTheTimeMessage ; FOCUS_SASH
 	dw IsntTheTimeMessage ; GRIP_CLAW
@@ -185,9 +186,9 @@ ItemEffects:
 	dw IsntTheTimeMessage ; SAFE_GOGGLES
 	dw IsntTheTimeMessage ; SHED_SHELL
 	dw IsntTheTimeMessage ; SHELL_BELL
-	dw IsntTheTimeMessage ; SOOTHE_BELL
+	dw IsntTheTimeMessage ; NECKLACE
 	dw IsntTheTimeMessage ; WEAK_POLICY
-	dw IsntTheTimeMessage ; WIDE_LENS
+	dw IsntTheTimeMessage ; TRUTH_LENS
 	dw IsntTheTimeMessage ; WISE_GLASSES
 	dw IsntTheTimeMessage ; ZOOM_LENS
 	dw IsntTheTimeMessage ; EJECT_BUTTON
@@ -244,7 +245,6 @@ ItemEffects:
 	dw IsntTheTimeMessage ; PEARL_STRING
 	dw IsntTheTimeMessage ; STARDUST
 	dw IsntTheTimeMessage ; STAR_PIECE
-	dw IsntTheTimeMessage ; BRICK_PIECE
 	dw IsntTheTimeMessage ; RARE_BONE
 	dw IsntTheTimeMessage ; SILVER_LEAF
 	dw IsntTheTimeMessage ; GOLD_LEAF
@@ -312,6 +312,8 @@ KeyItemEffects:
 	dw IsntTheTimeMessage ; SILPHSCOPE2
 	dw ApricornBox        ; APRICORN_BOX
 	dw TypeChart          ; TYPE_CHART
+	dw Sword	      ; SWORD
+	dw Gauntlets	      ; GAUNTLETS
 	assert_table_length NUM_KEY_ITEMS
 
 PokeBallEffect:
@@ -1173,7 +1175,7 @@ RevivalHerb:
 	predef ChangeHappiness
 	jmp LooksBitterMessage
 
-ReviveEffect:
+FairyEffect:
 	ld a, [wInitialOptions]
 	bit NUZLOCKE_MODE, a
 	jmp nz, Revive_NuzlockeFailureMessage
@@ -1195,7 +1197,7 @@ RevivePokemon:
 	xor a
 	ld [wLowHealthAlarm], a
 	ld a, [wCurItem]
-	cp REVIVE
+	cp FAIRYS
 	jr z, .revive_half_hp
 
 	call ReviveFullHP
@@ -1206,7 +1208,7 @@ RevivePokemon:
 
 .finish_revive
 	call HealHP_SFX_GFX
-	ld a, PARTYMENUTEXT_REVIVE
+	ld a, PARTYMENUTEXT_FAIRYS
 	ld [wPartyMenuActionText], a
 	call ItemActionTextWaitButton
 	call UseDisposableItem
@@ -1235,7 +1237,7 @@ FullRestore:
 	call HealStatus
 	call BattlemonRestoreHealth
 	call HealHP_SFX_GFX
-	ld a, PARTYMENUTEXT_HEAL_HP
+	ld a, PARTYMENUTEXT_FAIRYS
 	ld [wPartyMenuActionText], a
 	call ItemActionTextWaitButton
 	jmp UseDisposableItem
@@ -1289,7 +1291,7 @@ ItemRestoreHP:
 	call RestoreHealth
 	call BattlemonRestoreHealth
 	call HealHP_SFX_GFX
-	ld a, PARTYMENUTEXT_HEAL_HP
+	ld a, PARTYMENUTEXT_FAIRYS
 	ld [wPartyMenuActionText], a
 	call ItemActionTextWaitButton
 	call UseDisposableItem
@@ -1685,7 +1687,7 @@ FreshSnackFunction:
 	call IsMonFainted
 	call RestoreHealth
 	call HealHP_SFX_GFX
-	ld a, PARTYMENUTEXT_HEAL_HP
+	ld a, PARTYMENUTEXT_FAIRYS
 	call ItemActionText
 	call JoyWaitAorB
 .skip
@@ -1733,10 +1735,10 @@ FreshSnackFunction:
 	text_far _ItemCantUseOnMonText
 	text_end
 
-EscapeRope:
+MogmaMitts:
 	xor a
 	ld [wItemEffectSucceeded], a
-	call EscapeRopeFunction
+	call MogmaMittsFunction
 
 	ld a, [wItemEffectSucceeded]
 	dec a
@@ -1901,6 +1903,18 @@ TypeChart:
 	farcall Pack_InitGFX
 	farcall WaitBGMap_DrawPackGFX
 	farjp Pack_InitColors
+
+Sword:
+	ld a, 1
+	ld [wUsingHMItem], a
+	farcall CutFunction
+	ret
+
+Gauntlets:
+	ld a, 1
+	ld [wUsingHMItem], a
+	farcall StrengthFunction
+	ret
 
 OldRod:
 	ld e, $0

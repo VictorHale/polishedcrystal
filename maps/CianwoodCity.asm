@@ -24,7 +24,7 @@ CianwoodCity_MapScriptHeader:
 	bg_event  8, 32, BGEVENT_JUMPTEXT, CianwoodPhotoStudioSignText
 	bg_event  6, 26, BGEVENT_JUMPTEXT, CianwoodCliffEdgeGateSignText
 	bg_event  8, 22, BGEVENT_JUMPTEXT, CianwoodMoveManiacSignText
-	bg_event  4, 19, BGEVENT_ITEM + REVIVE, EVENT_CIANWOOD_CITY_HIDDEN_REVIVE
+	bg_event  4, 19, BGEVENT_ITEM + FAIRYS, EVENT_CIANWOOD_CITY_HIDDEN_FAIRYS
 	bg_event  5, 29, BGEVENT_ITEM + MAX_ETHER, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER
 
 	def_object_events

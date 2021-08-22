@@ -2105,10 +2105,10 @@ _UseDigText::
 	line "Dig!"
 	done
 
-SECTION "_UseEscapeRopeText", ROMX
-_UseEscapeRopeText::
-	text "<PLAYER> used an"
-	line "Escape Rope."
+SECTION "_UseMogmaMittsText", ROMX
+_UseMogmaMittsText::
+	text "<PLAYER> used the"
+	line "Mogma Mitts."
 	done
 
 SECTION "_CantUseDigText", ROMX

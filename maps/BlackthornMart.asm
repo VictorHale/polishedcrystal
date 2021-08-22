@@ -18,8 +18,8 @@ BlackthornMart_MapScriptHeader:
 	object_event 11,  3, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, BlackthornMartSuperNerdText, -1
 
 BlackthornMartCooltrainermText:
-	text "You can't buy Max"
-	line "Revive, but it"
+	text "You can't buy Great"
+	line "Fairy, but it"
 
 	para "fully restores a"
 	line "fainted #mon."

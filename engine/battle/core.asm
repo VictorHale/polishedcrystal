@@ -363,21 +363,25 @@ GetSpeed::
 	farcall ApplySpeedAbilities
 
 	; Apply item effects
-	predef GetUserItemAfterUnnerve
-	ld a, b
-	cp HELD_QUICK_POWDER
-	jr z, .quick_powder
-	cp HELD_IRON_BALL
-	ln a, 1, 2 ; x0.5
-	jr z, .apply_item_mod
-	ld a, b
-	cp HELD_CHOICE
-	jr nz, .done
-	ld a, c
-	cp SPEED
-	jr nz, .done
-	ln a, 3, 2 ; x1.5
-	jr .apply_item_mod
+    predef GetUserItemAfterUnnerve
+    ld a, b
+    cp HELD_QUICK_POWDER
+    jr z, .quick_powder
+    cp HELD_IRON_BALL
+    ln a, 1, 2 ; x0.5
+    jr z, .apply_item_mod
+    ld a, b
+    cp HELD_FEATHER
+    ln a, 2, 1 ; x2.0
+    jr z, .apply_item_mod
+    ld a, b
+    cp HELD_CHOICE
+    jr nz, .done
+    ld a, c
+    cp SPEED
+    jr nz, .done
+    ln a, 3, 2 ; x1.5
+    jr .apply_item_mod
 .quick_powder
 	; Double speed, but only for Ditto
 	ldh a, [hBattleTurn]

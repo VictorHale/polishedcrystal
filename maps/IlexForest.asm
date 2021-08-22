@@ -38,7 +38,7 @@ IlexForest_MapScriptHeader:
 	object_event 17, 16, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IlexForestHeadbuttGuyScript, -1
 	object_event 14,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 0, GenericTrainerBug_catcherWayne, -1
 	cuttree_event 10, 27, EVENT_ILEX_FOREST_CUT_TREE
-	itemball_event 22, 34, REVIVE, 1, EVENT_ILEX_FOREST_REVIVE
+	itemball_event 22, 34, FAIRYS, 1, EVENT_ILEX_FOREST_FAIRYS
 	itemball_event 11, 19, X_ATTACK, 1, EVENT_ILEX_FOREST_X_ATTACK
 	itemball_event 25, 17, ANTIDOTE, 1, EVENT_ILEX_FOREST_ANTIDOTE
 	itemball_event 29,  3, MULCH, 1, EVENT_ILEX_FOREST_MULCH
@@ -449,8 +449,27 @@ MapIlexForestSignpost4Script:
 	pause 20
 	clearflag ENGINE_HAVE_EXAMINED_GS_BALL
 	special Special_CelebiShrineEvent
-	loadwildmon CELEBI, 30
+	loadwildmon CELEBI, 50
 	startbattle
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $fe
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_SPD_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, GIGA_DRAIN
+	loadmem wPartyMon6Moves+1, MOONBLAST
+	loadmem wPartyMon6Moves+2, PSYSTRIKE
+	loadmem wPartyMon6Moves+3, POWER_GEM
+	loadmem wPartyMon6PP+0, 15
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	reloadmapafterbattle
 	pause 20
 	special CheckCaughtCelebi

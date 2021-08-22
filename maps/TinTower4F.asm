@@ -17,4 +17,4 @@ TinTower4F_MapScriptHeader:
 	def_object_events
 	itemball_event 12, 10, ULTRA_BALL, 1, EVENT_TIN_TOWER_4F_ULTRA_BALL
 	itemball_event 15, 14, PP_UP, 1, EVENT_TIN_TOWER_4F_PP_UP
-	itemball_event  0, 12, ESCAPE_ROPE, 1, EVENT_TIN_TOWER_4F_ESCAPE_ROPE
+	itemball_event  0, 12, MOGMA_MITTS, 1, EVENT_TIN_TOWER_4F_MOGMA_MITTS

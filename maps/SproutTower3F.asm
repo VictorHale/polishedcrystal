@@ -24,7 +24,7 @@ SproutTower3F_MapScriptHeader:
 	object_event  9, 11, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSageNeal, -1
 	object_event  8,  2, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElderLiScript, -1
 	itemball_event  4, 14, POTION, 1, EVENT_SPROUT_TOWER_3F_POTION
-	itemball_event 12,  1, ESCAPE_ROPE, 1, EVENT_SPROUT_TOWER_3F_ESCAPE_ROPE
+	itemball_event 12,  1, MOGMA_MITTS, 1, EVENT_SPROUT_TOWER_3F_MOGMA_MITTS
 
 	object_const_def
 	const SPROUTTOWER3F_SILVER
@@ -49,7 +49,7 @@ SproutTower3FRivalScene:
 	showtext SproutTowerRivalOnlyCareAboutStrongText
 	turnobject SPROUTTOWER3F_SILVER, UP
 	opentext
-	writetext SproutTowerRivalUsedEscapeRopeText
+	writetext SproutTowerRivalUsedMogmaMittsText
 	pause 15
 	closetext
 	playsound SFX_WARP_TO
@@ -171,9 +171,9 @@ SproutTowerRivalOnlyCareAboutStrongText:
 	cont "weak #mon."
 	done
 
-SproutTowerRivalUsedEscapeRopeText:
-	text "<RIVAL> used an"
-	line "Escape Rope!"
+SproutTowerRivalUsedMogmaMittsText:
+	text "<RIVAL> used the"
+	line "Mogma Mitts!"
 	done
 
 SageLiSeenText:

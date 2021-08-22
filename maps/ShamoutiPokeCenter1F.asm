@@ -70,7 +70,26 @@ ShamoutiPokeCenter1FIvyScript:
 	writetext .ChoseKantoStarterText
 	promptbutton
 	waitsfx
-	givepoke BULBASAUR, NO_FORM, 10, SITRUS_BERRY
+	givepoke BULBASAUR, NO_FORM, 10, FEATHER
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ee
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, GROWTH
+	loadmem wPartyMon6Moves+1, GIGA_DRAIN
+	loadmem wPartyMon6Moves+2, SLUDGE_BOMB
+	loadmem wPartyMon6Moves+3, ANCIENTPOWER
+	loadmem wPartyMon6PP+0, 20
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 5
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext .NoRoomText
 	getmonname BULBASAUR, STRING_BUFFER_3
 	setevent EVENT_GOT_BULBASAUR_FROM_IVY
@@ -80,7 +99,26 @@ ShamoutiPokeCenter1FIvyScript:
 	writetext .ChoseKantoStarterText
 	promptbutton
 	waitsfx
-	givepoke CHARMANDER, NO_FORM, 10, SITRUS_BERRY
+	givepoke CHARMANDER, NO_FORM, 10,  EXPERT_BELT
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ee
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, ABILITY_1 | NAT_ATK_UP_SATK_DOWN
+	loadmem wPartyMon6Moves+0, SACRED_FIRE
+	loadmem wPartyMon6Moves+1, DRAGON_CLAW
+	loadmem wPartyMon6Moves+2, SEED_BOMB
+	loadmem wPartyMon6Moves+3, GILDED_SLASH
+	loadmem wPartyMon6PP+0, 5
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 15
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext .NoRoomText
 	getmonname CHARMANDER, STRING_BUFFER_3
 	setevent EVENT_GOT_CHARMANDER_FROM_IVY
@@ -90,7 +128,26 @@ ShamoutiPokeCenter1FIvyScript:
 	writetext .ChoseKantoStarterText
 	promptbutton
 	waitsfx
-	givepoke SQUIRTLE, NO_FORM, 10, SITRUS_BERRY
+	givepoke SQUIRTLE, NO_FORM, 10, EXPERT_BELT
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ee
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, ABILITY_2 | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, JABUS_FROST
+	loadmem wPartyMon6Moves+1, FLASH_CANNON
+	loadmem wPartyMon6Moves+2, FARORES_WIND
+	loadmem wPartyMon6Moves+3, ELDINS_WRATH
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext .NoRoomText
 	getmonname SQUIRTLE, STRING_BUFFER_3
 	setevent EVENT_GOT_SQUIRTLE_FROM_IVY

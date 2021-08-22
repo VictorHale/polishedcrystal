@@ -371,7 +371,7 @@ AI_Smart:
 	dbw EFFECT_SWAGGER,           AI_Smart_Swagger
 	dbw EFFECT_ATTRACT,           AI_Smart_Attract
 	dbw EFFECT_SAFEGUARD,         AI_Smart_Safeguard
-	dbw EFFECT_MAGNITUDE,         AI_Smart_Magnitude
+	dbw EFFECT_ELDINS_WRATH,      AI_Smart_EldinsWrath
 	dbw EFFECT_BATON_PASS,        AI_Smart_BatonPass
 	dbw EFFECT_PURSUIT,           AI_Smart_Pursuit
 	dbw EFFECT_RAPID_SPIN,        AI_Smart_RapidSpin
@@ -384,7 +384,7 @@ AI_Smart:
 	dbw EFFECT_MIRROR_COAT,       AI_Smart_MirrorCoat
 	dbw EFFECT_EARTHQUAKE,        AI_Smart_Earthquake
 	dbw EFFECT_FUTURE_SIGHT,      AI_Smart_FutureSight
-	dbw EFFECT_GUST,              AI_Smart_Gust
+	dbw EFFECT_AERIAL_ACE,        AI_Smart_AerialAce
 	dbw EFFECT_STOMP,             AI_Smart_Stomp
 	dbw EFFECT_BODY_SLAM,         AI_Smart_Stomp
 	dbw EFFECT_SOLAR_BEAM,        AI_Smart_SolarBeam
@@ -1730,7 +1730,7 @@ AI_Smart_Safeguard:
 	inc [hl]
 	ret
 
-AI_Smart_Magnitude:
+AI_Smart_EldinsWrath:
 AI_Smart_Earthquake:
 
 ; Greatly encourage this move if the player is underground and the enemy is faster.
@@ -1951,7 +1951,7 @@ AI_Smart_MirrorCoat:
 	inc [hl]
 	ret
 
-AI_Smart_Gust:
+AI_Smart_AerialAce:
 
 ; Greatly encourage this move if the player is flying and the enemy is faster.
 	ld a, [wPlayerSelectedMove]
@@ -2242,12 +2242,13 @@ UsefulMoves:
 	db THUNDERBOLT
 	db THUNDER
 	db EARTHQUAKE
+	db ELDINS_WRATH
 	db TOXIC
 	db PSYCHIC_M
 	db HYPNOSIS
 	db WILL_O_WISP
 	db RECOVER
-	db FIRE_BLAST
+	db SOLAR_FLARE
 	db FRESH_SNACK
 	db SUPER_FANG
 	db MOONBLAST
@@ -2460,8 +2461,6 @@ AIDamageCalc:
 	jr z, .hidden_power
 	cp EFFECT_LOW_KICK
 	jr z, .low_kick
-	cp EFFECT_MAGNITUDE
-	jr z, .magnitude
 	cp EFFECT_RETURN
 	jr z, .return
 	cp EFFECT_REVERSAL
@@ -2510,11 +2509,6 @@ AIDamageCalc:
 .reversal
 	farcall BattleCommand_constantdamage
 	jr .stab
-.magnitude
-	; Pretend that the base power is 70
-	ld a, 70
-	ld [wEnemyMoveStruct + MOVE_POWER], a
-	; fallthrough
 .regular_damage
 	farcall BattleCommand_damagestats
 .damagecalc

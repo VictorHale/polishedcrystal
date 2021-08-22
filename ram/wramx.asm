@@ -975,6 +975,7 @@ wPokemonJournalsEnd::
 wTMsHMs:: flag_array NUM_TMS + NUM_HMS
 wTMsHMsEnd::
 
+wNumKeyItems:: db
 wKeyItems:: flag_array NUM_KEY_ITEMS
 wKeyItemsEnd::
 

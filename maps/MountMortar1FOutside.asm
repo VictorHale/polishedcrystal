@@ -23,7 +23,7 @@ MountMortar1FOutside_MapScriptHeader:
 	object_event  9, 15, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBattleGirlSubaru, -1
 	object_event 30, 11, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerBattleGirlDiane, -1
 	itemball_event 13, 15, ETHER, 1, EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER
-	itemball_event 31, 18, REVIVE, 1, EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE
+	itemball_event 31, 18, FAIRYS, 1, EVENT_MOUNT_MORTAR_1F_OUTSIDE_FAIRYS
 
 GenericTrainerBattleGirlSubaru:
 	generictrainer BATTLE_GIRL, SUBARU, EVENT_BEAT_BATTLE_GIRL_SUBARU, BattleGirlSubaruSeenText, BattleGirlSubaruBeatenText

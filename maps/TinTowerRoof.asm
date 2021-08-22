@@ -41,8 +41,27 @@ TinTowerHoOh:
 	closetext
 	setevent EVENT_FOUGHT_HO_OH
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
-	loadwildmon HO_OH, 75
+	loadwildmon HO_OH, 80
 	startbattle
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_ATK_UP_SATK_DOWN
+	loadmem wPartyMon6Moves+0, SACRED_FIRE
+	loadmem wPartyMon6Moves+1, AERIAL_ACE
+	loadmem wPartyMon6Moves+2, SEED_BOMB
+	loadmem wPartyMon6Moves+3, ELDINS_WRATH
+	loadmem wPartyMon6PP+0, 5
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	disappear TINTOWERROOF_HO_OH
 	reloadmapafterbattle
 	setevent EVENT_SET_WHEN_FOUGHT_HO_OH

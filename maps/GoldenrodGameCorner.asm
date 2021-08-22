@@ -64,18 +64,18 @@ GoldenrodGameCornerPokefanM3Script:
 GoldenrodGameCornerFisherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LISTENED_TO_PAY_DAY_INTRO
-	iftrue GoldenrodGameCornerTutorPayDayScript
+	checkevent EVENT_LISTENED_TO_SNARL_INTRO
+	iftrue GoldenrodGameCornerTutorSnarlScript
 	writetext GoldenrodGameCornerFisherText
 	waitbutton
-	setevent EVENT_LISTENED_TO_PAY_DAY_INTRO
-GoldenrodGameCornerTutorPayDayScript:
-	writetext Text_GoldenrodGameCornerTutorPayDayQuestion
+	setevent EVENT_LISTENED_TO_SNARL_INTRO
+GoldenrodGameCornerTutorSnarlScript:
+	writetext Text_GoldenrodGameCornerTutorSnarlQuestion
 	checkitem SILVER_LEAF
 	iffalse .NoSilverLeaf
 	yesorno
 	iffalse .TutorRefused
-	setval PAY_DAY
+	setval SNARL
 	writetext ClearText
 	special Special_MoveTutor
 	ifequal $0, .TeachMove
@@ -194,11 +194,14 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	closewindow
 	ifequal $1, .abra
 	ifequal $2, .cubone
-	ifequal $3, .clefairy
+	ifequal $3, .porygon
+	ifequal $4, .cyndaquil
+	ifequal $5, .totodile
+	ifequal $6, .chikorita
 	jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 
 .abra
-	checkcoins 200
+	checkcoins 500
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	getmonname ABRA, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
@@ -207,15 +210,34 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke ABRA, 5
+	givepoke ABRA, NO_FORM, 10, FEATHER
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ee
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_SPD_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, TELEPORT
+	loadmem wPartyMon6Moves+1, PSYSTRIKE
+	loadmem wPartyMon6Moves+2, MOONBLAST
+	loadmem wPartyMon6Moves+3, POWER_GEM
+	loadmem wPartyMon6PP+0, 20
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
 	setval ABRA
 	special Special_GameCornerPrizeMonCheckDex
-	takecoins 200
+	takecoins 500
 	sjump .loop
 
 .cubone
-	checkcoins 800
+	checkcoins 1000
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	getmonname CUBONE, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
@@ -224,28 +246,174 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke CUBONE, 10
+	givepoke CUBONE, NO_FORM, 10, THICK_CLUB
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ee
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_ATK_UP_SATK_DOWN
+	loadmem wPartyMon6Moves+0, CURSE
+	loadmem wPartyMon6Moves+1, ICICLE_CRASH
+	loadmem wPartyMon6Moves+2, ROCK_SMASH
+	loadmem wPartyMon6Moves+3, BONEMERANG
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
 	setval CUBONE
 	special Special_GameCornerPrizeMonCheckDex
-	takecoins 800
+	takecoins 1000
 	sjump .loop
 
-.clefairy
+.porygon
 	checkcoins 1500
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getmonname CLEFAIRY, $0
+	getmonname PORYGON, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	givepoke CLEFAIRY, 15
+	givepoke EEVEE, NO_FORM, 10, EXPERT_BELT
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, GROWTH
+	loadmem wPartyMon6Moves+1, HEADBUTT
+	loadmem wPartyMon6Moves+2, HYPER_VOICE
+	loadmem wPartyMon6Moves+3, PROTECT
+	loadmem wPartyMon6PP+0, 20
+	loadmem wPartyMon6PP+1, 15
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
-	setval CLEFAIRY
+	setval EEVEE
 	special Special_GameCornerPrizeMonCheckDex
 	takecoins 1500
+	sjump .loop
+
+.cyndaquil
+	checkcoins 2000
+	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+	getmonname CYNDAQUIL, $0
+	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
+	waitbutton
+	givepoke CYNDAQUIL, NO_FORM, 15, FEATHER
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SPD_UP_SATK_DOWN
+	loadmem wPartyMon6Moves+0, SACRED_FIRE
+	loadmem wPartyMon6Moves+1, DRAIN_PUNCH
+	loadmem wPartyMon6Moves+2, SEED_BOMB
+	loadmem wPartyMon6Moves+3, EARTHQUAKE
+	loadmem wPartyMon6PP+0, 5
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
+	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
+	setval CYNDAQUIL
+	special Special_GameCornerPrizeMonCheckDex
+	takecoins 2000
+	sjump .loop
+
+.totodile
+	checkcoins 2000
+	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+	getmonname TOTODILE, $0
+	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
+	waitbutton
+	givepoke TOTODILE, NO_FORM, 17, DAMP_ROCK
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_SPD_UP_SATK_DOWN
+	loadmem wPartyMon6Moves+0, RAIN_DANCE
+	loadmem wPartyMon6Moves+1, CRABHAMMER
+	loadmem wPartyMon6Moves+2, NIGHT_SLASH
+	loadmem wPartyMon6Moves+3, EARTHQUAKE
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 20
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
+	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
+	setval TOTODILE
+	special Special_GameCornerPrizeMonCheckDex
+	takecoins 2000
+	sjump .loop
+
+.chikorita
+	checkcoins 2000
+	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+	getmonname CHIKORITA, $0
+	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
+	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
+	waitbutton
+	givepoke CHIKORITA, NO_FORM, 13, TOXIC_ORB
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $fe
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, RECOVER
+	loadmem wPartyMon6Moves+1, ENERGY_BALL
+	loadmem wPartyMon6Moves+2, MOONBLAST
+	loadmem wPartyMon6Moves+3, POWER_GEM
+	loadmem wPartyMon6PP+0, 20
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
+	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorNoMoreRoomText
+	setval CHIKORITA
+	special Special_GameCornerPrizeMonCheckDex
+	takecoins 2000
 	sjump .loop
 
 .MenuDataHeader:
@@ -257,10 +425,13 @@ GoldenrodGameCornerPrizeMonVendorScript:
 
 .MenuData2:
 	db $80 ; flags
-	db 4 ; items
-	db "Abra        200@"
-	db "Cubone      800@"
-	db "Clefairy   1500@"
+	db 7 ; items
+	db "Abra        500@"
+	db "Cubone     1000@"
+	db "Porygon    1500@"
+	db "Cyndaquil  2000@"
+	db "Totodile   2000@"
+	db "Chikorita  2000@"
 	db "Cancel@"
 
 GoldenrodGameCornerPharmacistScript:
@@ -364,19 +535,19 @@ GoldenrodGameCornerPrizeVendorNoCoinCaseText:
 	done
 
 GoldenrodGameCornerFisherText:
-	text "Today's my pay day!"
-	line "Time to celebrate"
-	cont "with some slots!"
+	text "Today's my day to"
+	line "Snarl like a dog!"
+	cont "and gamble a lot!"
 
-	para "…You know, #mon"
-	line "get a Pay Day too."
+	para "…Maybe, #mon"
+	line "can Snarl to."
 	done
 
-Text_GoldenrodGameCornerTutorPayDayQuestion:
+Text_GoldenrodGameCornerTutorSnarlQuestion:
 	text "If you give me a"
 	line "Silver Leaf, I'll"
 
-	para "teach Pay Day to"
+	para "teach Snarl to"
 	line "your #mon."
 	done
 
@@ -391,12 +562,12 @@ Text_GoldenrodGameCornerTutorRefused:
 	done
 
 Text_GoldenrodGameCornerTutorTaught:
-	text "Pay Day nets you"
-	line "more money after a"
-	cont "battle."
+	text "Snarl is special"
+	line "it's like a growl"
+	cont "but cuter."
 
-	para "Keep using it and"
-	line "you'll be rich!"
+	para "It'll knock out"
+	line "the competition!"
 	done
 
 GoldenrodGameCornerPharmacistText:

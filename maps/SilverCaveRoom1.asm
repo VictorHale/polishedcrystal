@@ -16,5 +16,5 @@ SilverCaveRoom1_MapScriptHeader:
 	def_object_events
 	itemball_event  4,  9, MAX_ELIXIR, 1, EVENT_SILVER_CAVE_ROOM_1_MAX_ELIXIR
 	itemball_event 15, 29, PROTEIN, 1, EVENT_SILVER_CAVE_ROOM_1_PROTEIN
-	itemball_event  5, 30, ESCAPE_ROPE, 1, EVENT_SILVER_CAVE_ROOM_1_ESCAPE_ROPE
+	itemball_event  5, 30, MOGMA_MITTS, 1, EVENT_SILVER_CAVE_ROOM_1_MOGMA_MITTS
 	itemball_event  7, 18, ULTRA_BALL, 1, EVENT_SILVER_CAVE_ROOM_1_ULTRA_BALL

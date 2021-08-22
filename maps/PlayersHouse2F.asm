@@ -84,7 +84,7 @@ endc
 endr
 	giveitem MAX_POTION, 99
 	giveitem FULL_RESTORE, 99
-	giveitem MAX_REVIVE, 99
+	giveitem GREAT_FAIRY, 99
 	giveitem MAX_ELIXIR, 99
 	giveitem HP_UP, 99
 	giveitem PROTEIN, 99
@@ -98,7 +98,7 @@ endr
 	giveitem SACRED_ASH, 99
 	giveitem MAX_REPEL, 99
 	giveitem MAX_REPEL, 99
-	giveitem ESCAPE_ROPE, 99
+	giveitem MOGMA_MITTS, 99
 	giveitem ABILITY_CAP, 99
 	giveitem LEAF_STONE, 99
 	giveitem FIRE_STONE, 99
@@ -142,6 +142,7 @@ endr
 	setflag ENGINE_HIVEBADGE
 	setflag ENGINE_PLAINBADGE
 	setflag ENGINE_FOGBADGE
+	
 	setflag ENGINE_STORMBADGE
 	setflag ENGINE_MINERALBADGE
 	setflag ENGINE_GLACIERBADGE
@@ -250,10 +251,10 @@ endr
 	loadmem wPartyMon3PP+2, 15
 	loadmem wPartyMon3PP+3, 15
 	; variant form test
-	givepoke SLOWKING, GALARIAN_FORM, 50
-;	givepoke ARTICUNO, GALARIAN_FORM, 50
-;	givepoke ZAPDOS, GALARIAN_FORM, 50
-;	givepoke MOLTRES, GALARIAN_FORM, 50
+	givepoke SLOWKING, GALARIAN_FORM, 50, ASSAULT_VEST
+;	givepoke ARTICUNO, GALARIAN_FORM, 50, HEAVY_BOOTS
+;	givepoke ZAPDOS, GALARIAN_FORM, 50, HEAVY_BOOTS
+;	givepoke MOLTRES, GALARIAN_FORM, 50, WEAK_POLICY
 	; fill pokedex
 ;	callasm FillPokedex
 	; intro events
@@ -304,6 +305,65 @@ else
 	iftrue .AbbreviatedRadio
 	playmusic MUSIC_POKEMON_TALK
 	opentext
+	; Start with Eeveelutions and Shiny Ditto
+	givepoke CLEFAIRY, NO_FORM, 10, LIGHT_CLAY
+	loadmem wPartyMon1EVs+0, 252
+	loadmem wPartyMon1EVs+1, 252
+	loadmem wPartyMon1EVs+2, 252
+	loadmem wPartyMon1EVs+3, 252
+	loadmem wPartyMon1EVs+4, 252
+	loadmem wPartyMon1EVs+5, 252
+	loadmem wPartyMon1DVs+0, $fe
+	loadmem wPartyMon1DVs+1, $ff
+	loadmem wPartyMon1DVs+2, $ff
+	loadmem wPartyMon1Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_DEF_UP_SPD_DOWN
+	loadmem wPartyMon1Moves+0, METRONOME
+	loadmem wPartyMon1Moves+1, TRI_ATTACK
+	loadmem wPartyMon1Moves+2, PSYSTRIKE
+	loadmem wPartyMon1Moves+3, REFLECT
+	loadmem wPartyMon1PP+0, 20
+	loadmem wPartyMon1PP+1, 10
+	loadmem wPartyMon1PP+2, 10
+	loadmem wPartyMon1PP+3, 20
+	loadmem wPartyMon1Happiness, $ff
+	givepoke EEVEE, NO_FORM, 10, EXPERT_BELT
+	loadmem wPartyMon2EVs+0, 252
+	loadmem wPartyMon2EVs+1, 252
+	loadmem wPartyMon2EVs+2, 252
+	loadmem wPartyMon2EVs+3, 252
+	loadmem wPartyMon2EVs+4, 252
+	loadmem wPartyMon2EVs+5, 252
+	loadmem wPartyMon2DVs+0, $ff
+	loadmem wPartyMon2DVs+1, $ff
+	loadmem wPartyMon2DVs+2, $ff
+	loadmem wPartyMon2Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon2Moves+0, TRI_ATTACK
+	loadmem wPartyMon2Moves+1, PSYSTRIKE
+	loadmem wPartyMon2Moves+2, JABUS_FROST
+	loadmem wPartyMon2Moves+3, ELDINS_WRATH
+	loadmem wPartyMon2PP+0, 10
+	loadmem wPartyMon2PP+1, 10
+	loadmem wPartyMon2PP+2, 10
+	loadmem wPartyMon2PP+3, 10
+	loadmem wPartyMon2Happiness, $ff
+	givepoke DITTO, NO_FORM, 10, METAL_POWDER
+	loadmem wPartyMon3EVs+0, 252
+	loadmem wPartyMon3EVs+1, 252
+	loadmem wPartyMon3EVs+2, 252
+	loadmem wPartyMon3EVs+3, 252
+	loadmem wPartyMon3EVs+4, 252
+	loadmem wPartyMon3EVs+5, 252
+	loadmem wPartyMon3DVs+0, $ff
+	loadmem wPartyMon3DVs+1, $ff
+	loadmem wPartyMon3DVs+2, $ff
+	loadmem wPartyMon3Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_NEUTRAL
+	loadmem wPartyMon3Moves+0, TRANSFORM
+	loadmem wPartyMon3Moves+1, METRONOME
+	loadmem wPartyMon3Moves+2, HIDDEN_POWER
+	loadmem wPartyMon3PP+0, 10
+	loadmem wPartyMon3PP+1, 20
+	loadmem wPartyMon3PP+2, 15
+	loadmem wPartyMon3Happiness, $ff
 	writetext PlayerRadioText1
 	pause 45
 	writetext PlayerRadioText2
@@ -312,6 +372,16 @@ else
 	pause 45
 	musicfadeout MUSIC_NEW_BARK_TOWN, 16
 	writetext PlayerRadioText4
+	; all hm key items
+for x, SWORD, GAUNTLETS + 1
+if x != MACHINE_PART
+	givekeyitem x
+endc
+endr
+	; all tms+hms
+for x, NUM_TMS + NUM_HMS
+	givetmhm x
+endr
 	pause 45
 	closetext
 	setevent EVENT_LISTENED_TO_INITIAL_RADIO

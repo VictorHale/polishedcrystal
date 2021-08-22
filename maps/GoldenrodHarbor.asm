@@ -12,7 +12,7 @@ GoldenrodHarbor_MapScriptHeader:
 	def_bg_events
 	bg_event 29, 19, BGEVENT_JUMPTEXT, GoldenrodHarborSignText
 	bg_event 28, 15, BGEVENT_JUMPTEXT, GoldenrodHarborCrateSignText
-	bg_event 22, 21, BGEVENT_ITEM + REVIVE, EVENT_GOLDENROD_HARBOR_HIDDEN_REVIVE
+	bg_event 22, 21, BGEVENT_ITEM + FAIRYS, EVENT_GOLDENROD_HARBOR_HIDDEN_FAIRYS
 
 	def_object_events
 	object_event 17,  3, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodHarborFisherScript, -1

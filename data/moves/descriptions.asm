@@ -4,9 +4,9 @@ MoveDescriptions::
 	dw AcrobaticsDescription
 	dw KarateChopDescription
 	dw DoubleSlapDescription
-	dw AerialAceDescription
+	dw FaroresWindDescription
 	dw DragonClawDescription
-	dw PayDayDescription
+	dw SnarlDescription
 	dw FirePunchDescription
 	dw IcePunchDescription
 	dw ThunderpunchDescription
@@ -16,7 +16,7 @@ MoveDescriptions::
 	dw AirSlashDescription
 	dw SwordsDanceDescription
 	dw CutDescription
-	dw GustDescription
+	dw AerialAceDescription
 	dw WingAttackDescription
 	dw SuckerPunchDescription
 	dw FlyDescription
@@ -62,7 +62,7 @@ MoveDescriptions::
 	dw BlizzardDescription
 	dw PsybeamDescription
 	dw BubbleBeamDescription
-	dw AuroraBeamDescription
+	dw JabusFrostDescription
 	dw HyperBeamDescription
 	dw PeckDescription
 	dw DrillPeckDescription
@@ -126,7 +126,7 @@ MoveDescriptions::
 	dw GunkShotDescription
 	dw VenoshockDescription
 	dw EarthPowerDescription
-	dw FireBlastDescription
+	dw SolarFlareDescription
 	dw WaterfallDescription
 	dw IcicleCrashDescription
 	dw SwiftDescription
@@ -146,10 +146,10 @@ MoveDescriptions::
 	dw BraveBirdDescription
 	dw TransformDescription
 	dw WaterPulseDescription
-	dw DizzyPunchDescription
+	dw PlastizeDescription
 	dw SporeDescription
 	dw FlashDescription
-	dw ExtrasensoryDescription
+	dw PsychoCutDescription
 	dw SplashDescription
 	dw DragonDanceDescription
 	dw CrabhammerDescription
@@ -222,7 +222,7 @@ MoveDescriptions::
 	dw SafeguardDescription
 	dw PainSplitDescription
 	dw SacredFireDescription
-	dw MagnitudeDescription
+	dw EldinsWrathDescription
 	dw DynamicpunchDescription
 	dw MegahornDescription
 	dw DragonbreathDescription
@@ -232,7 +232,7 @@ MoveDescriptions::
 	dw RapidSpinDescription
 	dw ShadowClawDescription
 	dw IronTailDescription
-	dw MetalClawDescription
+	dw GildedSlashDescription
 	dw AuraSphereDescription
 	dw HealingLightDescription
 	dw HurricaneDescription
@@ -278,9 +278,13 @@ StoneEdgeDescription:
 SwiftDescription:
 FeintAttackDescription:
 DisarmVoiceDescription:
-AerialAceDescription:
 AuraSphereDescription:
+AerialAceDescription:
 	db   "An attack that"
+	next "never misses.@"
+
+FaroresWindDescription:
+	db   "Strong wind that"
 	next "never misses.@"
 
 AbsorbDescription:
@@ -333,7 +337,6 @@ HyperFangDescription:
 AirSlashDescription:
 IronHeadDescription:
 ZenHeadbuttDescription:
-ExtrasensoryDescription:
 DarkPulseDescription:
 AstonishDescription:
 IcicleCrashDescription:
@@ -349,7 +352,7 @@ GunkShotDescription:
 
 EmberDescription:
 FlamethrowerDescription:
-FireBlastDescription:
+PlastizeDescription:
 SacredFireDescription:
 ScaldDescription:
 	db   "An attack that may"
@@ -375,7 +378,6 @@ BlizzardDescription:
 
 PsybeamDescription:
 ConfusionDescription:
-DizzyPunchDescription:
 WaterPulseDescription:
 HurricaneDescription:
 	db   "An attack that may"
@@ -385,9 +387,9 @@ DynamicpunchDescription:
 	db   "An attack that"
 	next "confuses the foe.@"
 
-MetalClawDescription:
-	db   "An attack that may"
-	next "up user's Attack.@"
+GildedSlashDescription:
+	db   "Static-tipped ed-"
+	next "ges slash the foe.@"
 
 SteelWingDescription:
 	db   "An attack that may"
@@ -405,7 +407,10 @@ CloseCombatDescription:
 	db   "Lowers the user's"
 	next "Def and Sp.Def.@"
 
-AuroraBeamDescription:
+JabusFrostDescription:
+	db   "A cold stream that"
+	next "freezes under.@"
+
 PlayRoughDescription:
 	db   "An attack that may"
 	next "lower Attack.@"
@@ -574,6 +579,10 @@ SmokescreenDescription:
 FlashDescription:
 	db   "A move that lowers"
 	next "the foe's accuracy.@"
+
+PsychoCutDescription:
+	db   "A critical slice"
+	next "that flinches.@"
 
 CharmDescription:
 	db   "Sharply lowers the"
@@ -770,10 +779,6 @@ XScissorDescription:
 	db   "Slashes foe with"
 	next "scythes or claws.@"
 
-GustDescription:
-	db   "Whips up a strong"
-	next "gust of wind.@"
-
 WingAttackDescription:
 	db   "Strikes the foe"
 	next "with wings.@"
@@ -789,10 +794,6 @@ HornAttackDescription:
 DoubleKickDescription:
 	db   "A double kicking"
 	next "attack.@"
-
-PayDayDescription:
-	db   "Throws coins. Gets"
-	next "them back later.@"
 
 SuckerPunchDescription:
 	db   "Attacks before the"
@@ -923,6 +924,7 @@ FacadeDescription:
 	next "Psn, Brn, or Prz.@"
 
 HyperVoiceDescription:
+SnarlDescription:
 	db   "Attack the foe"
 	next "with sound waves.@"
 
@@ -998,6 +1000,7 @@ ReturnDescription:
 	db   "An attack that is"
 	next "based on loyalty.@"
 
+SolarFlareDescription:
 PsystrikeDescription:
 	db   "A wave that does"
 	next "physical damage.@"
@@ -1006,9 +1009,9 @@ PainSplitDescription:
 	db   "Adds user & foe's"
 	next "HPs. Shares total.@"
 
-MagnitudeDescription:
-	db   "A Ground attack"
-	next "with random power.@"
+EldinsWrathDescription:
+	db   "Burrows and rises"
+	next "in a hot eruption.@"
 
 MegahornDescription:
 	db   "A powerful charge"

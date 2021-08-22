@@ -81,7 +81,7 @@ SeafoamIslandsB4FLawrenceEncounterScript:
 	showtext SeafoamIslandsB4FLawrenceSpeechText
 	turnobject SEAFOAMISLANDSB4F_LAWRENCE, UP
 	opentext
-	writetext SeafoamIslandsB4FLawrenceEscapeRopeText
+	writetext SeafoamIslandsB4FLawrenceMogmaMittsText
 	pause 15
 	closetext
 	playsound SFX_WARP_TO
@@ -102,9 +102,28 @@ SeafoamIslandsArticuno:
 	cry ARTICUNO
 	pause 15
 	closetext
-	loadwildmon ARTICUNO, 65
+	loadwildmon ARTICUNO, 70
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
 	startbattle
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, HAIL
+	loadmem wPartyMon6Moves+1, BLIZZARD
+	loadmem wPartyMon6Moves+2, JABUS_FROST
+	loadmem wPartyMon6Moves+3, ELDINS_WRATH
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 5
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	disappear SEAFOAMISLANDSB4F_ARTICUNO
 	setevent EVENT_SEAFOAM_ISLANDS_ARTICUNO
 	reloadmapafterbattle
@@ -172,9 +191,9 @@ SeafoamIslandsB4FLawrenceSpeechText:
 	cont "those #mon."
 	done
 
-SeafoamIslandsB4FLawrenceEscapeRopeText:
-	text "Lawrence used an"
-	line "Escape Rope!"
+SeafoamIslandsB4FLawrenceMogmaMittsText:
+	text "Lawrence used the"
+	line "Mogma Mitts!"
 	done
 
 SeafoamIslandsB4FMovementData_LawrenceSurfApproach1:

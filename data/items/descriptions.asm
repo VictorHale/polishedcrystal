@@ -36,8 +36,8 @@ ItemDescriptions:
 	dw IceHealDesc
 	dw FullHealDesc
 	dw FullRestoreDesc
-	dw ReviveDesc
-	dw MaxReviveDesc
+	dw FairysDesc
+	dw GreatFairyDesc
 	dw EtherDesc
 	dw MaxEtherDesc
 	dw ElixirDesc
@@ -56,7 +56,6 @@ ItemDescriptions:
 	dw LemonadeDesc
 	dw MoomooMilkDesc
 	dw RageCandyBarDesc
-	dw PewterCrunchDesc
 	dw SacredAshDesc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
@@ -73,7 +72,7 @@ ItemDescriptions:
 	dw RepelDesc
 	dw SuperRepelDesc
 	dw MaxRepelDesc
-	dw EscapeRopeDesc
+	dw MogmaMittsDesc
 	dw PokeDollDesc
 	dw AbilityCapDesc
 	dw LeafStoneDesc
@@ -138,7 +137,7 @@ ItemDescriptions:
 	dw BlackGlassesDesc
 	dw PinkBowDesc
 	dw BrightPowderDesc
-	dw ScopeLensDesc
+	dw HawkeyeDesc
 	dw QuickClawDesc
 	dw KingsRockDesc
 	dw FocusBandDesc
@@ -154,13 +153,15 @@ ItemDescriptions:
 	dw LuckyPunchDesc
 	dw MetalPowderDesc
 	dw QuickPowderDesc
+	dw FeatherDesc
+	dw BraceletDesc
 	dw ArmorSuitDesc
 	dw AirBalloonDesc
 	dw AssaultVestDesc
 	dw BigRootDesc
 	dw BindingBandDesc
 	dw DestinyKnotDesc
-	dw EvioliteDesc
+	dw ShieldDesc
 	dw ExpertBeltDesc
 	dw FocusSashDesc
 	dw GripClawDesc
@@ -173,9 +174,9 @@ ItemDescriptions:
 	dw SafeGogglesDesc
 	dw ShedShellDesc
 	dw ShellBellDesc
-	dw SootheBellDesc
+	dw NecklaceDesc
 	dw WeakPolicyDesc
-	dw WideLensDesc
+	dw TruthLensDesc
 	dw WiseGlassesDesc
 	dw ZoomLensDesc
 	dw EjectButtonDesc
@@ -232,7 +233,6 @@ ItemDescriptions:
 	dw PearlStringDesc
 	dw StardustDesc
 	dw StarPieceDesc
-	dw BrickPieceDesc
 	dw RareBoneDesc
 	dw SilverLeafDesc
 	dw GoldLeafDesc
@@ -287,6 +287,8 @@ KeyItemDescriptions:
 	dw SilphScope2Desc
 	dw ApricornBoxDesc
 	dw TypeChartDesc
+	dw SwordDesc
+	dw GauntletsDesc
 
 PokeBallDesc:
 	db   "An item for catch-"
@@ -426,7 +428,6 @@ IceHealDesc:
 
 FullHealDesc:
 RageCandyBarDesc:
-PewterCrunchDesc:
 	db   "Eliminates all"
 	next "status problems.@"
 
@@ -434,11 +435,11 @@ FullRestoreDesc:
 	db   "Fully restores HP"
 	next "& status.@"
 
-ReviveDesc:
+FairysDesc:
 	db   "Restores a fainted"
 	next "#mon to 1/2 HP.@"
 
-MaxReviveDesc:
+GreatFairyDesc:
 	db   "Fully restores a"
 	next "fainted #mon.@"
 
@@ -574,7 +575,7 @@ MaxRepelDesc:
 	db   "Repels weak #-"
 	next "mon for 250 steps.@"
 
-EscapeRopeDesc:
+MogmaMittsDesc:
 	db   "Use for escaping"
 	next "from caves, etc.@"
 
@@ -807,7 +808,7 @@ BrightPowderDesc:
 	db   "Lowers the foe's"
 	next "accuracy. (Hold)@"
 
-ScopeLensDesc:
+HawkeyeDesc:
 RazorClawDesc:
 	db   "Raises critical"
 	next "hit ratio. (Hold)@"
@@ -872,6 +873,14 @@ MetalPowderDesc:
 QuickPowderDesc:
 	db   "Raises Speed of"
 	next "Ditto. (Hold)@"
+
+FeatherDesc:
+	db   "Raises Speed"
+	next "for moves. (Hold)@"
+
+BraceletDesc:
+	db   "Ups Atk and Spcl."
+	next "Atk of evolvers.@"
 
 ArmorSuitDesc:
 	db   "A suit of armor"
@@ -941,7 +950,7 @@ ShellBellDesc:
 	db   "Self-restore item."
 	next "(1/8 damage, Hold)@"
 
-SootheBellDesc:
+NecklaceDesc:
 	db   "Calms and fosters"
 	next "friendship. (Hold)@"
 
@@ -949,7 +958,7 @@ WeakPolicyDesc:
 	db   "Super effective"
 	next "hit ups offenses.@"
 
-WideLensDesc:
+TruthLensDesc:
 	db   "Slightly boosts"
 	next "accuracy. (Hold)@"
 
@@ -1045,7 +1054,7 @@ SweetHoneyDesc:
 	db   "The aroma attracts"
 	next "wild #mon.@"
 
-EvioliteDesc:
+ShieldDesc:
 	db   "Ups Def and Spcl."
 	next "Def of evolvers.@"
 
@@ -1124,10 +1133,6 @@ StardustDesc:
 StarPieceDesc:
 	db   "A hunk of red gem."
 	next "Sell very high.@"
-
-BrickPieceDesc:
-	db   "A rare chunk of"
-	next "tile.@"
 
 RareBoneDesc:
 	db   "A rare bone for"
@@ -1377,3 +1382,11 @@ ApricornBoxDesc:
 TypeChartDesc:
 	db   "Summarizes all"
 	next "type advantages.@"
+
+SwordDesc:
+	db   "Your trusty Sword!"
+	next "Very sharp.@"
+
+GauntletsDesc:
+	db   "Bracelets that can"
+	next "grant Strength!@"

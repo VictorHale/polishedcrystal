@@ -11,7 +11,7 @@ Route11_MapScriptHeader:
 
 	def_bg_events
 	bg_event  5,  7, BGEVENT_JUMPTEXT, Route11SignText
-	bg_event 44,  5, BGEVENT_ITEM + REVIVE, EVENT_ROUTE_11_HIDDEN_REVIVE
+	bg_event 44,  5, BGEVENT_ITEM + FAIRYS, EVENT_ROUTE_11_HIDDEN_FAIRYS
 
 	def_object_events
 	object_event 32, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerYoungsterOwen, -1

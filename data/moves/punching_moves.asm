@@ -1,6 +1,6 @@
 PunchingMoves:
 	db BULLET_PUNCH
-	db DIZZY_PUNCH
+	db PLASTIZE
 	db DRAIN_PUNCH
 	db DYNAMICPUNCH
 	db FIRE_PUNCH

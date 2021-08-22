@@ -114,19 +114,19 @@ GetExtraHappiness:
 	ld b, a
 
 	cp 255
-	jr nc, .no_soothe_bell ; already at maximum
+	jr nc, .no_necklace ; already at maximum
 
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMon1Item
 	call GetPartyLocation
 	ld a, [hl]
-	cp SOOTHE_BELL
-	jr nz, .no_soothe_bell
+	cp NECKLACE
+	jr nz, .no_necklace
 
-	; Soothe Bell adds 1
+	; Necklace adds 1
 	inc b
 
-.no_soothe_bell
+.no_necklace
 	ld a, b
 	cp 255
 	jr nc, .no_luxury_ball ; already at maximum

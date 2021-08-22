@@ -99,12 +99,12 @@ CeruleanGymMistyScript:
 .LyrasEgg:
 	specialphonecall SPECIALCALL_LYRASEGG
 .FightDone:
-	checkevent EVENT_GOT_TM63_WATER_PULSE
+	checkevent EVENT_GOT_TM63_JABUS_FROST
 	iftrue_jumpopenedtext MistyFightDoneText
 	writetext MistyGiveTMText
 	promptbutton
-	verbosegivetmhm TM_WATER_PULSE
-	setevent EVENT_GOT_TM63_WATER_PULSE
+	verbosegivetmhm TM_JABUS_FROST
+	setevent EVENT_GOT_TM63_JABUS_FROST
 	jumpopenedtext MistyOutroText
 
 GenericTrainerSwimmerfDiana:

@@ -52,8 +52,8 @@
 	const FULL_HEAL    ; 23
 	const FULL_RESTORE ; 24
 
-	const REVIVE       ; 25
-	const MAX_REVIVE   ; 26
+	const FAIRYS       ; 25
+	const GREAT_FAIRY  ; 26
 
 	const ETHER        ; 27
 	const MAX_ETHER    ; 28
@@ -75,204 +75,204 @@
 	const LEMONADE     ; 36
 	const MOOMOO_MILK  ; 37
 	const RAGECANDYBAR ; 38
-	const PEWTERCRUNCH ; 39
 
-	const SACRED_ASH   ; 3a
-	const ENERGYPOWDER ; 3b
-	const ENERGY_ROOT  ; 3c
-	const HEAL_POWDER  ; 3d
-	const REVIVAL_HERB ; 3e
+	const SACRED_ASH   ; 39
+	const ENERGYPOWDER ; 3a
+	const ENERGY_ROOT  ; 3b
+	const HEAL_POWDER  ; 3c
+	const REVIVAL_HERB ; 3d
 
-	const X_ATTACK     ; 3f
-	const X_DEFEND     ; 40
-	const X_SPEED      ; 41
-	const X_SPCL_ATK   ; 42
-	const X_SPCL_DEF   ; 43
-	const X_ACCURACY   ; 44
-	const DIRE_HIT     ; 45
-	const GUARD_SPEC   ; 46
+	const X_ATTACK     ; 3e
+	const X_DEFEND     ; 3f
+	const X_SPEED      ; 40
+	const X_SPCL_ATK   ; 41
+	const X_SPCL_DEF   ; 42
+	const X_ACCURACY   ; 43
+	const DIRE_HIT     ; 44
+	const GUARD_SPEC   ; 45
 
-	const REPEL        ; 47
-	const SUPER_REPEL  ; 48
-	const MAX_REPEL    ; 49
-	const ESCAPE_ROPE  ; 4a
-	const POKE_DOLL    ; 4b
+	const REPEL        ; 46
+	const SUPER_REPEL  ; 47
+	const MAX_REPEL    ; 48
+	const MOGMA_MITTS  ; 49
+	const POKE_DOLL    ; 4a
 
-	const ABILITY_CAP  ; 4c
+	const ABILITY_CAP  ; 4b
 
-	const LEAF_STONE   ; 4d
-	const FIRE_STONE   ; 4e
-	const WATER_STONE  ; 4f
-	const THUNDERSTONE ; 50
-	const MOON_STONE   ; 51
-	const SUN_STONE    ; 52
-	const DUSK_STONE   ; 53
-	const DAWN_STONE   ; 54
-	const SHINY_STONE  ; 55
-	const ICE_STONE    ; 56
-	const EVERSTONE    ; 57
+	const LEAF_STONE   ; 4c
+	const FIRE_STONE   ; 4d
+	const WATER_STONE  ; 4e
+	const THUNDERSTONE ; 4f
+	const MOON_STONE   ; 50
+	const SUN_STONE    ; 51
+	const DUSK_STONE   ; 52
+	const DAWN_STONE   ; 53
+	const SHINY_STONE  ; 54
+	const ICE_STONE    ; 55
+	const EVERSTONE    ; 56
 
-	const EXP_SHARE    ; 58
+	const EXP_SHARE    ; 57
 
-	const CHERI_BERRY  ; 59
-	const CHESTO_BERRY ; 5a
-	const PECHA_BERRY  ; 5b
-	const RAWST_BERRY  ; 5c
-	const ASPEAR_BERRY ; 5d
-	const LEPPA_BERRY  ; 5e
-	const ORAN_BERRY   ; 5f
-	const PERSIM_BERRY ; 60
-	const LUM_BERRY    ; 61
-	const SITRUS_BERRY ; 62
-	const FIGY_BERRY   ; 63
-	const POMEG_BERRY  ; 64
-	const KELPSY_BERRY ; 65
-	const QUALOT_BERRY ; 66
-	const HONDEW_BERRY ; 67
-	const GREPA_BERRY  ; 68
-	const TAMATO_BERRY ; 69
-	const LIECHI_BERRY ; 6a
-	const GANLON_BERRY ; 6b
-	const SALAC_BERRY  ; 6c
-	const PETAYA_BERRY ; 6d
-	const APICOT_BERRY ; 6e
-	const LANSAT_BERRY ; 6f
-	const STARF_BERRY  ; 70
-	const ENIGMA_BERRY ; 71
-	const CUSTAP_BERRY ; 72
-	const JABOCA_BERRY ; 73
-	const ROWAP_BERRY  ; 74
-	const KEE_BERRY    ; 75
-	const MARANGABERRY ; 76
+	const CHERI_BERRY  ; 58
+	const CHESTO_BERRY ; 59
+	const PECHA_BERRY  ; 5a
+	const RAWST_BERRY  ; 5b
+	const ASPEAR_BERRY ; 5c
+	const LEPPA_BERRY  ; 5d
+	const ORAN_BERRY   ; 5e
+	const PERSIM_BERRY ; 5f
+	const LUM_BERRY    ; 60
+	const SITRUS_BERRY ; 61
+	const FIGY_BERRY   ; 62
+	const POMEG_BERRY  ; 63
+	const KELPSY_BERRY ; 64
+	const QUALOT_BERRY ; 65
+	const HONDEW_BERRY ; 66
+	const GREPA_BERRY  ; 67
+	const TAMATO_BERRY ; 68
+	const LIECHI_BERRY ; 69
+	const GANLON_BERRY ; 6a
+	const SALAC_BERRY  ; 6b
+	const PETAYA_BERRY ; 6c
+	const APICOT_BERRY ; 6d
+	const LANSAT_BERRY ; 6e
+	const STARF_BERRY  ; 6f
+	const ENIGMA_BERRY ; 70
+	const CUSTAP_BERRY ; 71
+	const JABOCA_BERRY ; 72
+	const ROWAP_BERRY  ; 73
+	const KEE_BERRY    ; 74
+	const MARANGABERRY ; 75
 
-	const BERRY_JUICE  ; 77
+	const BERRY_JUICE  ; 76
 
-	const SILK_SCARF   ; 78
-	const BLACK_BELT   ; 79
-	const SHARP_BEAK   ; 7a
-	const POISON_BARB  ; 7b
-	const SOFT_SAND    ; 7c
-	const HARD_STONE   ; 7d
-	const SILVERPOWDER ; 7e
-	const SPELL_TAG    ; 7f
-	const METAL_COAT   ; 80
-	const CHARCOAL     ; 81
-	const MYSTIC_WATER ; 82
-	const MIRACLE_SEED ; 83
-	const MAGNET       ; 84
-	const TWISTEDSPOON ; 85
-	const NEVERMELTICE ; 86
-	const DRAGON_FANG  ; 87
-	const BLACKGLASSES ; 88
-	const PINK_BOW     ; 89
+	const SILK_SCARF   ; 77
+	const BLACK_BELT   ; 78
+	const SHARP_BEAK   ; 79
+	const POISON_BARB  ; 7a
+	const SOFT_SAND    ; 7b
+	const HARD_STONE   ; 7c
+	const SILVERPOWDER ; 7d
+	const SPELL_TAG    ; 7e
+	const METAL_COAT   ; 7f
+	const CHARCOAL     ; 80
+	const MYSTIC_WATER ; 81
+	const MIRACLE_SEED ; 82
+	const MAGNET       ; 83
+	const TWISTEDSPOON ; 84
+	const NEVERMELTICE ; 85
+	const DRAGON_FANG  ; 86
+	const BLACKGLASSES ; 87
+	const PINK_BOW     ; 88
 
-	const BRIGHTPOWDER ; 8a
-	const SCOPE_LENS   ; 8b
-	const QUICK_CLAW   ; 8c
-	const KINGS_ROCK   ; 8d
-	const FOCUS_BAND   ; 8e
-	const LEFTOVERS    ; 8f
-	const LUCKY_EGG    ; 90
-	const AMULET_COIN  ; 91
-	const CLEANSE_TAG  ; 92
-	const SMOKE_BALL   ; 93
-	const BERSERK_GENE ; 94
+	const BRIGHTPOWDER ; 89
+	const HAWKEYE      ; 8a
+	const QUICK_CLAW   ; 8b
+	const KINGS_ROCK   ; 8c
+	const FOCUS_BAND   ; 8d
+	const LEFTOVERS    ; 8e
+	const LUCKY_EGG    ; 8f
+	const AMULET_COIN  ; 90
+	const CLEANSE_TAG  ; 91
+	const SMOKE_BALL   ; 92
+	const BERSERK_GENE ; 93
 
-	const LIGHT_BALL   ; 95
-	const STICK        ; 96
-	const THICK_CLUB   ; 97
-	const LUCKY_PUNCH  ; 98
-	const METAL_POWDER ; 99
-	const QUICK_POWDER ; 9a
-	const ARMOR_SUIT   ; 9b
+	const LIGHT_BALL   ; 94
+	const STICK        ; 95
+	const THICK_CLUB   ; 96
+	const LUCKY_PUNCH  ; 97
+	const METAL_POWDER ; 98
+	const QUICK_POWDER ; 99
+	const FEATHER      ; 9a
+	const BRACELET     ; 9b
+	const ARMOR_SUIT   ; 9c
 
-	const AIR_BALLOON  ; 9c
-	const ASSAULT_VEST ; 9d
-	const BIG_ROOT     ; 9e
-	const BINDING_BAND ; 9f
-	const DESTINY_KNOT ; a0
-	const EVIOLITE     ; a1
-	const EXPERT_BELT  ; a2
-	const FOCUS_SASH   ; a3
-	const GRIP_CLAW    ; a4
-	const LIFE_ORB     ; a5
-	const LIGHT_CLAY   ; a6
-	const METRONOME_I  ; a7
-	const MUSCLE_BAND  ; a8
-	const PROTECT_PADS ; a9
-	const ROCKY_HELMET ; aa
-	const SAFE_GOGGLES ; ab
-	const SHED_SHELL   ; ac
-	const SHELL_BELL   ; ad
-	const SOOTHE_BELL  ; ae
-	const WEAK_POLICY  ; af
-	const WIDE_LENS    ; b0
-	const WISE_GLASSES ; b1
-	const ZOOM_LENS    ; b2
+	const AIR_BALLOON  ; 9d
+	const ASSAULT_VEST ; 9e
+	const BIG_ROOT     ; 9f
+	const BINDING_BAND ; a0
+	const DESTINY_KNOT ; a1
+	const SHIELD       ; a2
+	const EXPERT_BELT  ; a3
+	const FOCUS_SASH   ; a4
+	const GRIP_CLAW    ; a5
+	const LIFE_ORB     ; a6
+	const LIGHT_CLAY   ; a7
+	const METRONOME_I  ; a8
+	const MUSCLE_BAND  ; a9
+	const PROTECT_PADS ; aa
+	const ROCKY_HELMET ; ab
+	const SAFE_GOGGLES ; ac
+	const SHED_SHELL   ; ad
+	const SHELL_BELL   ; ae
+	const NECKLACE     ; af
+	const WEAK_POLICY  ; b0
+	const TRUTH_LENS   ; b1
+	const WISE_GLASSES ; b2
+	const ZOOM_LENS    ; b3
 
-	const EJECT_BUTTON ; b3
-	const LAGGING_TAIL ; b4
-	const IRON_BALL    ; b5
-	const RING_TARGET  ; b6
-	const RED_CARD     ; b7
-	const ABSORB_BULB  ; b8
-	const CELL_BATTERY ; b9
-	const LUMINOUSMOSS ; ba
-	const SNOWBALL     ; bb
+	const EJECT_BUTTON ; b4
+	const LAGGING_TAIL ; b5
+	const IRON_BALL    ; b6
+	const RING_TARGET  ; b7
+	const RED_CARD     ; b8
+	const ABSORB_BULB  ; b9
+	const CELL_BATTERY ; ba
+	const LUMINOUSMOSS ; bb
+	const SNOWBALL     ; bc
 
-	const EJECT_PACK   ; bc
-	const ROOM_SERVICE ; bd
-	const BLUNDRPOLICY ; be
-	const THROAT_SPRAY ; bf
-	const HEAVY_BOOTS  ; c0
-	const UTILUMBRELLA ; c1
+	const EJECT_PACK   ; bd
+	const ROOM_SERVICE ; be
+	const BLUNDRPOLICY ; bf
+	const THROAT_SPRAY ; c0
+	const HEAVY_BOOTS  ; c1
+	const UTILUMBRELLA ; c2
 
-	const MENTAL_HERB  ; c2
-	const POWER_HERB   ; c3
-	const WHITE_HERB   ; c4
+	const MENTAL_HERB  ; c3
+	const POWER_HERB   ; c4
+	const WHITE_HERB   ; c5
 
-	const DAMP_ROCK    ; c5
-	const HEAT_ROCK    ; c6
-	const SMOOTH_ROCK  ; c7
-	const ICY_ROCK     ; c8
+	const DAMP_ROCK    ; c6
+	const HEAT_ROCK    ; c7
+	const SMOOTH_ROCK  ; c8
+	const ICY_ROCK     ; c9
 
-	const CHOICE_BAND  ; c9
-	const CHOICE_SCARF ; ca
-	const CHOICE_SPECS ; cb
+	const CHOICE_BAND  ; ca
+	const CHOICE_SCARF ; cb
+	const CHOICE_SPECS ; cc
 
-	const FLAME_ORB    ; cc
-	const TOXIC_ORB    ; cd
-	const BLACK_SLUDGE ; ce
+	const FLAME_ORB    ; cd
+	const TOXIC_ORB    ; ce
+	const BLACK_SLUDGE ; cf
 
-	const MACHO_BRACE  ; cf
-	const POWER_WEIGHT ; d0
-	const POWER_BRACER ; d1
-	const POWER_BELT   ; d2
-	const POWER_LENS   ; d3
-	const POWER_BAND   ; d4
-	const POWER_ANKLET ; d5
+	const MACHO_BRACE  ; d0
+	const POWER_WEIGHT ; d1
+	const POWER_BRACER ; d2
+	const POWER_BELT   ; d3
+	const POWER_LENS   ; d4
+	const POWER_BAND   ; d5
+	const POWER_ANKLET ; d6
 
-	const DRAGON_SCALE ; d6
-	const UP_GRADE     ; d7
-	const DUBIOUS_DISC ; d8
-	const PROTECTOR    ; d9
-	const ELECTIRIZER  ; da
-	const MAGMARIZER   ; db
-	const RAZOR_FANG   ; dc
-	const RAZOR_CLAW   ; dd
-	const ODD_SOUVENIR ; de
+	const DRAGON_SCALE ; d7
+	const UP_GRADE     ; d8
+	const DUBIOUS_DISC ; d9
+	const PROTECTOR    ; da
+	const ELECTIRIZER  ; db
+	const MAGMARIZER   ; dc
+	const RAZOR_FANG   ; dd
+	const RAZOR_CLAW   ; de
+	const ODD_SOUVENIR ; df
 
-	const NUGGET       ; df
-	const BIG_NUGGET   ; e0
-	const TINYMUSHROOM ; e1
-	const BIG_MUSHROOM ; e2
-	const BALMMUSHROOM ; e3
-	const PEARL        ; e4
-	const BIG_PEARL    ; e5
-	const PEARL_STRING ; e6
-	const STARDUST     ; e7
-	const STAR_PIECE   ; e8
-	const BRICK_PIECE  ; e9
+	const NUGGET       ; e0
+	const BIG_NUGGET   ; e1
+	const TINYMUSHROOM ; e2
+	const BIG_MUSHROOM ; e3
+	const BALMMUSHROOM ; e4
+	const PEARL        ; e5
+	const BIG_PEARL    ; e6
+	const PEARL_STRING ; e7
+	const STARDUST     ; e8
+	const STAR_PIECE   ; e9
 	const RARE_BONE    ; ea
 	const SILVER_LEAF  ; eb
 	const GOLD_LEAF    ; ec
@@ -332,8 +332,8 @@ ALWAYS_ITEM_2  EQU $ff
 	const NAM_BLUESKY_MAIL
 	const NAM_BLUNDRPOLICY
 	const NAM_BOTTLE_CAP
-	const NAM_BRICK_PIECE
 	const NAM_BRIGHTPOWDER
+	const NAM_BRACELET
 	const NAM_BURN_HEAL
 if !DEF(FAITHFUL)
 	const NAM_RAGECANDYBAR ; Cake of Rage
@@ -370,13 +370,13 @@ endc
 	const NAM_ENERGYPOWDER
 	const NAM_ENIGMA_BERRY
 	const NAM_EON_MAIL
-	const NAM_ESCAPE_ROPE
 	const NAM_ETHER
 	const NAM_EVERSTONE
-	const NAM_EVIOLITE
 	const NAM_EXP_SHARE
 	const NAM_EXPERT_BELT
+	const NAM_FAIRYS
 	const NAM_FAST_BALL
+	const NAM_FEATHER
 	const NAM_FIGY_BERRY
 	const NAM_FIRE_STONE
 	const NAM_FLAME_ORB
@@ -390,10 +390,12 @@ endc
 	const NAM_GANLON_BERRY
 	const NAM_GOLD_LEAF
 	const NAM_GREAT_BALL
+	const NAM_GREAT_FAIRY
 	const NAM_GREPA_BERRY
 	const NAM_GRIP_CLAW
 	const NAM_GUARD_SPEC
 	const NAM_HARD_STONE
+	const NAM_HAWKEYE
 	const NAM_HEAL_BALL
 	const NAM_HEAL_POWDER
 	const NAM_HEAT_ROCK
@@ -441,7 +443,6 @@ endc
 	const NAM_MAX_ETHER
 	const NAM_MAX_POTION
 	const NAM_MAX_REPEL
-	const NAM_MAX_REVIVE
 	const NAM_MENTAL_HERB
 	const NAM_METAL_COAT
 	const NAM_METAL_POWDER
@@ -449,6 +450,7 @@ endc
 	const NAM_MINT_LEAF
 	const NAM_MIRACLE_SEED
 	const NAM_MIRAGE_MAIL
+	const NAM_MOGMA_MITTS
 	const NAM_MOOMOO_MILK
 	const NAM_MOON_BALL
 	const NAM_MOON_STONE
@@ -457,6 +459,7 @@ endc
 	const NAM_MUSCLE_BAND
 	const NAM_MUSIC_MAIL
 	const NAM_MYSTIC_WATER
+	const NAM_NECKLACE
 	const NAM_NEST_BALL
 	const NAM_NET_BALL
 	const NAM_NEVERMELTICE
@@ -470,7 +473,6 @@ endc
 	const NAM_PECHA_BERRY
 	const NAM_PERSIM_BERRY
 	const NAM_PETAYA_BERRY
-	const NAM_PEWTERCRUNCH
 	const NAM_PINK_BOW
 	const NAM_POISON_BARB
 	const NAM_POKE_BALL
@@ -507,7 +509,6 @@ endc
 	const NAM_REPEAT_BALL
 	const NAM_REPEL
 	const NAM_REVIVAL_HERB
-	const NAM_REVIVE
 	const NAM_RING_TARGET
 	const NAM_ROCKY_HELMET
 	const NAM_ROOM_SERVICE
@@ -516,10 +517,10 @@ endc
 	const NAM_SAFARI_BALL
 	const NAM_SAFE_GOGGLES
 	const NAM_SALAC_BERRY
-	const NAM_SCOPE_LENS
 	const NAM_SHARP_BEAK
 	const NAM_SHED_SHELL
 	const NAM_SHELL_BELL
+	const NAM_SHIELD
 	const NAM_SHINY_STONE
 	const NAM_SILK_SCARF
 	const NAM_SILVER_LEAF
@@ -531,7 +532,6 @@ endc
 	const NAM_SNOWBALL
 	const NAM_SODA_POP
 	const NAM_SOFT_SAND
-	const NAM_SOOTHE_BELL
 	const NAM_SPELL_TAG
 	const NAM_STAR_PIECE
 	const NAM_STARDUST
@@ -549,6 +549,7 @@ endc
 	const NAM_TIMER_BALL
 	const NAM_TINYMUSHROOM
 	const NAM_TOXIC_ORB
+	const NAM_TRUTH_LENS
 	const NAM_TWISTEDSPOON
 	const NAM_ULTRA_BALL
 	const NAM_UP_GRADE
@@ -556,7 +557,6 @@ endc
 	const NAM_WATER_STONE
 	const NAM_WEAK_POLICY
 	const NAM_WHITE_HERB
-	const NAM_WIDE_LENS
 	const NAM_WISE_GLASSES
 	const NAM_X_ACCURACY
 	const NAM_X_ATTACK
@@ -615,4 +615,6 @@ NUM_APRICORNS EQU const_value - 1
 	const SILPHSCOPE2  ; 1b
 	const APRICORN_BOX ; 1c
 	const TYPE_CHART   ; 1d
+	const SWORD        ; 1e
+	const GAUNTLETS    ; 1f
 NUM_KEY_ITEMS EQU const_value

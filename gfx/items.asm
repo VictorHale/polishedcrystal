@@ -41,8 +41,8 @@ ParlyzHealIcon::
 AwakeningIcon::
 IceHealIcon::      INCBIN "gfx/items/antidote.2bpp.lz"
 FullHealIcon::     INCBIN "gfx/items/full_heal.2bpp.lz"
-ReviveIcon::       INCBIN "gfx/items/revive.2bpp.lz"
-MaxReviveIcon::    INCBIN "gfx/items/max_revive.2bpp.lz"
+FairysIcon::       INCBIN "gfx/items/fairys.2bpp.lz"
+GreatFairyIcon::   INCBIN "gfx/items/great_fairy.2bpp.lz"
 
 
 SECTION "Item Icons 3", ROMX
@@ -65,7 +65,6 @@ SodaPopIcon::      INCBIN "gfx/items/soda_pop.2bpp.lz"
 LemonadeIcon::     INCBIN "gfx/items/lemonade.2bpp.lz"
 MoomooMilkIcon::   INCBIN "gfx/items/moomoo_milk.2bpp.lz"
 RageCandyBarIcon:: INCBIN "gfx/items/ragecandybar.2bpp.lz"
-PewterCrunchIcon:: INCBIN "gfx/items/pewtercrunch.2bpp.lz"
 SacredAshIcon::
 SoftSandIcon::
 BrightPowderIcon::
@@ -92,7 +91,7 @@ GuardSpecIcon::    INCBIN "gfx/items/battle_item.2bpp.lz"
 RepelIcon::
 SuperRepelIcon::
 MaxRepelIcon::     INCBIN "gfx/items/repel.2bpp.lz"
-EscapeRopeIcon::   INCBIN "gfx/items/escape_rope.2bpp.lz"
+MogmaMittsIcon::   INCBIN "gfx/items/mogma_mitts.2bpp.lz"
 PokeDollIcon::     INCBIN "gfx/items/poke_doll.2bpp.lz"
 AbilityCapIcon::   INCBIN "gfx/items/ability_cap.2bpp.lz"
 LeafStoneIcon::    INCBIN "gfx/items/leaf_stone.2bpp.lz"
@@ -171,7 +170,7 @@ PinkBowIcon::      INCBIN "gfx/items/pink_bow.2bpp.lz"
 
 SECTION "Item Icons 8", ROMX
 
-ScopeLensIcon::    INCBIN "gfx/items/scope_lens.2bpp.lz"
+HawkeyeIcon::    INCBIN "gfx/items/hawkeye.2bpp.lz"
 QuickClawIcon::    INCBIN "gfx/items/quick_claw.2bpp.lz"
 KingsRockIcon::    INCBIN "gfx/items/kings_rock.2bpp.lz"
 FocusBandIcon::    INCBIN "gfx/items/focus_band.2bpp.lz"
@@ -196,7 +195,7 @@ AssaultVestIcon::  INCBIN "gfx/items/assault_vest.2bpp.lz"
 BigRootIcon::      INCBIN "gfx/items/big_root.2bpp.lz"
 BindingBandIcon::  INCBIN "gfx/items/binding_band.2bpp.lz"
 DestinyKnotIcon::  INCBIN "gfx/items/destiny_knot.2bpp.lz"
-EvioliteIcon::     INCBIN "gfx/items/eviolite.2bpp.lz"
+ShieldIcon::       INCBIN "gfx/items/shield.2bpp.lz"
 ExpertBeltIcon::   INCBIN "gfx/items/expert_belt.2bpp.lz"
 FocusSashIcon::    INCBIN "gfx/items/focus_sash.2bpp.lz"
 GripClawIcon::     INCBIN "gfx/items/grip_claw.2bpp.lz"
@@ -213,10 +212,10 @@ ShedShellIcon::    INCBIN "gfx/items/shed_shell.2bpp.lz"
 SECTION "Item Icons 10", ROMX
 
 ShellBellIcon::    INCBIN "gfx/items/shell_bell.2bpp.lz"
-SootheBellIcon::   INCBIN "gfx/items/soothe_bell.2bpp.lz"
+NecklaceIcon::     INCBIN "gfx/items/necklace.2bpp.lz"
 WeakPolicyIcon::
 BlundrPolicyIcon:: INCBIN "gfx/items/policy.2bpp.lz"
-WideLensIcon::     INCBIN "gfx/items/wide_lens.2bpp.lz"
+TruthLensIcon::    INCBIN "gfx/items/truth_lens.2bpp.lz"
 WiseGlassesIcon::  INCBIN "gfx/items/wise_glasses.2bpp.lz"
 ZoomLensIcon::     INCBIN "gfx/items/zoom_lens.2bpp.lz"
 EjectButtonIcon::  INCBIN "gfx/items/eject_button.2bpp.lz"
@@ -257,6 +256,7 @@ SECTION "Item Icons 12", ROMX
 
 PowerBracerIcon::  INCBIN "gfx/items/power_bracer.2bpp.lz"
 PowerBeltIcon::    INCBIN "gfx/items/power_belt.2bpp.lz"
+BraceletIcon::
 PowerLensIcon::    INCBIN "gfx/items/power_lens.2bpp.lz"
 PowerBandIcon::    INCBIN "gfx/items/power_band.2bpp.lz"
 PowerAnkletIcon::  INCBIN "gfx/items/power_anklet.2bpp.lz"
@@ -282,7 +282,6 @@ PearlIcon::        INCBIN "gfx/items/pearl.2bpp.lz"
 BigPearlIcon::     INCBIN "gfx/items/big_pearl.2bpp.lz"
 PearlStringIcon::  INCBIN "gfx/items/pearl_string.2bpp.lz"
 StarPieceIcon::    INCBIN "gfx/items/star_piece.2bpp.lz"
-BrickPieceIcon::   INCBIN "gfx/items/brick_piece.2bpp.lz"
 SilverLeafIcon::
 GoldLeafIcon::     INCBIN "gfx/items/leaf.2bpp.lz"
 SlowpokeTailIcon:: INCBIN "gfx/items/slowpoketail.2bpp.lz"
@@ -335,6 +334,7 @@ LostItemIcon::     INCBIN "gfx/items/lost_item.2bpp.lz"
 
 SECTION "Key Item Icons 2", ROMX
 
+FeatherIcon::
 RainbowWingIcon::  INCBIN "gfx/items/rainbow_wing.2bpp.lz"
 SilverWingIcon::   INCBIN "gfx/items/silver_wing.2bpp.lz"
 ClearBellIcon::    INCBIN "gfx/items/clear_bell.2bpp.lz"
@@ -349,3 +349,5 @@ CatchCharmIcon::   INCBIN "gfx/items/catch_charm.2bpp.lz"
 SilphScope2Icon::  INCBIN "gfx/items/silphscope2.2bpp.lz"
 ApricornBoxIcon::  INCBIN "gfx/items/apricorn_box.2bpp.lz"
 TypeChartIcon::    INCBIN "gfx/items/type_chart.2bpp.lz"
+SwordIcon::        INCBIN "gfx/items/sword.2bpp.lz"
+GauntletsIcon::    INCBIN "gfx/items/gauntlets.2bpp.lz"

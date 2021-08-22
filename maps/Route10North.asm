@@ -193,9 +193,28 @@ Route10Zapdos:
 	cry ZAPDOS
 	pause 15
 	closetext
-	loadwildmon ZAPDOS, 65
+	loadwildmon ZAPDOS, 70
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
 	startbattle
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, THUNDERBOLT
+	loadmem wPartyMon6Moves+1, FARORES_WIND
+	loadmem wPartyMon6Moves+2, FLASH_CANNON
+	loadmem wPartyMon6Moves+3, ENERGY_BALL
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	disappear ROUTE10_ZAPDOS
 	setevent EVENT_ZAPDOS_GONE
 	setevent EVENT_ROUTE_10_ZAPDOS

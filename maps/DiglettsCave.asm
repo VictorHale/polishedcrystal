@@ -14,7 +14,7 @@ DiglettsCave_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  8, 15, BGEVENT_ITEM + MAX_REVIVE, EVENT_DIGLETTS_CAVE_HIDDEN_MAX_REVIVE
+	bg_event  8, 15, BGEVENT_ITEM + GREAT_FAIRY, EVENT_DIGLETTS_CAVE_HIDDEN_GREAT_FAIRY
 	bg_event 34, 33, BGEVENT_ITEM + MAX_REPEL, EVENT_DIGLETTS_CAVE_HIDDEN_MAX_REPEL
 
 	def_object_events

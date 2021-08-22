@@ -37,8 +37,8 @@ ItemIconPointers:
 	dba IceHealIcon
 	dba FullHealIcon
 	dba FullRestoreIcon
-	dba ReviveIcon
-	dba MaxReviveIcon
+	dba FairysIcon
+	dba GreatFairyIcon
 	dba EtherIcon
 	dba MaxEtherIcon
 	dba ElixirIcon
@@ -57,7 +57,6 @@ ItemIconPointers:
 	dba LemonadeIcon
 	dba MoomooMilkIcon
 	dba RageCandyBarIcon
-	dba PewterCrunchIcon
 	dba SacredAshIcon
 	dba EnergyPowderIcon
 	dba EnergyRootIcon
@@ -74,7 +73,7 @@ ItemIconPointers:
 	dba RepelIcon
 	dba SuperRepelIcon
 	dba MaxRepelIcon
-	dba EscapeRopeIcon
+	dba MogmaMittsIcon
 	dba PokeDollIcon
 	dba AbilityCapIcon
 	dba LeafStoneIcon
@@ -139,7 +138,7 @@ ItemIconPointers:
 	dba BlackGlassesIcon
 	dba PinkBowIcon
 	dba BrightPowderIcon
-	dba ScopeLensIcon
+	dba HawkeyeIcon
 	dba QuickClawIcon
 	dba KingsRockIcon
 	dba FocusBandIcon
@@ -155,13 +154,15 @@ ItemIconPointers:
 	dba LuckyPunchIcon
 	dba MetalPowderIcon
 	dba QuickPowderIcon
+	dba FeatherIcon
+	dba BraceletIcon
 	dba ArmorSuitIcon
 	dba AirBalloonIcon
 	dba AssaultVestIcon
 	dba BigRootIcon
 	dba BindingBandIcon
 	dba DestinyKnotIcon
-	dba EvioliteIcon
+	dba ShieldIcon
 	dba ExpertBeltIcon
 	dba FocusSashIcon
 	dba GripClawIcon
@@ -174,9 +175,9 @@ ItemIconPointers:
 	dba SafeGogglesIcon
 	dba ShedShellIcon
 	dba ShellBellIcon
-	dba SootheBellIcon
+	dba NecklaceIcon
 	dba WeakPolicyIcon
-	dba WideLensIcon
+	dba TruthLensIcon
 	dba WiseGlassesIcon
 	dba ZoomLensIcon
 	dba EjectButtonIcon
@@ -233,7 +234,6 @@ ItemIconPointers:
 	dba PearlStringIcon
 	dba StardustIcon
 	dba StarPieceIcon
-	dba BrickPieceIcon
 	dba RareBoneIcon
 	dba SilverLeafIcon
 	dba GoldLeafIcon
@@ -288,3 +288,5 @@ KeyItemIconPointers:
 	dba SilphScope2Icon
 	dba ApricornBoxIcon
 	dba TypeChartIcon
+	dba SwordIcon
+	dba GauntletsIcon

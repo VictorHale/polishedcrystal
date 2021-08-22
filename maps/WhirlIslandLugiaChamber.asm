@@ -41,8 +41,27 @@ Lugia:
 	closetext
 	setevent EVENT_FOUGHT_LUGIA
 	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
-	loadwildmon LUGIA, 75
+	loadwildmon LUGIA, 80
 	startbattle
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_DEF_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, PSYSTRIKE
+	loadmem wPartyMon6Moves+1, AEROBLAST
+	loadmem wPartyMon6Moves+2, MOONBLAST
+	loadmem wPartyMon6Moves+3, FLASH_CANNON
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 5
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
 	reloadmapafterbattle
 	end

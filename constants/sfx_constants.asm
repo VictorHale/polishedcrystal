@@ -16,7 +16,7 @@
 	const SFX_BOOT_PC                     ; 0d
 	const SFX_SHUT_DOWN_PC                ; 0e
 	const SFX_CHOOSE_PC_OPTION            ; 0f
-	const SFX_ESCAPE_ROPE                 ; 10
+	const SFX_MOGMA_MITTS                 ; 10
 	const SFX_PUSH_BUTTON                 ; 11
 	const SFX_SECOND_PART_OF_ITEMFINDER   ; 12
 	const SFX_WARP_TO                     ; 13

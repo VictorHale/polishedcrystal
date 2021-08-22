@@ -36,12 +36,10 @@ INCLUDE "engine/battle/move_effects/knock_off.asm"
 INCLUDE "engine/battle/move_effects/leech_seed.asm"
 INCLUDE "engine/battle/move_effects/low_kick.asm"
 INCLUDE "engine/battle/move_effects/magic_bounce.asm"
-INCLUDE "engine/battle/move_effects/magnitude.asm"
 INCLUDE "engine/battle/move_effects/mean_look.asm"
 INCLUDE "engine/battle/move_effects/metronome.asm"
 INCLUDE "engine/battle/move_effects/minimize.asm"
 INCLUDE "engine/battle/move_effects/pain_split.asm"
-INCLUDE "engine/battle/move_effects/pay_day.asm"
 INCLUDE "engine/battle/move_effects/perish_song.asm"
 INCLUDE "engine/battle/move_effects/protect.asm"
 INCLUDE "engine/battle/move_effects/pursuit.asm"
@@ -313,6 +311,8 @@ BattleCommand_checkturn:
 	; Sacred Fire, Scald, and Flare Blitz thaw the user.
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
+	cp ELDINS_WRATH
+	jr z, .thaw
 	cp SACRED_FIRE
 	jr z, .thaw
 	cp SCALD
@@ -1148,16 +1148,16 @@ BattleCommand_critical:
 	ld hl, CriticalHitMoves
 	call IsInByteArray
 	pop bc
-	jr nc, .ScopeLens
+	jr nc, .Hawkeye
 
 ; +1 critical level
 	inc c
 
-.ScopeLens:
+.Hawkeye:
 	push bc
 	call GetUserItem
 	ld a, b
-	cp HELD_CRITICAL_UP ; Increased critical chance (Scope Lens and Razor Claw)
+	cp HELD_CRITICAL_UP ; Increased critical chance (Hawkeye and Razor Claw)
 	pop bc
 	jr nz, .Ability
 
@@ -1898,7 +1898,7 @@ BattleCommand_checkhit:
 
 .LockOn:
 ; Return nz if we are locked-on and aren't trying to use Earthquake
-; or Magnitude on a monster that is flying.
+; or Eldin's Wrath on a monster that is flying.
 	ld a, BATTLE_VARS_SUBSTATUS2_OPP
 	call GetBattleVarAddr
 	bit SUBSTATUS_LOCK_ON, [hl]
@@ -1915,7 +1915,7 @@ BattleCommand_checkhit:
 
 	cp EARTHQUAKE
 	ret z
-	cp MAGNITUDE
+	cp ELDINS_WRATH
 	ret z
 
 .LockedOn:
@@ -1963,11 +1963,19 @@ BattleCommand_checkhit:
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 
-	cp GUST
+	cp AERIAL_ACE
 	ret z
 	cp THUNDER
 	ret z
 	cp HURRICANE
+	ret z
+	cp ROCK_SLIDE
+	ret z
+	cp SKY_UPPERCUT
+	ret z
+	cp FARORES_WIND
+	ret z 
+	cp AEROBLAST
 	ret
 
 .DigMoves:
@@ -1976,8 +1984,9 @@ BattleCommand_checkhit:
 
 	cp EARTHQUAKE
 	ret z
-	cp MAGNITUDE
-	ret
+	cp ELDINS_WRATH
+	ret z
+	cp JABUS_FROST
 
 .WeatherAccCheck:
 ; Returns z if the move used always hits in the current weather
@@ -3344,7 +3353,8 @@ endc
 	rr c
 	ret
 
-UnevolvedEviolite:
+UnevolvedBracelet:
+UnevolvedShield:
 	push hl
 	push bc
 	; c = species
@@ -3374,7 +3384,7 @@ UnevolvedEviolite:
 	push bc
 	call GetOpponentItem
 	ld a, [hl]
-	cp EVIOLITE
+	cp SHIELD
 	pop bc
 	ret nz
 
@@ -3513,7 +3523,8 @@ endc
 	pop hl
 	ld e, a
 	call DittoMetalPowder
-	call UnevolvedEviolite
+	call UnevolvedBracelet
+	call UnevolvedShield
 
 	ld a, 1
 	and a
@@ -3550,8 +3561,8 @@ TruncateHL_BC:
 ThickClubOrLightBallBoost:
 ; Return in hl the stat value at hl.
 
-; If the attacking monster is Cubone or Marowak and
-; it's holding a Thick Club, or if it's Pikachu and
+; If the attacking monster is Cubone, Marowak, or Kangaskhan and
+; it's holding a Thick Club, or if it's Pichu, Pikachu or Raichu and
 ; it's holding a Light Ball, double it.
 	push bc
 	push de
@@ -3560,11 +3571,15 @@ ThickClubOrLightBallBoost:
 	call TrueUserPartyAttr
 	pop hl
 	cp PIKACHU
-	lb bc, PIKACHU, PIKACHU
-	ld d, LIGHT_BALL
+	ld b, PICHU
+	ld c, PIKACHU
+	ld d, RAICHU
+	ld e, LIGHT_BALL
 	jr z, .ok
-	lb bc, CUBONE, MAROWAK
-	ld d, THICK_CLUB
+	ld b, CUBONE
+	ld c, MAROWAK
+	ld d, KANGASKHAN
+	ld e, THICK_CLUB
 .ok
 	call SpeciesItemBoost
 	pop de
@@ -3578,8 +3593,10 @@ LightBallBoost:
 ; holding a Light Ball, double it.
 	push bc
 	push de
-	lb bc, PIKACHU, PIKACHU
-	ld d, LIGHT_BALL
+	ld b, PICHU
+	ld c, PIKACHU
+	ld d, RAICHU
+	ld e, LIGHT_BALL
 	call SpeciesItemBoost
 	pop de
 	pop bc
@@ -3603,6 +3620,8 @@ SpeciesItemBoost:
 	cp b
 	jr z, .GetItemHeldEffect
 	cp c
+	jr z, .GetItemHeldEffect
+	cp d
 	ret nz
 
 .GetItemHeldEffect:
@@ -3610,7 +3629,7 @@ SpeciesItemBoost:
 	call GetUserItem
 	ld a, [hl]
 	pop hl
-	cp d
+	cp e
 	ret nz
 
 ; Double the stat

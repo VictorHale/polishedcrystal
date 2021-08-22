@@ -203,8 +203,8 @@ CyndaquilPokeBallScript:
 	iftrue_jumptext ElmPokeBallText
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic CYNDAQUIL
-	cry CYNDAQUIL
+	pokepic CLEFAIRY
+	cry CLEFAIRY
 	waitbutton
 	closepokepic
 	opentext
@@ -216,7 +216,26 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CYNDAQUIL, NO_FORM, 5, ORAN_BERRY
+	givepoke CLEFAIRY, NO_FORM, 5, LIGHT_CLAY
+	loadmem wPartyMon4EVs+0, 252
+	loadmem wPartyMon4EVs+1, 252
+	loadmem wPartyMon4EVs+2, 252
+	loadmem wPartyMon4EVs+3, 252
+	loadmem wPartyMon4EVs+4, 252
+	loadmem wPartyMon4EVs+5, 252
+	loadmem wPartyMon4DVs+0, $fe
+	loadmem wPartyMon4DVs+1, $ff
+	loadmem wPartyMon4DVs+2, $ff
+	loadmem wPartyMon4Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_DEF_UP_SPD_DOWN
+	loadmem wPartyMon4Moves+0, METRONOME
+	loadmem wPartyMon4Moves+1, TRI_ATTACK
+	loadmem wPartyMon4Moves+2, PSYSTRIKE
+	loadmem wPartyMon4Moves+3, REFLECT
+	loadmem wPartyMon4PP+0, 20
+	loadmem wPartyMon4PP+1, 10
+	loadmem wPartyMon4PP+2, 10
+	loadmem wPartyMon4PP+3, 20
+	loadmem wPartyMon4Happiness, $ff
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -224,7 +243,7 @@ CyndaquilPokeBallScript:
 	pause 15
 	disappear ELMSLAB_POKE_BALL3
 	opentext
-	getmonname CHIKORITA, STRING_BUFFER_3
+	getmonname PICHU, STRING_BUFFER_3
 	writetext LyraReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -243,8 +262,8 @@ TotodilePokeBallScript:
 	iftrue_jumptext ElmPokeBallText
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic TOTODILE
-	cry TOTODILE
+	pokepic EEVEE
+	cry EEVEE
 	waitbutton
 	closepokepic
 	opentext
@@ -256,7 +275,26 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke TOTODILE, NO_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, NO_FORM, 5, EXPERT_BELT
+	loadmem wPartyMon4EVs+0, 252
+	loadmem wPartyMon4EVs+1, 252
+	loadmem wPartyMon4EVs+2, 252
+	loadmem wPartyMon4EVs+3, 252
+	loadmem wPartyMon4EVs+4, 252
+	loadmem wPartyMon4EVs+5, 252
+	loadmem wPartyMon4DVs+0, $ee
+	loadmem wPartyMon4DVs+1, $ff
+	loadmem wPartyMon4DVs+2, $ff
+	loadmem wPartyMon4Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon4Moves+0, CALM_MIND
+	loadmem wPartyMon4Moves+1, HYPER_VOICE
+	loadmem wPartyMon4Moves+2, MOONBLAST
+	loadmem wPartyMon4Moves+3, ELDINS_WRATH
+	loadmem wPartyMon4PP+0, 20
+	loadmem wPartyMon4PP+1, 10
+	loadmem wPartyMon4PP+2, 10
+	loadmem wPartyMon4PP+3, 10
+	loadmem wPartyMon4Happiness, $ff
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -264,7 +302,7 @@ TotodilePokeBallScript:
 	pause 15
 	disappear ELMSLAB_POKE_BALL1
 	opentext
-	getmonname CYNDAQUIL, STRING_BUFFER_3
+	getmonname CLEFAIRY, STRING_BUFFER_3
 	writetext LyraReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -281,8 +319,8 @@ ChikoritaPokeBallScript:
 	iftrue_jumptext ElmPokeBallText
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic CHIKORITA
-	cry CHIKORITA
+	pokepic PICHU
+	cry PICHU
 	waitbutton
 	closepokepic
 	opentext
@@ -294,7 +332,26 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CHIKORITA, NO_FORM, 5, ORAN_BERRY
+	givepoke PICHU, NO_FORM, 5, LIGHT_BALL
+	loadmem wPartyMon4EVs+0, 252
+	loadmem wPartyMon4EVs+1, 252
+	loadmem wPartyMon4EVs+2, 252
+	loadmem wPartyMon4EVs+3, 252
+	loadmem wPartyMon4EVs+4, 252
+	loadmem wPartyMon4EVs+5, 252
+	loadmem wPartyMon4DVs+0, $ee
+	loadmem wPartyMon4DVs+1, $ff
+	loadmem wPartyMon4DVs+2, $ff
+	loadmem wPartyMon4Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SPD_UP_ATK_DOWN
+	loadmem wPartyMon4Moves+0, VOLT_SWITCH
+	loadmem wPartyMon4Moves+1, PSYSTRIKE
+	loadmem wPartyMon4Moves+2, ENERGY_BALL
+	loadmem wPartyMon4Moves+3, FLASH_CANNON
+	loadmem wPartyMon4PP+0, 10
+	loadmem wPartyMon4PP+1, 10
+	loadmem wPartyMon4PP+2, 10
+	loadmem wPartyMon4PP+3, 10
+	loadmem wPartyMon4Happiness, $ff
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -302,7 +359,7 @@ ChikoritaPokeBallScript:
 	pause 15
 	disappear ELMSLAB_POKE_BALL2
 	opentext
-	getmonname TOTODILE, STRING_BUFFER_3
+	getmonname EEVEE, STRING_BUFFER_3
 	writetext LyraReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
@@ -969,20 +1026,20 @@ LabWhereGoingText:
 
 TakeCyndaquilText:
 	text "Elm: You'll take"
-	line "Cyndaquil, the"
-	cont "fire #mon?"
+	line "Clefairy, the"
+	cont "Lucky #mon?"
 	done
 
 TakeTotodileText:
 	text "Elm: Do you want"
-	line "Totodile, the"
-	cont "water #mon?"
+	line "Eevee, the"
+	cont "Transform #mon?"
 	done
 
 TakeChikoritaText:
 	text "Elm: So, you like"
-	line "Chikorita, the"
-	cont "grass #mon?"
+	line "Pichu, the"
+	cont "Sparky #mon?"
 	done
 
 DidntChooseStarterText:
@@ -1556,19 +1613,19 @@ LyraReceivedStarterText:
 LyraNicknamedChikoritaText:
 	text "Lyra: It's so"
 	line "cute! I'll nick-"
-	cont "name it Chicory!"
+	cont "name it Paichu!"
 	done
 
 LyraNicknamedCyndaquilText:
 	text "Lyra: It's so"
 	line "cute! I'll nick-"
-	cont "name it Cinder!"
+	cont "name it Clefame!"
 	done
 
 LyraNicknamedTotodileText:
 	text "Lyra: It's so"
 	line "cute! I'll nick-"
-	cont "name it Toto!"
+	cont "name it Eon!"
 	done
 
 ElmsLabLyraGoodChoiceText:

@@ -35,7 +35,7 @@ LakeOfRage_MapScriptHeader:
 	object_event 36, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, LakeOfRageSuperNerdText, -1
 	object_event 25, 29, SPRITE_BATTLE_GIRL, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, LakeOfRageCooltrainerFText, -1
 	itemball_event 13,  2, ELIXIR, 1, EVENT_LAKE_OF_RAGE_ELIXIR
-	itemball_event  7, 10, MAX_REVIVE, 1, EVENT_LAKE_OF_RAGE_MAX_REVIVE
+	itemball_event  7, 10, GREAT_FAIRY, 1, EVENT_LAKE_OF_RAGE_GREAT_FAIRY
 	tmhmball_event 35,  2, TM_SUBSTITUTE, EVENT_LAKE_OF_RAGE_TM_SUBSTITUTE
 	cuttree_event 18,  9, EVENT_LAKE_OF_RAGE_CUT_TREE_1
 	cuttree_event 11, 12, EVENT_LAKE_OF_RAGE_CUT_TREE_2

@@ -26,10 +26,10 @@ TreeMonSet_Canyon:
 	db  5, MEOWTH,     10
 	db -1
 	; rare
-	db 50, PIDGEY,     10
+	db 50, HERACROSS,  10
 	db 15, HERACROSS,  10
 	db 15, HERACROSS,  10
-	db 10, PIDGEY,     10
+	db 10, HERACROSS,  10
 	db  5, MEOWTH,     10
 	db  5, MEOWTH,     10
 	db -1
@@ -43,10 +43,10 @@ TreeMonSet_Town:
 	db  5, MEOWTH,     10
 	db -1
 	; rare
-	db 50, PIDGEY,     10
+	db 50, HERACROSS,  10
 	db 15, HERACROSS,  10
 	db 15, HERACROSS,  10
-	db 10, PIDGEY,     10
+	db 10, HERACROSS,  10
 	db  5, MEOWTH,     10
 	db  5, MEOWTH,     10
 	db -1

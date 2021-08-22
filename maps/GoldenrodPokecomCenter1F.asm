@@ -95,8 +95,8 @@ GoldenrodPokecenter1FLassText:
 	done
 
 GoldenrodPokecenter1FPokefanF:
-	checkevent EVENT_GOT_EVIOLITE_IN_GOLDENROD
-	iftrue_jumptextfaceplayer GoldenrodPokecenter1FPokefanFGotEvioliteText
+	checkevent EVENT_GOT_SHIELD_IN_GOLDENROD
+	iftrue_jumptextfaceplayer GoldenrodPokecenter1FPokefanFGotShieldText
 	faceplayer
 	opentext
 	writetext GoldenrodPokecenter1FPokefanFDoYouHaveEonMailText
@@ -111,16 +111,16 @@ GoldenrodPokecenter1FPokefanF:
 	waitbutton
 	writetext GoldenrodPokecenter1FPokefanFThisIsForYouText
 	waitbutton
-	verbosegiveitem EVIOLITE
-	iffalse .NoRoomForEviolite
-	setevent EVENT_GOT_EVIOLITE_IN_GOLDENROD
+	verbosegiveitem SHIELD
+	iffalse .NoRoomForShield
+	setevent EVENT_GOT_SHIELD_IN_GOLDENROD
 	jumpthisopenedtext
 
 	text "My daughter will"
 	line "be delighted!"
 	done
 
-.NoRoomForEviolite:
+.NoRoomForShield:
 	giveitem EON_MAIL
 	jumpthisopenedtext
 
@@ -166,7 +166,7 @@ GoldenrodPokecenter1FPlayerGaveAwayTheEonMailText:
 	line "the Eon Mail."
 	done
 
-GoldenrodPokecenter1FPokefanFGotEvioliteText:
+GoldenrodPokecenter1FPokefanFGotShieldText:
 	text "Thank you for"
 	line "the Eon Mail!"
 

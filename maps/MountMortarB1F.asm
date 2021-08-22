@@ -10,7 +10,7 @@ MountMortarB1F_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  4,  6, BGEVENT_ITEM + MAX_REVIVE, EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE
+	bg_event  4,  6, BGEVENT_ITEM + GREAT_FAIRY, EVENT_MOUNT_MORTAR_B1F_HIDDEN_GREAT_FAIRY
 
 	def_object_events
 	object_event 11, 31, SPRITE_HIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMortarB1FHikerScript, -1
@@ -70,6 +70,25 @@ MountMortarB1FKiyoScript:
 	promptbutton
 	waitsfx
 	givepoke TYROGUE, NO_FORM, 10, NO_ITEM, PREMIER_BALL
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 202
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_2 | NAT_SPD_UP_SATK_DOWN
+	loadmem wPartyMon6Moves+0, SKY_UPPERCUT
+	loadmem wPartyMon6Moves+1, ROCK_SLIDE
+	loadmem wPartyMon6Moves+2, POISON_JAB
+	loadmem wPartyMon6Moves+3, U_TURN
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	iffalse_jumpopenedtext MountMortarB1FKiyoFullPartyAndBoxText
 	setevent EVENT_GOT_TYROGUE_FROM_KIYO
 	jumpthisopenedtext

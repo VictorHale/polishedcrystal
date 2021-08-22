@@ -40,7 +40,7 @@ ENDM
 	add_tm SAFEGUARD    ; $13
 	add_tm BULLDOZE     ; $14
 	add_tm SOLAR_BEAM   ; $15
-	add_tm IRON_TAIL    ; $16
+	add_tm GILDED_SLASH ; $16
 	add_tm THUNDERBOLT  ; $17
 	add_tm THUNDER      ; $18
 	add_tm EARTHQUAKE   ; $19
@@ -59,9 +59,9 @@ endc
 	add_tm FLAMETHROWER ; $22
 	add_tm SLUDGE_BOMB  ; $23
 	add_tm SANDSTORM    ; $24
-	add_tm FIRE_BLAST   ; $25
+	add_tm SOLAR_FLARE  ; $25
 	add_tm SWIFT        ; $26
-	add_tm AERIAL_ACE   ; $27
+	add_tm FARORES_WIND ; $27
 	add_tm SUBSTITUTE   ; $28
 	add_tm FACADE       ; $29
 	add_tm FLAME_CHARGE ; $2a
@@ -84,7 +84,7 @@ endc
 	add_tm DRAIN_PUNCH  ; $3b
 	add_tm WILL_O_WISP  ; $3c
 	add_tm ACROBATICS   ; $3d
-	add_tm WATER_PULSE  ; $3e
+	add_tm JABUS_FROST  ; $3e
 	add_tm EXPLOSION    ; $3f
 	add_tm SHADOW_CLAW  ; $40
 	add_tm POISON_JAB   ; $41
@@ -92,9 +92,9 @@ endc
 	add_tm GIGA_IMPACT  ; $43
 	add_tm U_TURN       ; $44
 	add_tm FLASH        ; $45
-	add_tm STONE_EDGE   ; $46
+	add_tm ELDINS_WRATH ; $46
 	add_tm VOLT_SWITCH  ; $47
-	add_tm THUNDER_WAVE ; $48
+	add_tm PLASTIZE     ; $48
 	add_tm GYRO_BALL    ; $49
 	add_tm SWORDS_DANCE ; $4a
 NUM_TMS = __tmhm_value__ - 1
@@ -140,7 +140,7 @@ ENDM
 	add_mt ICY_WIND     ; $60
 	add_mt IRON_HEAD    ; $61
 	add_mt KNOCK_OFF    ; $62
-	add_mt PAY_DAY      ; $63
+	add_mt SNARL        ; $63
 	add_mt ROLLOUT      ; $64
 	add_mt SEED_BOMB    ; $65
 	add_mt SEISMIC_TOSS ; $66

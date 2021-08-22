@@ -166,19 +166,76 @@ HelixDomeAmberMenuDataHeader:
 ResurrectHelixFossil:
 	takeitem HELIX_FOSSIL
 	scall ResurrectAFossilScript
-	givepoke OMANYTE, 20
+	givepoke OMANYTE, 20, WEAK_POLICY
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_1 | NAT_SPD_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, RAIN_DANCE
+	loadmem wPartyMon6Moves+1, JABUS_FROST
+	loadmem wPartyMon6Moves+2, POWER_GEM
+	loadmem wPartyMon6Moves+3, ICY_WIND
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	sjump FinishResurrect
 
 ResurrectDomeFossil:
 	takeitem DOME_FOSSIL
 	scall ResurrectAFossilScript
-	givepoke KABUTO, 20
+	givepoke KABUTO, 20, WEAK_POLICY
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_1 | NAT_SPD_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, RAIN_DANCE
+	loadmem wPartyMon6Moves+1, JABUS_FROST
+	loadmem wPartyMon6Moves+2, POWER_GEM
+	loadmem wPartyMon6Moves+3, ICY_WIND
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	sjump FinishResurrect
 
 ResurrectOldAmber:
 	takeitem OLD_AMBER
 	scall ResurrectAFossilScript
-	givepoke AERODACTYL, 20
+	givepoke AERODACTYL, 20, EXPERT_BELT
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, ROCK_SLIDE
+	loadmem wPartyMon6Moves+1, AERIAL_ACE
+	loadmem wPartyMon6Moves+2, SACRED_FIRE
+	loadmem wPartyMon6Moves+3, EARTHQUAKE
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 5
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 FinishResurrect:
 	iffalse_jumpopenedtext NoRoomForFossilPokemonText
 	jumpopenedtext TakeGoodCareOfItText

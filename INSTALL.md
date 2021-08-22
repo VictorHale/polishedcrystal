@@ -33,7 +33,7 @@ make
 To build other versions:
 
 ```bash
-make [faithful] [nortc] [hgss|monochrome|noir] [debug]
+make [rupee] [faithful] [nortc] [hgss|monochrome|noir] [debug]
 ```
 
 For example, to build a mononchrome faithful version:
@@ -68,7 +68,7 @@ make
 To build other versions:
 
 ```bash
-make [faithful] [nortc] [hgss|monochrome|noir] [debug]
+make [rupee] [faithful] [nortc] [hgss|monochrome|noir] [debug]
 ```
 
 
@@ -100,5 +100,5 @@ make
 To build other versions:
 
 ```bash
-make [faithful] [nortc] [hgss|monochrome|noir] [debug]
+make [rupee] [faithful] [nortc] [hgss|monochrome|noir] [debug]
 ```

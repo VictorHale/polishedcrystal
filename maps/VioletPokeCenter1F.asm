@@ -54,6 +54,10 @@ VioletPokeCenter1FElmsAideScript:
 	iffalse .RefusedEgg
 	readvar VAR_PARTYCOUNT
 	giveegg TOGEPI
+	loadmem wPartyMon5DVs+0, $ff
+	loadmem wPartyMon5DVs+1, $ff
+	loadmem wPartyMon5DVs+2, $ff
+	loadmem wPartyMon5Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN
 	iffalse_jumpopenedtext .PartyAndBoxFull
 	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	clearevent EVENT_ELMS_AIDE_IN_LAB

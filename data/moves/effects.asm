@@ -3,7 +3,7 @@ INCLUDE "data/moves/effects_pointers.asm"
 MoveEffects: ; used only for BANK(MoveEffects)
 
 NormalHit:
-AerialAce:
+SkyUppercut:
 Aeroblast:
 AquaJet:
 AquaTail:
@@ -12,7 +12,6 @@ BulletPunch:
 Crabhammer:
 CrossChop:
 Cut:
-Dazzlingleam:
 DragonClaw:
 DrillPeck:
 Extremespeed:
@@ -57,6 +56,50 @@ XScissor:
 	damagecalc
 	stab
 	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	postfainteffects
+	posthiteffects
+	endmove
+
+
+Dazzlingleam:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	loweroppstathit ATTACK
+	postfainteffects
+	posthiteffects
+	endmove
+
+FaroresWind:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	doubleflyingdamage
 	moveanim
 	failuretext
 	applydamage
@@ -141,7 +184,6 @@ MultiHit:
 Bonemerang:
 CometPunch:
 DoubleKick:
-DoubleSlap:
 PinMissile:
 IcicleSpear:
 RockBlast:
@@ -202,12 +244,10 @@ AirSlash:
 Astonish:
 Bite:
 DarkPulse:
-Extrasensory:
 Headbutt:
 HyperFang:
 IcicleCrash:
 IronHead:
-RockSlide:
 Waterfall:
 ZenHeadbutt:
 	checkobedience
@@ -231,11 +271,33 @@ ZenHeadbutt:
 	flinchtarget
 	endmove
 
+RockSlide:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	doubleflyingdamage
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	postfainteffects
+	posthiteffects
+	flinchtarget
+	endmove
+
 PoisonHit:
 PoisonSting:
 SludgeBomb:
 PoisonJab:
-GunkShot:
 	checkobedience
 	usedmovetext
 	doturn
@@ -257,11 +319,33 @@ GunkShot:
 	poisontarget
 	endmove
 
+ToxicHit:
+GunkShot:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	postfainteffects
+	posthiteffects
+	toxic
+	endmove
+
 BurnHit:
 Ember:
 FirePunch:
 Flamethrower:
-FireBlast:
 	checkobedience
 	usedmovetext
 	doturn
@@ -283,14 +367,38 @@ FireBlast:
 	burntarget
 	endmove
 
+SolarFlare:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	defrost
+	postfainteffects
+	posthiteffects
+	burntarget
+	endmove
+
 ParalyzeHit:
 Lick:
 Thundershock:
-Spark:
 Thunderpunch:
+Spark:
 Dragonbreath:
 Thunderbolt:
 ZapCannon:
+GildedSlash:
 	checkobedience
 	usedmovetext
 	doturn
@@ -384,7 +492,6 @@ Blizzard:
 
 ConfuseHit:
 Confusion:
-DizzyPunch:
 Psybeam:
 Dynamicpunch:
 WaterPulse:
@@ -411,7 +518,6 @@ Hurricane:
 	endmove
 
 AttackUpHit:
-MetalClaw:
 	checkobedience
 	usedmovetext
 	doturn
@@ -506,8 +612,7 @@ Ancientpower:
 	posthiteffects
 	endmove
 
-AttackDownHit:
-AuroraBeam:
+AttackDownHit::
 	checkobedience
 	usedmovetext
 	doturn
@@ -1080,6 +1185,28 @@ Flash:
 	loweroppstat ACCURACY
 	endmove
 
+PsychoCut:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	postfainteffects
+	posthiteffects
+	flinchtarget
+	endmove
+
 EvasionDown:
 	checkobedience
 	usedmovetext
@@ -1338,7 +1465,7 @@ Conversion:
 	conversion
 	endmove
 
-PayDay:
+Snarl:
 	checkobedience
 	usedmovetext
 	doturn
@@ -1354,7 +1481,7 @@ PayDay:
 	applydamage
 	criticaltext
 	supereffectivetext
-	payday
+	loweroppstathit SP_ATTACK
 	postfainteffects
 	posthiteffects
 	endmove
@@ -1808,6 +1935,7 @@ Return:
 	posthiteffects
 	endmove
 
+Plastize:
 SacredFire:
 	checkobedience
 	usedmovetext
@@ -1831,26 +1959,27 @@ SacredFire:
 	burntarget
 	endmove
 
-Magnitude:
+EldinsWrath:
 	checkobedience
 	usedmovetext
 	doturn
-	hastarget
-	checkhit
 	critical
 	damagestats
-	getmagnitude
 	damagecalc
 	stab
 	damagevariation
 	doubleundergrounddamage
+	checkhit
+	effectchance
 	moveanim
 	failuretext
 	applydamage
 	criticaltext
 	supereffectivetext
+	defrost
 	postfainteffects
 	posthiteffects
+	burntarget
 	endmove
 
 GyroBall:
@@ -2009,6 +2138,29 @@ MirrorCoat:
 	posthiteffects
 	endmove
 
+JabusFrost:
+	checkobedience
+	usedmovetext
+	doturn
+	hastarget
+	checkhit
+	critical
+	effectchance
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	doubleundergrounddamage
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	postfainteffects
+	posthiteffects
+	freezetarget
+	endmove
+
 Earthquake:
 	checkobedience
 	usedmovetext
@@ -2052,7 +2204,7 @@ FutureSight:
 	posthiteffects
 	endmove
 
-Gust:
+AerialAce:
 	checkobedience
 	usedmovetext
 	doturn

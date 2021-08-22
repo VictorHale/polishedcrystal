@@ -11,7 +11,7 @@ EvolutionMoves::
 	db FLASH_CANNON ; BLASTOISE
 	db NO_MOVE      ; CATERPIE
 	db DEFENSE_CURL ; METAPOD
-	db GUST         ; BUTTERFREE
+	db FARORES_WIND ; BUTTERFREE
 	db NO_MOVE      ; WEEDLE
 	db DEFENSE_CURL ; KAKUNA
 	db U_TURN       ; BEEDRILL
@@ -48,7 +48,7 @@ EvolutionMoves::
 	db NO_MOVE      ; PARAS
 	db SHADOW_CLAW  ; PARASECT
 	db NO_MOVE      ; VENONAT
-	db GUST         ; VENOMOTH
+	db AERIAL_ACE   ; VENOMOTH
 	db NO_MOVE      ; DIGLETT
 	db TRI_ATTACK   ; DUGTRIO
 	db NO_MOVE      ; MEOWTH
@@ -106,7 +106,7 @@ EvolutionMoves::
 	db NO_MOVE      ; CUBONE
 	db SWORDS_DANCE ; MAROWAK
 	db DOUBLE_KICK  ; HITMONLEE
-	db DIZZY_PUNCH  ; HITMONCHAN
+	db PLASTIZE     ; HITMONCHAN
 	db NO_MOVE      ; KOFFING
 	db NO_MOVE      ; WEEZING
 	db NO_MOVE      ; RHYHORN
@@ -195,7 +195,7 @@ endc
 	db NO_MOVE      ; WOOPER
 	db ANCIENTPOWER ; QUAGSIRE
 	db CONFUSION    ; ESPEON
-	db PURSUIT      ; UMBREON
+	db FEINT_ATTACK ; UMBREON
 	db NO_MOVE      ; MURKROW
 	db NO_MOVE      ; HONCHKROW
 	db NO_MOVE      ; SLOWKING
@@ -213,7 +213,7 @@ endc
 	db NO_MOVE      ; SNUBBULL
 	db NO_MOVE      ; GRANBULL
 	db NO_MOVE      ; QWILFISH
-	db METAL_CLAW   ; SCIZOR
+	db GILDED_SLASH ; SCIZOR
 	db NO_MOVE      ; SHUCKLE
 	db NO_MOVE      ; HERACROSS
 	db NO_MOVE      ; SNEASEL
@@ -255,7 +255,7 @@ endc
 	db NO_MOVE      ; LUGIA
 	db NO_MOVE      ; HO_OH
 	db NO_MOVE      ; CELEBI
-	db RAZOR_LEAF   ; LEAFEON
+	db SEED_BOMB    ; LEAFEON
 	db ICY_WIND     ; GLACEON
 	db DISARM_VOICE ; SYLVEON
 	assert_table_length NUM_POKEMON

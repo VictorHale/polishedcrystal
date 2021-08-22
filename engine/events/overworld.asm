@@ -163,16 +163,9 @@ CutFunction:
 	dw .FailCut
 
 .CheckAble:
-	ld de, ENGINE_HIVEBADGE
-	call CheckBadge
-	jr c, .nohivebadge
 	call CheckMapForSomethingToCut
 	jr c, .nothingtocut
 	ld a, $1
-	ret
-
-.nohivebadge
-	ld a, $80
 	ret
 
 .nothingtocut
@@ -862,16 +855,16 @@ Script_AskWaterfall:
 	iftrue Script_UsedWaterfall
 	endtext
 
-EscapeRopeFunction:
+MogmaMittsFunction:
 	call FieldMoveJumptableReset
 	ld a, $1
-	jr EscapeRopeOrDig
+	jr MogmaMittsOrDig
 
 DigFunction:
 	call FieldMoveJumptableReset
 	ld a, $2
 
-EscapeRopeOrDig:
+MogmaMittsOrDig:
 	ld [wBuffer2], a
 .loop
 	ld hl, .DigTable
@@ -917,16 +910,16 @@ EscapeRopeOrDig:
 	rst CopyBytes
 	ld a, [wBuffer2]
 	cp $2
-	jr nz, .escaperope
+	jr nz, .mogmamitts
 	call GetPartyNickname
 	ld hl, .UsedDigScript
 	call QueueScript
 	ld a, $81
 	ret
 
-.escaperope
+.mogmamitts
 	farcall SpecialKabutoChamber
-	ld hl, .UsedEscapeRopeScript
+	ld hl, .UsedMogmaMittsScript
 	call QueueScript
 	ld a, $81
 	ret
@@ -934,13 +927,13 @@ EscapeRopeOrDig:
 .FailDig:
 	ld a, [wBuffer2]
 	cp $2
-	jr nz, .failescaperope
+	jr nz, .failmogmamitts
 	ld hl, .Text_CantUseHere
 	call MenuTextbox
 	call WaitPressAorB_BlinkCursor
 	call CloseWindow
 
-.failescaperope
+.failmogmamitts
 	ld a, $80
 	ret
 
@@ -949,13 +942,13 @@ EscapeRopeOrDig:
 	text_far _CantUseDigText
 	text_end
 
-.UsedEscapeRopeScript:
+.UsedMogmaMittsScript:
 	reloadmappart
 	special UpdateTimePals
-	farwritetext _UseEscapeRopeText
+	farwritetext _UseMogmaMittsText
 	waitbutton
 	closetext
-	sjump .UsedDigOrEscapeRopeScript
+	sjump .UsedDigOrMogmaMittsScript
 
 .UsedDigScript:
 	reloadmappart
@@ -966,7 +959,7 @@ EscapeRopeOrDig:
 	closetext
 	scall FieldMovePokepicScript
 
-.UsedDigOrEscapeRopeScript:
+.UsedDigOrMogmaMittsScript:
 	playsound SFX_WARP_TO
 	applymovement PLAYER, .DigOut
 	farscall Script_AbortBugContest
@@ -1844,14 +1837,18 @@ Script_CantGetOffBike:
 	farwritetext _CantGetOffBikeText
 	waitendtext
 
-HasCutAvailable::
-	ld d, CUT
-	call CheckPartyMove
+TryCutOW::
+	ld a, SWORD
+	ld [wCurItem], a
+	ld hl, wNumKeyItems
+	call CheckItem
 	jr c, .no
 
-	ld de, ENGINE_HIVEBADGE
-	call CheckEngineFlag
-	jr c, .no
+	ld a, BANK(AskCutTreeScript)
+	ld hl, AskCutTreeScript
+	call CallScript
+	scf
+	ret
 
 .yes
 	xor a
@@ -1864,7 +1861,7 @@ HasCutAvailable::
 	ret
 
 AskCutTreeScript:
-	callasm HasCutAvailable
+	callasm TryCutOW
 	ifequal 1, .no
 
 	checkflag ENGINE_AUTOCUT_ACTIVE

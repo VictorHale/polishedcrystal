@@ -13,7 +13,7 @@ endc
 	db METAL_POWDER ; item 2
 	dn GENDER_UNKNOWN, 3 ; gender ratio, step cycles to hatch
 	INCBIN "gfx/pokemon/ditto/front.dimensions"
-	abilities_for DITTO, LIMBER, LIMBER, IMPOSTER
+	abilities_for DITTO, LIMBER, ADAPTABILITY, IMPOSTER
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_DITTO, EGG_DITTO ; egg groups
 

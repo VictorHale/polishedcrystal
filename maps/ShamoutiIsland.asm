@@ -53,6 +53,25 @@ ShamoutiIslandVileplumeScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon VILEPLUME, 60
 	startbattle
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, SHINY_MASK | ABILITY_1 | NAT_SPD_UP_ATK_DOWN
+	loadmem wPartyMon6Moves+0, SUNNY_DAY
+	loadmem wPartyMon6Moves+1, SOLAR_BEAM
+	loadmem wPartyMon6Moves+2, VENOSHOCK
+	loadmem wPartyMon6Moves+3, SOLAR_FLARE
+	loadmem wPartyMon6PP+0, 10
+	loadmem wPartyMon6PP+1, 10
+	loadmem wPartyMon6PP+2, 10
+	loadmem wPartyMon6PP+3, 10
+	loadmem wPartyMon6Happiness, $ff
 	disappear SHAMOUTIISLAND_VILEPLUME
 	reloadmapafterbattle
 	end

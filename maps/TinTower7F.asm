@@ -15,5 +15,5 @@ TinTower7F_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	itemball_event 14,  1, MAX_REVIVE, 1, EVENT_TIN_TOWER_7F_MAX_REVIVE
+	itemball_event 14,  1, GREAT_FAIRY, 1, EVENT_TIN_TOWER_7F_GREAT_FAIRY
 

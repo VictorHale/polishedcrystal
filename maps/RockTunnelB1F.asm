@@ -20,7 +20,7 @@ RockTunnelB1F_MapScriptHeader:
 	object_event 24, 24, SPRITE_HEX_MANIAC, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerHexManiacVivian, -1
 	itemball_event  7, 17, IRON, 1, EVENT_ROCK_TUNNEL_B1F_IRON
 	itemball_event  8,  4, PP_UP, 1, EVENT_ROCK_TUNNEL_B1F_PP_UP
-	itemball_event 15,  2, REVIVE, 1, EVENT_ROCK_TUNNEL_B1F_REVIVE
+	itemball_event 15,  2, FAIRYS, 1, EVENT_ROCK_TUNNEL_B1F_FAIRYS
 	strengthboulder_event 10, 25
 
 GenericTrainerFirebreatherDick:

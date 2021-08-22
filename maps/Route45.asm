@@ -24,7 +24,7 @@ Route45_MapScriptHeader:
 	object_event  6, 33, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerCooltrainerfKelly, -1
 	fruittree_event 20, 80, FRUITTREE_ROUTE_45, LEPPA_BERRY, PAL_NPC_RED
 	itemball_event  8, 51, NUGGET, 1, EVENT_ROUTE_45_NUGGET
-	itemball_event  5, 66, REVIVE, 1, EVENT_ROUTE_45_REVIVE
+	itemball_event  5, 66, FAIRYS, 1, EVENT_ROUTE_45_FAIRYS
 	itemball_event  7, 20, ELIXIR, 1, EVENT_ROUTE_45_ELIXIR
 	itemball_event 15, 32, MAX_POTION, 1, EVENT_ROUTE_45_MAX_POTION
 	object_event  4, 70, SPRITE_CAMPER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerCamperQuentin, -1
