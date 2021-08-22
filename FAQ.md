@@ -1,6 +1,6 @@
 # FAQ
 
-If you have a question about playing Polished Crystal, or think you've found a bug, please read this FAQ first.
+If you have a question about playing Polished Rupee, or think you've found a bug, please read this FAQ first.
 
 > At the time, I was asking really obvious questions like: "So 'wireless' means you're getting rid of the wires, right?"
 >
@@ -30,13 +30,13 @@ If you have a question about playing Polished Crystal, or think you've found a b
 
 ### Which file do I need to play?
 
-The [nightly 3.0.0 beta release](https://github.com/Rangi42/polishedcrystal/releases/tag/v3.0.0-beta-nightly) provides .gbc files and .sym files. You only need a .gbc file to play; they're ROMs, not patches. I recommend playing `polishedcrystal-3.0.0-beta-xxxxxxxx.gbc`, or `polishedcrystal-3.0.0-beta-xxxxxxxx-faithful.gbc` if you want a more faithful canon experience, without changes to Pokémon base stats or types.
+The [nightly 3.0.0 beta release](https://github.com/VictorHale/polishedrupee/releases/tag/v3.0.0-beta-nightly) provides .gbc files and .sym files. You only need a .gbc file to play; they're ROMs, not patches. I recommend playing `polishedrupee-3.0.0-beta-xxxxxxxx.gbc`, or `polishedrupee-3.0.0-beta-xxxxxxxx-faithful.gbc` if you want a more faithful canon experience, without changes to Pokémon base stats or types.
 
 Don't download the debug ROMs; they're for beta testing, not start-to-finish playthroughs. Although if you want to help test for bugs, get a debug ROM, talk to your room's radio to unlock many things, and hold A+B to walk through walls.
 
 Remember the commit hash at the end of the nightly filename to identify which code is running.
 
-The [2.2.0 release](https://github.com/Rangi42/polishedcrystal/releases/tag/v2.2.0) provides .ips patch files. Apply these to a default Crystal ROM with a tool like [Lunar IPS](http://fusoya.eludevisibility.org/lips/) (for Windows), [MultiPatch](http://projects.sappharad.com/tools/multipatch.html) (for OS X), or [UniPatcher](https://play.google.com/store/apps/details?id=org.emunix.unipatcher&hl=en) (for Android).
+The [2.2.0 release](https://github.com/VictorHale/polishedrupee/releases/tag/v2.2.0) provides .ips patch files. Apply these to a default Crystal ROM with a tool like [Lunar IPS](http://fusoya.eludevisibility.org/lips/) (for Windows), [MultiPatch](http://projects.sappharad.com/tools/multipatch.html) (for OS X), or [UniPatcher](https://play.google.com/store/apps/details?id=org.emunix.unipatcher&hl=en) (for Android).
 
 This is the ROM you should use for patching 2.2.0:
 
@@ -48,7 +48,7 @@ It's identical to the one built by the [pokecrystal](https://github.com/pret/pok
 
 ### What are the .sym files for?
 
-The .sym files are created when you build Polished Crystal. They list the memory address of every label in the source code. These can be useful for [discovering GameShark cheat codes](https://github.com/pret/pokecrystal/wiki/Discovering-GameShark-cheat-codes). You can compare the addresses for Polished Crystal with the same labels for [pokecrystal](https://github.com/pret/pokecrystal/tree/symbols) to find the equivalents of old Crystal cheats.
+The .sym files are created when you build Polished Rupee. They list the memory address of every label in the source code. These can be useful for [discovering GameShark cheat codes](https://github.com/pret/pokecrystal/wiki/Discovering-GameShark-cheat-codes). You can compare the addresses for Polished Rupee with the same labels for [pokecrystal](https://github.com/pret/pokecrystal/tree/symbols) to find the equivalents of old Crystal cheats.
 
 Cheat codes are *not* officially supported: new updates may change or break old codes, disable cheats before complaining that there's a bug in the game, and don't ask for pre-made cheat codes.
 
@@ -65,7 +65,7 @@ The game's [data files](data/) do a fairly good job of listing things you'll wan
 * [Wild Pokémon](data/wild/)
 * [Hidden Grottoes](data/events/hidden_grottoes/grottoes.asm)
 
-For information that's not all in one file, like [faithful version differences](https://github.com/Rangi42/polishedcrystal/search?q=DEF+FAITHFUL), you can use GitHub's search in this repository.
+For information that's not all in one file, like [faithful version differences](https://github.com/VictorHale/polishedrupee/search?q=DEF+FAITHFUL), you can use GitHub's search in this repository.
 
 
 ### Why is shiny Gyarados gold? Is the red Gyarados shiny?

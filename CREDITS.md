@@ -1,6 +1,6 @@
 # Credits
 
-Pokémon Polished Crystal would never have been finished without the help of many more people than just me. Please let me know if I've failed to credit anyone or if you don't want your work being used.
+Pokémon Polished Rupee would never have been finished without the help of many more people than just me. Please let me know if I've failed to credit anyone or if you don't want your work being used.
 
 > **Morimoto:** Actually, at that time we had very few programmers. That wasn't just the case for Gold and Silver but for Red and Green as well. There were only about four programmers.
 >
@@ -89,7 +89,7 @@ Pokémon Polished Crystal would never have been finished without the help of man
 
 ## Special Thanks
 
-* yenatch, kanzure, Pikalax, iimarckus, and everyone else who's contributed to disassembling Pokémon Crystal.
+* yenatch, kanzure, Pikalax, iimarckus, and everyone else who's contributed to disassembling Pokémon Rupee.
 * Luna for her inspiring Red++ ROM hack, and help on Skeetendo.
 * Crystal_ for his in-depth RBY/GSC mechanics research, and help on /r/PokemonROMhacks.
 * Tauwasser, comet, and other members of Skeetendo for help and advice.

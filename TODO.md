@@ -102,7 +102,7 @@ Some of these may never be added; they're just suggestions.
 
 * More Pokémon
    * Rewrite everything to use two-byte IDs, allowing 65,534 Pokémon
-   * Restore Stantler as a Normal/Psychic type, and make Girafarig Psychic/Dark
+   * Restore Stantler as a Ice/Psychic type, and make Girafarig Psychic/Dark
    * Add all the new babies and evolutions of Gen 1 and 2 Pokémon
       * Lickilicky
       * Ambipom

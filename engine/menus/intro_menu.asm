@@ -917,10 +917,10 @@ Intro_PlacePlayerSprite:
 	db 10 * 8 + 4,  9 * 8, 2
 	db 10 * 8 + 4, 10 * 8, 3
 
-CrystalIntroSequence:
+RupeeIntroSequence:
 	farcall SplashScreen
 	jr c, StartTitleScreen
-	farcall CrystalIntro
+	farcall RupeeIntro
 
 StartTitleScreen:
 	ld hl, rIE
@@ -969,8 +969,8 @@ StartTitleScreen:
 .Jumptable
 	dw _MainMenu
 	dw DeleteSaveData
-	dw CrystalIntroSequence
-	dw CrystalIntroSequence
+	dw RupeeIntroSequence
+	dw RupeeIntroSequence
 	dw ResetClock
 	dw ResetInitialOptions
 
@@ -1027,7 +1027,7 @@ TitleScreenEntrance:
 	dec b
 	jr nz, .loop
 
-	farjp AnimateTitleCrystal
+	farjp AnimateTitleRupee
 
 .done
 ; Next scene
@@ -1244,4 +1244,4 @@ GameInit::
 	ld a, $90
 	ldh [hWY], a
 	call ApplyTilemapInVBlank
-	jmp CrystalIntroSequence
+	jmp RupeeIntroSequence

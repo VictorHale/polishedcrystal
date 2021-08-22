@@ -216,7 +216,7 @@ INCLUDE "engine/events/hidden_grottoes.asm"
 INCLUDE "engine/pokedex/pokedex_2.asm"
 
 
-SECTION "Crystal Features 1", ROMX
+SECTION "Rupee Features 1", ROMX
 
 INCLUDE "engine/events/move_tutor.asm"
 INCLUDE "engine/tilesets/tileset_palettes.asm"
@@ -275,7 +275,7 @@ SECTION "Base Data", ROMX
 INCLUDE "data/pokemon/base_stats.asm"
 
 
-SECTION "Crystal Phone Text", ROMX
+SECTION "Rupee Phone Text", ROMX
 
 INCLUDE "data/phone/text/extra.asm"
 INCLUDE "data/phone/text/lyra.asm"
@@ -299,7 +299,7 @@ INCLUDE "engine/gfx/copy_tilemap_at_once.asm"
 INCLUDE "engine/pokemon/abilities.asm"
 
 
-SECTION "Crystal Features 2", ROMX
+SECTION "Rupee Features 2", ROMX
 
 INCLUDE "engine/events/kurt.asm"
 INCLUDE "engine/gfx/player_gfx.asm"
@@ -479,7 +479,7 @@ SECTION "Standard Text", ROMX
 INCLUDE "data/text/std_text.asm"
 
 
-SECTION "Crystal Phone Text 2", ROMX
+SECTION "Rupee Phone Text 2", ROMX
 
 INCLUDE "data/phone/text/extra2.asm"
 
@@ -541,7 +541,7 @@ INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
 
 
-SECTION "Crystal Events", ROMX
+SECTION "Rupee Events", ROMX
 
 INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "engine/events/odd_egg.asm"

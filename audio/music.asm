@@ -1,8 +1,8 @@
 SECTION "Song - nothing", ROMX
 INCLUDE "audio/music/nothing.asm"
 
-SECTION "Song - crystalopening", ROMX
-INCLUDE "audio/music/crystalopening.asm"
+SECTION "Song - rupeeopening", ROMX
+INCLUDE "audio/music/rupeeopening.asm"
 
 SECTION "Song - titlescreen", ROMX
 INCLUDE "audio/music/titlescreen.asm"

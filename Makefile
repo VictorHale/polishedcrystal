@@ -1,8 +1,8 @@
-NAME := polishedcrystal
+NAME := polishedrupee
 VERSION := 3.0.0-beta
 
-TITLE := PKPCRYSTAL
-MCODE := PKPC
+TITLE := PKPRUPEE
+MCODE := PKPR
 ROMVERSION := 0x30
 
 FILLER = 0xff
@@ -36,7 +36,7 @@ ifeq ($(filter debug,$(MAKECMDGOALS)),debug)
 RGBASM_FLAGS += -DDEBUG
 endif
 
-crystal_obj := \
+rupee_obj := \
 main.o \
 home.o \
 ram.o \
@@ -58,21 +58,21 @@ gfx/misc.o
 
 
 .SUFFIXES:
-.PHONY: clean tidy crystal faithful nortc debug monochrome freespace tools bsp
+.PHONY: clean tidy rupee faithful nortc debug monochrome freespace tools bsp
 .SECONDEXPANSION:
 .PRECIOUS: %.2bpp %.1bpp
 .SECONDARY:
-.DEFAULT_GOAL: crystal
+.DEFAULT_GOAL: rupee
 
-crystal: ROM_NAME = $(NAME)-$(VERSION)
-crystal: $(NAME)-$(VERSION).gbc
+rupee: ROM_NAME = $(NAME)-$(VERSION)
+rupee: $(NAME)-$(VERSION).gbc
 
-faithful: crystal
-nortc: crystal
-monochrome: crystal
-noir: crystal
-hgss: crystal
-debug: crystal
+faithful: rupee
+nortc: rupee
+monochrome: rupee
+noir: rupee
+hgss: rupee
+debug: rupee
 
 tools:
 	$(MAKE) -C tools/
@@ -85,10 +85,10 @@ clean: tidy
 	$(MAKE) clean -C tools/
 
 tidy:
-	rm -f $(crystal_obj) $(wildcard $(NAME)-*.gbc) $(wildcard $(NAME)-*.map) $(wildcard $(NAME)-*.sym) $(wildcard $(NAME)-*.bsp) rgbdscheck.o
+	rm -f $(rupee_obj) $(wildcard $(NAME)-*.gbc) $(wildcard $(NAME)-*.map) $(wildcard $(NAME)-*.sym) $(wildcard $(NAME)-*.bsp) rgbdscheck.o
 
 freespace: ROM_NAME = $(NAME)-$(VERSION)
-freespace: crystal tools/bankends
+freespace: rupee tools/bankends
 	tools/bankends $(ROM_NAME).map > bank_ends.txt
 
 bsp: $(NAME)-$(VERSION).bsp
@@ -104,12 +104,12 @@ endef
 
 ifeq (,$(filter clean tidy tools,$(MAKECMDGOALS)))
 $(info $(shell $(MAKE) -C tools))
-$(foreach obj, $(crystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(rupee_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
 endif
 
 
 .gbc: tools/bankends
-%.gbc: $(crystal_obj)
+%.gbc: $(rupee_obj)
 	$(RGBDS_DIR)rgblink $(RGBLINK_FLAGS) -o $@ $^
 	$(RGBDS_DIR)rgbfix $(RGBFIX_FLAGS) $@
 	tools/bankends -q $(ROM_NAME).map
@@ -180,7 +180,7 @@ gfx/slots/slots_3.2bpp: tools/gfx += --interleave --png=$< --remove-duplicates -
 
 gfx/stats/stats_balls.2bpp: gfx/stats/stats.2bpp gfx/stats/balls.2bpp ; cat $^ > $@
 
-gfx/title/crystal.2bpp: tools/gfx += --interleave --png=$<
+gfx/title/rupee.2bpp: tools/gfx += --interleave --png=$<
 gfx/title/logo_version.2bpp: gfx/title/logo.2bpp gfx/title/version.2bpp ; cat $^ > $@
 
 gfx/trade/ball.2bpp: tools/gfx += --remove-whitespace

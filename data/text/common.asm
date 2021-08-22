@@ -3251,7 +3251,7 @@ SECTION "_InitialOptionsText", ROMX
 _InitialOptionsText::
 	text "Please choose how"
 	line "you want to play"
-	cont "Polished Crystal."
+	cont "Polished Rupee."
 	prompt
 
 SECTION "_ElmText1", ROMX
@@ -3344,7 +3344,7 @@ _WarnVBAText::
 	line "emulator has bugs"
 
 	para "that may crash"
-	line "Polished Crystal."
+	line "Polished Rupee."
 
 	para "Please use a more"
 	line "accurate emulator,"

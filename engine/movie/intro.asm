@@ -1,4 +1,4 @@
-CrystalIntro:
+RupeeIntro:
 	ld hl, rIE
 	set LCD_STAT, [hl]
 	ldh a, [rSVBK]
@@ -158,14 +158,14 @@ IntroScene2:
 	jr nz, .DontPlaySound
 	push af
 	depixel 11, 11
-	call CrystalIntro_InitUnownAnim
+	call RupeeIntro_InitUnownAnim
 	ld de, SFX_INTRO_UNOWN_1
 	call PlaySFX
 	pop af
 .DontPlaySound:
 	ld [wIntroSceneTimer], a
 	xor a
-	jmp CrystalIntro_UnownFade
+	jmp RupeeIntro_UnownFade
 
 IntroScene3:
 ; More setup. Transition to the outdoor scene.
@@ -267,26 +267,26 @@ IntroScene6:
 .FirstUnown:
 	push af
 	depixel 7, 15
-	call CrystalIntro_InitUnownAnim
+	call RupeeIntro_InitUnownAnim
 	ld de, SFX_INTRO_UNOWN_2
 	call PlaySFX
 	pop af
 .NoUnown:
 	ld [wIntroSceneTimer], a
 	xor a
-	jmp CrystalIntro_UnownFade
+	jmp RupeeIntro_UnownFade
 
 .SecondUnown:
 	push af
 	depixel 14, 6
-	call CrystalIntro_InitUnownAnim
+	call RupeeIntro_InitUnownAnim
 	ld de, SFX_INTRO_UNOWN_1
 	call PlaySFX
 	pop af
 .StopUnown:
 	ld [wIntroSceneTimer], a
 	ld a, $1
-	jmp CrystalIntro_UnownFade
+	jmp RupeeIntro_UnownFade
 
 IntroScene7:
 ; Back to the outdoor scene.
@@ -483,7 +483,7 @@ IntroScene12:
 	and $e0
 	srl a
 	swap a
-	jmp CrystalIntro_UnownFade
+	jmp RupeeIntro_UnownFade
 
 .second_half
 ; double speed
@@ -496,7 +496,7 @@ IntroScene12:
 	and $70
 	or $40
 	swap a
-	jmp CrystalIntro_UnownFade
+	jmp RupeeIntro_UnownFade
 
 .PlayUnownSound:
 	ld a, [wIntroSceneFrameCounter]
@@ -553,7 +553,7 @@ IntroScene13:
 	depixel 13, 11, 4, 0
 	ld a, SPRITE_ANIM_INDEX_INTRO_SUICUNE
 	call _InitSpriteAnimStruct
-	ld de, MUSIC_CRYSTAL_OPENING
+	ld de, MUSIC_RUPEE_OPENING
 	call PlayMusic
 	xor a
 	ld [wGlobalAnimXOffset], a
@@ -907,7 +907,7 @@ IntroScene26:
 	call Intro_DecompressRequest2bpp_64Tiles
 	xor a
 	ldh [rVBK], a
-	ld hl, IntroCrystalUnownsGFX
+	ld hl, IntroRupeeUnownsGFX
 	ld de, vTiles2 tile $00
 	call Intro_DecompressRequest2bpp_128Tiles
 	ld hl, IntroTilemap017
@@ -1099,7 +1099,7 @@ else
 	RGB_MONOCHROME_WHITE
 endc
 
-CrystalIntro_InitUnownAnim:
+RupeeIntro_InitUnownAnim:
 	push de
 	ld a, SPRITE_ANIM_INDEX_INTRO_UNOWN
 	call _InitSpriteAnimStruct
@@ -1138,7 +1138,7 @@ CrystalIntro_InitUnownAnim:
 	ld a, SPRITE_ANIM_FRAMESET_INTRO_UNOWN_2
 	jmp ReinitSpriteAnimFrame
 
-CrystalIntro_UnownFade:
+RupeeIntro_UnownFade:
 	add a
 	add a
 	add a
@@ -1933,8 +1933,8 @@ endr
 	MONOCHROME_RGB_FOUR
 endc
 
-IntroCrystalUnownsGFX:
-INCBIN "gfx/intro/crystal_unowns.2bpp.lz"
+IntroRupeeUnownsGFX:
+INCBIN "gfx/intro/rupee_unowns.2bpp.lz"
 
 IntroTilemap017:
 INCBIN "gfx/intro/017.tilemap.lz"

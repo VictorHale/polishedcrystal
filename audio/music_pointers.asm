@@ -1,7 +1,7 @@
 Music:
 	table_width 3, Music
 	dba Music_Nothing
-	dba Music_CrystalOpening
+	dba Music_RupeeOpening
 	dba Music_TitleScreen
 	dba Music_MainMenu
 	dba Music_NewBarkTown

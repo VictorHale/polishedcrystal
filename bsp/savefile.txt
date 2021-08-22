@@ -57,11 +57,11 @@ PatchSavefile:
 	exit 1
 
 .latest_build_string
-	string "The savefile already corresponds to the current build of Polished Crystal. No patching is necessary."
+	string "The savefile already corresponds to the current build of Polished Rupee. No patching is necessary."
 .future_build_string_1
 	string "The savefile indicates it corresponds to build "
 .future_build_string_2
-	string ", which is higher than the current build of Polished Crystal. The savefile cannot be patched." 
+	string ", which is higher than the current build of Polished Rupee. The savefile cannot be patched." 
 .invalid_build_string
 	string "The savefile contains an invalid build number, and thus cannot be patched."
 .savefile_build_string_1

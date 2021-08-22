@@ -23,7 +23,7 @@ exclude = {
 }
 
 if len(sys.argv) != 2:
-	print(f'Usage: {sys.argv[0]} polishedcrystal.sym', file=sys.stderr)
+	print(f'Usage: {sys.argv[0]} polishedrupee.sym', file=sys.stderr)
 	exit(1)
 
 sym_banks = {}

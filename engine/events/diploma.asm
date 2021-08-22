@@ -35,7 +35,7 @@ _Diploma:
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	rst CopyBytes
-	ld de, .PolishedCrystal
+	ld de, .PolishedRupee
 	hlcoord 2, 1
 	rst PlaceString
 	ld de, .PlayTime
@@ -65,8 +65,8 @@ _Diploma:
 .PlayTime:
 	db "Play Time@"
 
-.PolishedCrystal:
-	db "Polished Crystal@"
+.PolishedRupee:
+	db "Polished Rupee@"
 
 DiplomaGFX:
 INCBIN "gfx/diploma/diploma.2bpp.lz"

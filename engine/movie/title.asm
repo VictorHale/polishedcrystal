@@ -73,7 +73,7 @@ _TitleScreen:
 	ld a, 6
 	rst ByteFill
 
-; 'CRYSTAL VERSION'
+; 'RUPEE VERSION'
 	hlbgcoord 5, 9
 	ld bc, NAME_LENGTH ; length of version text
 	ld a, 1
@@ -94,8 +94,8 @@ _TitleScreen:
 	ld de, vTiles1
 	call Decompress
 
-; Decompress background crystal
-	ld hl, TitleCrystalGFX
+; Decompress background rupee
+	ld hl, TitleRupeeGFX
 	ld de, vTiles0
 	call Decompress
 
@@ -128,7 +128,7 @@ endc
 	ld d, $0
 	call LoadSuicuneFrame
 
-; Initialize background crystal
+; Initialize background rupee
 	call InitializeBackground
 
 ; Save WRAM bank
@@ -330,8 +330,8 @@ InitializeBackground:
 	jr nz, .loop2
 	ret
 
-AnimateTitleCrystal:
-; Move the title screen crystal downward until it's fully visible
+AnimateTitleRupee:
+; Move the title screen rupee downward until it's fully visible
 
 ; Stop at y=6
 ; y is really from the bottom of the sprite, which is two tiles high
@@ -340,7 +340,7 @@ AnimateTitleCrystal:
 	cp 6 + $10
 	ret z
 
-; Move all 30 parts of the crystal down by 2
+; Move all 30 parts of the rupee down by 2
 	ld c, 30
 .loop
 	ld a, [hl]
@@ -360,8 +360,8 @@ INCBIN "gfx/title/suicune.2bpp.lz"
 TitleLogoGFX:
 INCBIN "gfx/title/logo_version.2bpp.lz"
 
-TitleCrystalGFX:
-INCBIN "gfx/title/crystal.2bpp.lz"
+TitleRupeeGFX:
+INCBIN "gfx/title/rupee.2bpp.lz"
 
 TitleScreenPalettes:
 ; BG

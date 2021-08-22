@@ -121,7 +121,7 @@ endc
 
 BSODMessage:
 	db    "      #mon"
-	next1 " Polished Crystal"
+	next1 " Polished Rupee"
 	next  "       ERROR"
 	next1 "------------------"
 	next  "Please report this"
@@ -132,7 +132,7 @@ BSODMessage:
 
 VBABSODMessage:
 	db    "      #mon"
-	next1 " Polished Crystal"
+	next1 " Polished Rupee"
 	next  "       ERROR"
 	next1 "------------------"
 	next  "Please use a more"
