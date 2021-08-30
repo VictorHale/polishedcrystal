@@ -194,7 +194,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	closewindow
 	ifequal $1, .abra
 	ifequal $2, .cubone
-	ifequal $3, .porygon
+	ifequal $3, .eevee
 	ifequal $4, .cyndaquil
 	ifequal $5, .totodile
 	ifequal $6, .chikorita
@@ -272,10 +272,10 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	takecoins 1000
 	sjump .loop
 
-.porygon
+.eevee
 	checkcoins 1500
 	ifequal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
-	getmonname PORYGON, $0
+	getmonname EEVEE, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse_jumpopenedtext GoldenrodGameCornerPrizeVendorQuitText
 	waitsfx
@@ -428,7 +428,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	db 7 ; items
 	db "Abra        500@"
 	db "Cubone     1000@"
-	db "Porygon    1500@"
+	db "Eevee      1500@"
 	db "Cyndaquil  2000@"
 	db "Totodile   2000@"
 	db "Chikorita  2000@"

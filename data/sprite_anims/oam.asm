@@ -44,8 +44,8 @@ SpriteAnimOAMData:
 	dbw $04, .OAMData_Tree               ; SPRITE_ANIM_OAMSET_HEADBUTT_TREE_2
 	dbw $00, .OAMData_BlueWalk           ; SPRITE_ANIM_OAMSET_BLUE_WALK_1
 	dbw $04, .OAMData_BlueWalk           ; SPRITE_ANIM_OAMSET_BLUE_WALK_2
-	dbw $00, .OAMData_MagnetTrainBlue    ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1
-	dbw $04, .OAMData_MagnetTrainBlue    ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2
+	dbw $00, .OAMData_MagnetTrainGreen    ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1
+	dbw $04, .OAMData_MagnetTrainGreen    ; SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2
 	dbw $00, .OAMData_IntroSuicune1      ; SPRITE_ANIM_OAMSET_INTRO_SUICUNE_1
 	dbw $08, .OAMData_IntroSuicune2      ; SPRITE_ANIM_OAMSET_INTRO_SUICUNE_2
 	dbw $60, .OAMData_IntroSuicune3      ; SPRITE_ANIM_OAMSET_INTRO_SUICUNE_3
@@ -83,6 +83,8 @@ SpriteAnimOAMData:
 	dbw $00, .OAMData_PcMode             ; SPRITE_ANIM_OAMSET_PC_MODE
 	dbw $00, .OAMData_PcMode2            ; SPRITE_ANIM_OAMSET_PC_MODE2
 	dbw $00, .OAMData_PcPack             ; SPRITE_ANIM_OAMSET_PC_PACK
+	dbw $00, .OAMData_GreenWalk          ; SPRITE_ANIM_OAMSET_GREEN_WALK_1
+	dbw $04, .OAMData_GreenWalk          ; SPRITE_ANIM_OAMSET_GREEN_WALK_2
 	assert_table_length NUM_SPRITE_ANIM_OAMSETS
 
 .OAMData_1x1_Palette0:
@@ -303,12 +305,12 @@ SpriteAnimOAMData:
 	dsprite  0,  0, -1,  0, $02, $1
 	dsprite  0,  0,  0,  0, $03, $1
 
-.OAMData_MagnetTrainBlue:
+.OAMData_MagnetTrainGreen:
 	db 4
-	dsprite -1,  0, -1,  0, $00, $1 | PRIORITY
-	dsprite -1,  0,  0,  0, $01, $1 | PRIORITY
-	dsprite  0,  0, -1,  0, $02, $1 | PRIORITY
-	dsprite  0,  0,  0,  0, $03, $1 | PRIORITY
+	dsprite -1,  0, -1,  0, $00, $2 | PRIORITY
+	dsprite -1,  0,  0,  0, $01, $2 | PRIORITY
+	dsprite  0,  0, -1,  0, $02, $2 | PRIORITY
+	dsprite  0,  0,  0,  0, $03, $2 | PRIORITY
 
 .OAMData_IntroSuicune1:
 	db 36
@@ -686,3 +688,10 @@ SpriteAnimOAMData:
 	dsprite  0,  0,  1,  0, $30, $4 | VRAM_BANK_1
 	dsprite  1,  0,  0,  0, $31, $4 | VRAM_BANK_1
 	dsprite  1,  0,  1,  0, $32, $4 | VRAM_BANK_1
+
+.OAMData_GreenWalk:
+	db 4
+	dsprite -1,  0, -1,  0, $00, $2
+	dsprite -1,  0,  0,  0, $01, $2
+	dsprite  0,  0, -1,  0, $02, $2
+	dsprite  0,  0,  0,  0, $03, $2

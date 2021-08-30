@@ -720,7 +720,7 @@
 	wildmon 24, RATTATA
 	; nite
 	wildmon 21, ZUBAT
-	wildmon 22, MARILL
+	wildmon 22, DIGLETT
 	wildmon 21, GOLBAT
 	wildmon 22, GEODUDE
 	wildmon 20, CUBONE
@@ -748,7 +748,7 @@
 	wildmon 25, GOLBAT
 	; nite
 	wildmon 21, GEODUDE
-	wildmon 23, MARILL
+	wildmon 23, DIGLETT
 	wildmon 22, ZUBAT
 	wildmon 23, RATICATE
 	wildmon 20, CUBONE

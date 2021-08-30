@@ -4392,9 +4392,9 @@ PokefanMGroup:
 	db "Carter@"
 	db TRAINERTYPE_ITEM
 	; party
-	db 59, BULBASAUR, SITRUS_BERRY
-	db 59, CHARMANDER, SITRUS_BERRY
-	db 59, SQUIRTLE, SITRUS_BERRY
+	db 59, VENUSAUR, SITRUS_BERRY
+	db 59, CHARIZARD, SITRUS_BERRY
+	db 59, BLASTOISE, SITRUS_BERRY
 	db -1 ; end
 
 ; ================
@@ -8983,7 +8983,7 @@ GuitaristMGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODD: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9264,7 +9264,7 @@ TamerGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9372,7 +9372,7 @@ AromaLadyGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9399,7 +9399,7 @@ SightseerMGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9409,7 +9409,7 @@ SightseerMGroup:
 	db TRAINERTYPE_PERSONALITY | TRAINERTYPE_NICKNAME
 
 	; TODO: party
-	db 50, BULBASAUR, ABILITY_1 | NAT_NEUTRAL, MALE, "Bulbasaur@"
+	db 50, VENUSAUR, ABILITY_1 | NAT_NEUTRAL, MALE, "Bulbasaur@"
 	db -1 ; end
 
 ; ================
@@ -9419,7 +9419,7 @@ SightseerMGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9429,7 +9429,7 @@ SightseerMGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9439,7 +9439,7 @@ SightseerMGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9454,7 +9454,7 @@ SightseerFGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9464,7 +9464,7 @@ SightseerFGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -9474,7 +9474,7 @@ SightseerFGroup:
 	db TRAINERTYPE_NORMAL
 
 	; TODO: party
-	db 50, BULBASAUR
+	db 50, VENUSAUR
 	db -1 ; end
 
 ; ================
@@ -11005,7 +11005,7 @@ if DEF(FAITHFUL)
 else
 		db LEECH_LIFE, SEED_BOMB, SLUDGE_BOMB, CUT
 endc
-	db 65, PORYGON2, SHIELD, FAKE_PERFECT_DVS, NAT_DEF_UP_ATK_DOWN | ABIL_PORYGON2_DOWNLOAD, MALE
+	db 65, PORYGON2, SHIELD, FAKE_PERFECT_DVS, NAT_DEF_UP_ATK_DOWN | ABIL_PORYGON2_MARVEL_SCALE, MALE
 		db RECOVER, TRI_ATTACK, THUNDER_WAVE, SHADOW_BALL
 	db 65, SNORLAX, LEFTOVERS, FAKE_PERFECT_DVS, NAT_ATK_UP_SATK_DOWN | ABIL_SNORLAX_IMMUNITY, MALE
 		db CURSE, REST, SLEEP_TALK, RETURN

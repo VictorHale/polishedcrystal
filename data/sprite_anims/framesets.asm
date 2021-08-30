@@ -35,7 +35,7 @@ SpriteAnimFrameData:
 	dw .Frameset_EggHatch4
 	dw .Frameset_HeadbuttTree
 	dw .Frameset_BlueWalk
-	dw .Frameset_MagnetTrainBlue
+	dw .Frameset_MagnetTrainGreen
 	dw .Frameset_IntroSuicune
 	dw .Frameset_IntroSuicune2
 	dw .Frameset_IntroPichu
@@ -56,6 +56,7 @@ SpriteAnimFrameData:
 	dw .Frameset_PcMode
 	dw .Frameset_PcMode2
 	dw .Frameset_PcPack
+	dw .Frameset_GreenWalk
 	assert_table_length NUM_SPRITE_ANIM_FRAMESETS
 
 .Frameset_00:
@@ -106,11 +107,11 @@ SpriteAnimFrameData:
 	frame SPRITE_ANIM_OAMSET_BLUE_WALK_2,  8, OAM_X_FLIP
 	dorestart
 
-.Frameset_MagnetTrainBlue:
-	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1,  8
-	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2,  8
-	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_1,  8
-	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_BLUE_2,  8, OAM_X_FLIP
+.Frameset_MagnetTrainGreen:
+	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1,  8
+	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2,  8
+	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_1,  8
+	frame SPRITE_ANIM_OAMSET_MAGNET_TRAIN_GREEN_2,  8, OAM_X_FLIP
 	dorestart
 
 .Frameset_TextEntryCursor:
@@ -357,4 +358,11 @@ SpriteAnimFrameData:
 
 .Frameset_PcPack:
 	frame SPRITE_ANIM_OAMSET_PC_PACK, 32
+	dorestart
+
+.Frameset_GreenWalk:
+	frame SPRITE_ANIM_OAMSET_GREEN_WALK_1,  8
+	frame SPRITE_ANIM_OAMSET_GREEN_WALK_2,  8
+	frame SPRITE_ANIM_OAMSET_GREEN_WALK_1,  8
+	frame SPRITE_ANIM_OAMSET_GREEN_WALK_2,  8, OAM_X_FLIP
 	dorestart

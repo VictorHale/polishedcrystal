@@ -368,8 +368,8 @@ TitleScreenPalettes:
 if !DEF(MONOCHROME)
 	RGB 00, 00, 00
 	RGB 19, 00, 00
-	RGB 15, 08, 31
-	RGB 15, 08, 31
+	RGB 00, 19, 00
+	RGB 19, 00, 00
 
 	RGB 00, 00, 00
 	RGB 31, 31, 31
@@ -408,9 +408,9 @@ if !DEF(MONOCHROME)
 
 ; OBJ
 	RGB 00, 00, 00
-	RGB 10, 00, 15
-	RGB 17, 05, 22
-	RGB 19, 09, 31
+	RGB 10, 10, 15
+	RGB 15, 15, 15
+	RGB 27, 27, 27
 
 	RGB 31, 31, 31
 	RGB 00, 00, 00

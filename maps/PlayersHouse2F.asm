@@ -305,7 +305,7 @@ else
 	iftrue .AbbreviatedRadio
 	playmusic MUSIC_POKEMON_TALK
 	opentext
-	; Start with Eeveelutions and Shiny Ditto
+	; Start with Starters and Shiny Ditto
 	givepoke CLEFAIRY, NO_FORM, 10, LIGHT_CLAY
 	loadmem wPartyMon1EVs+0, 252
 	loadmem wPartyMon1EVs+1, 252

@@ -2030,9 +2030,8 @@ _CantUseItemText::
 
 SECTION "_UseCutText", ROMX
 _UseCutText::
-	text_ram wStringBuffer2
-	text " used"
-	line "Cut!"
+	text "A skillful slash"
+	line "Cut it down!"
 	prompt
 
 SECTION "_CutNothingText", ROMX

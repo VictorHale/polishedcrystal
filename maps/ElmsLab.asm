@@ -198,6 +198,7 @@ LabTryToLeaveScript:
 	applyonemovement PLAYER, step_up
 	end
 
+if !DEF(DEBUG)
 CyndaquilPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue_jumptext ElmPokeBallText
@@ -256,7 +257,68 @@ CyndaquilPokeBallScript:
 	ifequal RIGHT, ElmDirectionsScript
 	applymovement PLAYER, AfterCyndaquilMovement
 	sjump ElmDirectionsScript
+else
+CyndaquilPokeBallScript:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iftrue_jumptext ElmPokeBallText
+	turnobject ELMSLAB_ELM, DOWN
+	refreshscreen
+	pokepic CLEFAIRY
+	cry CLEFAIRY
+	waitbutton
+	closepokepic
+	opentext
+	writetext TakeCyndaquilText
+	yesorno
+	iffalse_jumpopenedtext DidntChooseStarterText
+	disappear ELMSLAB_POKE_BALL1
+	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	writetext ChoseStarterText
+	promptbutton
+	waitsfx
+	givepoke CLEFAIRY, NO_FORM, 10, LIGHT_CLAY
+	loadmem wPartyMon5EVs+0, 252
+	loadmem wPartyMon5EVs+1, 252
+	loadmem wPartyMon5EVs+2, 252
+	loadmem wPartyMon5EVs+3, 252
+	loadmem wPartyMon5EVs+4, 252
+	loadmem wPartyMon5EVs+5, 252
+	loadmem wPartyMon5DVs+0, $fe
+	loadmem wPartyMon5DVs+1, $ff
+	loadmem wPartyMon5DVs+2, $ff
+	loadmem wPartyMon5Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_DEF_UP_SPD_DOWN
+	loadmem wPartyMon5Moves+0, TRICK_ROOM
+	loadmem wPartyMon5Moves+1, TRI_ATTACK
+	loadmem wPartyMon5Moves+2, PSYSTRIKE
+	loadmem wPartyMon5Moves+3, REFLECT
+	loadmem wPartyMon5PP+0, 5
+	loadmem wPartyMon5PP+1, 10
+	loadmem wPartyMon5PP+2, 10
+	loadmem wPartyMon5PP+3, 20
+	loadmem wPartyMon5Happiness, $ff
+	writetext LyraChoosesStarterText
+	waitbutton
+	closetext
+	applymovement ELMSLAB_LYRA, LyraPicksChikoritaMovement
+	pause 15
+	disappear ELMSLAB_POKE_BALL3
+	opentext
+	getmonname PICHU, STRING_BUFFER_3
+	writetext LyraReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	writetext LyraNicknamedChikoritaText
+	waitbutton
+	closetext
+	applymovement ELMSLAB_LYRA, LyraAfterChikoritaMovement
+	readvar VAR_FACING
+	ifequal RIGHT, ElmDirectionsScript
+	applymovement PLAYER, AfterCyndaquilMovement
+	sjump ElmDirectionsScript
+endc
 
+if !DEF(DEBUG)
 TotodilePokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue_jumptext ElmPokeBallText
@@ -313,7 +375,66 @@ TotodilePokeBallScript:
 	applymovement ELMSLAB_LYRA, LyraAfterCyndaquilMovement
 	applymovement PLAYER, AfterTotodileMovement
 	sjump ElmDirectionsScript
+else
+TotodilePokeBallScript:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iftrue_jumptext ElmPokeBallText
+	turnobject ELMSLAB_ELM, DOWN
+	refreshscreen
+	pokepic EEVEE
+	cry EEVEE
+	waitbutton
+	closepokepic
+	opentext
+	writetext TakeTotodileText
+	yesorno
+	iffalse_jumpopenedtext DidntChooseStarterText
+	disappear ELMSLAB_POKE_BALL2
+	setevent EVENT_GOT_TOTODILE_FROM_ELM
+	writetext ChoseStarterText
+	promptbutton
+	waitsfx
+	givepoke EEVEE, NO_FORM, 5, EXPERT_BELT
+	loadmem wPartyMon5EVs+0, 252
+	loadmem wPartyMon5EVs+1, 252
+	loadmem wPartyMon5EVs+2, 252
+	loadmem wPartyMon5EVs+3, 252
+	loadmem wPartyMon5EVs+4, 252
+	loadmem wPartyMon5EVs+5, 252
+	loadmem wPartyMon5DVs+0, $ff
+	loadmem wPartyMon5DVs+1, $ff
+	loadmem wPartyMon5DVs+2, $ff
+	loadmem wPartyMon5Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SATK_UP_ATK_DOWN
+	loadmem wPartyMon5Moves+0, CALM_MIND
+	loadmem wPartyMon5Moves+1, TRI_ATTACK
+	loadmem wPartyMon5Moves+2, PSYSTRIKE
+	loadmem wPartyMon5Moves+3, ELDINS_WRATH
+	loadmem wPartyMon5PP+0, 20
+	loadmem wPartyMon5PP+1, 10
+	loadmem wPartyMon5PP+2, 10
+	loadmem wPartyMon5PP+3, 10
+	loadmem wPartyMon5Happiness, $ff
+	writetext LyraChoosesStarterText
+	waitbutton
+	closetext
+	applymovement ELMSLAB_LYRA, LyraPicksCyndaquilMovement
+	pause 15
+	disappear ELMSLAB_POKE_BALL1
+	opentext
+	getmonname CLEFAIRY, STRING_BUFFER_3
+	writetext LyraReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	writetext LyraNicknamedCyndaquilText
+	waitbutton
+	closetext
+	applymovement ELMSLAB_LYRA, LyraAfterCyndaquilMovement
+	applymovement PLAYER, AfterTotodileMovement
+	sjump ElmDirectionsScript
+endc
 
+if !DEF(DEBUG)
 ChikoritaPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue_jumptext ElmPokeBallText
@@ -332,7 +453,7 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke PICHU, NO_FORM, 5, LIGHT_BALL
+	givepoke PICHU, NO_FORM, 5, FEATHER
 	loadmem wPartyMon4EVs+0, 252
 	loadmem wPartyMon4EVs+1, 252
 	loadmem wPartyMon4EVs+2, 252
@@ -370,6 +491,64 @@ ChikoritaPokeBallScript:
 	applymovement ELMSLAB_LYRA, LyraAfterTotodileMovement
 	applymovement PLAYER, AfterChikoritaMovement
 	sjump ElmDirectionsScript
+else
+ChikoritaPokeBallScript:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iftrue_jumptext ElmPokeBallText
+	turnobject ELMSLAB_ELM, DOWN
+	refreshscreen
+	pokepic PICHU
+	cry PICHU
+	waitbutton
+	closepokepic
+	opentext
+	writetext TakeChikoritaText
+	yesorno
+	iffalse_jumpopenedtext DidntChooseStarterText
+	disappear ELMSLAB_POKE_BALL3
+	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+	writetext ChoseStarterText
+	promptbutton
+	waitsfx
+	givepoke PICHU, NO_FORM, 5, LIGHT_BALL
+	loadmem wPartyMon5EVs+0, 252
+	loadmem wPartyMon5EVs+1, 252
+	loadmem wPartyMon5EVs+2, 252
+	loadmem wPartyMon5EVs+3, 252
+	loadmem wPartyMon5EVs+4, 252
+	loadmem wPartyMon5EVs+5, 252
+	loadmem wPartyMon5DVs+0, $ff
+	loadmem wPartyMon5DVs+1, $ff
+	loadmem wPartyMon5DVs+2, $ff
+	loadmem wPartyMon5Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SPD_UP_ATK_DOWN
+	loadmem wPartyMon5Moves+0, AGILITY
+	loadmem wPartyMon5Moves+1, VOLT_SWITCH
+	loadmem wPartyMon5Moves+2, PSYSTRIKE
+	loadmem wPartyMon5Moves+3, ENERGY_BALL
+	loadmem wPartyMon5PP+0, 30
+	loadmem wPartyMon5PP+1, 10
+	loadmem wPartyMon5PP+2, 10
+	loadmem wPartyMon5PP+3, 10
+	loadmem wPartyMon5Happiness, $ff
+	writetext LyraChoosesStarterText
+	waitbutton
+	closetext
+	applymovement ELMSLAB_LYRA, LyraPicksTotodileMovement
+	pause 15
+	disappear ELMSLAB_POKE_BALL2
+	opentext
+	getmonname EEVEE, STRING_BUFFER_3
+	writetext LyraReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	writetext LyraNicknamedTotodileText
+	waitbutton
+	closetext
+	applymovement ELMSLAB_LYRA, LyraAfterTotodileMovement
+	applymovement PLAYER, AfterChikoritaMovement
+	sjump ElmDirectionsScript
+endc
 
 ElmDirectionsScript:
 	turnobject PLAYER, UP
