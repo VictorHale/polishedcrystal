@@ -83,8 +83,13 @@ SpriteAnimOAMData:
 	dbw $00, .OAMData_PcMode             ; SPRITE_ANIM_OAMSET_PC_MODE
 	dbw $00, .OAMData_PcMode2            ; SPRITE_ANIM_OAMSET_PC_MODE2
 	dbw $00, .OAMData_PcPack             ; SPRITE_ANIM_OAMSET_PC_PACK
+<<<<<<< HEAD
 	dbw $00, .OAMData_GreenWalk          ; SPRITE_ANIM_OAMSET_GREEN_WALK_1
 	dbw $04, .OAMData_GreenWalk          ; SPRITE_ANIM_OAMSET_GREEN_WALK_2
+=======
+	dbw $00, .OAMData_GreenWalk           ; SPRITE_ANIM_OAMSET_GREEN_WALK_1
+	dbw $04, .OAMData_GreenWalk           ; SPRITE_ANIM_OAMSET_GREEN_WALK_2
+>>>>>>> ffc5d3d236cc5e09b7ae6ae54af13a53ea1ee79c
 	assert_table_length NUM_SPRITE_ANIM_OAMSETS
 
 .OAMData_1x1_Palette0:
