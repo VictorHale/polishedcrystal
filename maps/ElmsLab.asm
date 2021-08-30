@@ -276,7 +276,7 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CLEFAIRY, NO_FORM, 10, LIGHT_CLAY
+	givepoke CLEFAIRY, NO_FORM, 10, EXPERT_BELT
 	loadmem wPartyMon5EVs+0, 252
 	loadmem wPartyMon5EVs+1, 252
 	loadmem wPartyMon5EVs+2, 252
@@ -453,7 +453,7 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke PICHU, NO_FORM, 5, FEATHER
+	givepoke PICHU, NO_FORM, 5, EXPERT_BELT
 	loadmem wPartyMon4EVs+0, 252
 	loadmem wPartyMon4EVs+1, 252
 	loadmem wPartyMon4EVs+2, 252
@@ -464,10 +464,10 @@ ChikoritaPokeBallScript:
 	loadmem wPartyMon4DVs+1, $ff
 	loadmem wPartyMon4DVs+2, $ff
 	loadmem wPartyMon4Personality, SHINY_MASK | HIDDEN_ABILITY | NAT_SPD_UP_ATK_DOWN
-	loadmem wPartyMon4Moves+0, VOLT_SWITCH
-	loadmem wPartyMon4Moves+1, PSYSTRIKE
-	loadmem wPartyMon4Moves+2, ENERGY_BALL
-	loadmem wPartyMon4Moves+3, FLASH_CANNON
+	loadmem wPartyMon4Moves+0, NASTY_PLOT
+	loadmem wPartyMon4Moves+1, VOLT_SWITCH
+	loadmem wPartyMon4Moves+2, PSYSTRIKE
+	loadmem wPartyMon4Moves+3, ENERGY_BALL
 	loadmem wPartyMon4PP+0, 10
 	loadmem wPartyMon4PP+1, 10
 	loadmem wPartyMon4PP+2, 10
