@@ -468,7 +468,7 @@ ChikoritaPokeBallScript:
 	loadmem wPartyMon4Moves+1, VOLT_SWITCH
 	loadmem wPartyMon4Moves+2, PSYSTRIKE
 	loadmem wPartyMon4Moves+3, ENERGY_BALL
-	loadmem wPartyMon4PP+0, 10
+	loadmem wPartyMon4PP+0, 20
 	loadmem wPartyMon4PP+1, 10
 	loadmem wPartyMon4PP+2, 10
 	loadmem wPartyMon4PP+3, 10
