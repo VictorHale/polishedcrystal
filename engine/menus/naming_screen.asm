@@ -99,9 +99,9 @@ NamingScreen:
 	farcall _GetPlayerIcon
 	ld a, [wPlayerGender]
 	bit 0, a
-	ld c, SPRITE_ANIM_INDEX_RED_WALK
+	ld c, SPRITE_ANIM_INDEX_GREEN_WALK
 	jr z, .got_player_walk
-	ld c, SPRITE_ANIM_INDEX_BLUE_WALK
+	ld c, SPRITE_ANIM_INDEX_RED_WALK
 .got_player_walk
 	call .LoadSprite
 	hlcoord 5, 2

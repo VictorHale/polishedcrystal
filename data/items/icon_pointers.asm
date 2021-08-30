@@ -290,3 +290,4 @@ KeyItemIconPointers:
 	dba TypeChartIcon
 	dba SwordIcon
 	dba GauntletsIcon
+	dba SwordIconf

@@ -1106,11 +1106,11 @@ Intro_PlacePlayerSprite:
 	inc de
 	ld [hli], a
 
-	ld b, 0
+	ld b, 2 ;male char pallete?
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .male
-	ld b, 1
+	ld b, 0 ;female char pallete?
 .male
 	ld a, b
 

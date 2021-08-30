@@ -627,11 +627,11 @@ CheckSkipFarawayIsland:
 PokegearMap_InitPlayerIcon:
 	push af
 	depixel 0, 0
-	ld b, SPRITE_ANIM_INDEX_RED_WALK
+	ld b, SPRITE_ANIM_INDEX_GREEN_WALK
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_BLUE_WALK
+	ld b, SPRITE_ANIM_INDEX_RED_WALK
 .got_gender
 	ld a, b
 	call _InitSpriteAnimStruct
@@ -2420,11 +2420,11 @@ Pokedex_GetArea:
 	ld [hli], a
 	inc de
 	push bc
-	ld c, 0 ; RED
+	ld c, 0 ; GREEN
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	inc c   ; BLUE
+	inc c   ; RED
 .got_gender
 	ld a, c
 	ld [hli], a
@@ -2703,11 +2703,11 @@ TownMapPlayerIcon:
 	call Request2bppInWRA6
 ; Animation/palette
 	depixel 0, 0
-	ld b, SPRITE_ANIM_INDEX_RED_WALK ; Male
+	ld b, SPRITE_ANIM_INDEX_GREEN_WALK ; Male
 	ld a, [wPlayerGender]
 	bit 0, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_BLUE_WALK ; Female
+	ld b, SPRITE_ANIM_INDEX_RED_WALK ; Female
 .got_gender
 	ld a, b
 	call _InitSpriteAnimStruct
