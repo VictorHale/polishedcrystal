@@ -720,11 +720,12 @@ if !DEF(DEBUG)
 
 ;this forces Medicine into the inventory
 .list2
-	db 28 ; # items
+	db 29 ; # items
 	db MAX_POTION, 99
 	db FULL_RESTORE, 99
 	db MAX_ELIXIR, 99
 	db PP_MAX, 99
+	db GREAT_FAIRY, 99
 	db SACRED_ASH, 99
 	db HP_UP, 99
 	db HP_UP, 99
@@ -818,7 +819,7 @@ if !DEF(DEBUG)
 ;this forces various types of Items into Player's PC
 .list5
 	db 39 ; # items
-	db GREAT_FAIRY, 99
+	db PP_MAX, 99
 	db HP_UP, 15
 	db PROTEIN, 15
 	db IRON, 15

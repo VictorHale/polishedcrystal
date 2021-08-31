@@ -217,7 +217,7 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CLEFAIRY, NO_FORM, 5, LIGHT_CLAY
+	givepoke CLEFAIRY, NO_FORM, 5, EXPERT_BELT
 	loadmem wPartyMon4EVs+0, 252
 	loadmem wPartyMon4EVs+1, 252
 	loadmem wPartyMon4EVs+2, 252
@@ -510,7 +510,7 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke PICHU, NO_FORM, 5, LIGHT_BALL
+	givepoke PICHU, NO_FORM, 5, EXPERT_BELT
 	loadmem wPartyMon5EVs+0, 252
 	loadmem wPartyMon5EVs+1, 252
 	loadmem wPartyMon5EVs+2, 252
