@@ -679,9 +679,15 @@ endc
 if !DEF(DEBUG)
 ;this forces Items into the inventory
 .list1
-	db 28 ; # items
+	db 35 ; # items
 	db SHIELD, 99
 	db FEATHER, 99
+	db WEAK_POLICY, 99
+	db LIFE_ORB, 99
+	db FLAME_ORB, 99
+	db TOXIC_ORB, 99
+	db MUSCLE_BAND, 99
+	db WISE_GLASSES, 99
 	db LIGHT_BALL, 99
 	db KINGS_ROCK, 99
 	db METAL_COAT, 99
@@ -707,17 +713,19 @@ if !DEF(DEBUG)
 	db BIG_NUGGET, 99
 	db BIG_NUGGET, 99
 	db BIG_NUGGET, 99
+	db BOTTLE_CAP, 99
 	db MULCH, 98
 	db -1 ;end of list
 .list1_end
 
 ;this forces Medicine into the inventory
 .list2
-	db 28 ; # items
+	db 29 ; # items
 	db MAX_POTION, 99
 	db FULL_RESTORE, 99
 	db MAX_ELIXIR, 99
 	db PP_MAX, 99
+	db GREAT_FAIRY, 99
 	db SACRED_ASH, 99
 	db HP_UP, 99
 	db HP_UP, 99

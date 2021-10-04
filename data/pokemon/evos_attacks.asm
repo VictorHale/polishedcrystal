@@ -1378,21 +1378,21 @@ ArcanineEvosAttacks:
 	db 1, SUNNY_DAY
 	db 1, DRAGON_CLAW
 	db 1, SACRED_FIRE
-	db 1, SEED_BOMB
+	db 1, ROCK_SLIDE
 	db 1, FLARE_BLITZ
 	db 1, PLAY_ROUGH
 	db 1, OUTRAGE
 	db 1, EXTREMESPEED ; evolution move
-	db 30, SUPER_FANG
-	db 32, DRAGON_DANCE
-	db 34, FLAME_CHARGE
+	db 30, DRAGON_DANCE
+	db 32, STONE_EDGE
+	db 34, DOUBLE_EDGE
 	db 39, BULLDOZE
 	db 41, DRAGON_CLAW
 	db 43, PLAY_ROUGH
 	db 45, FLARE_BLITZ
 	db 49, THRASH
 	db 55, HYPER_FANG
-	db 57, DOUBLE_EDGE
+	db 57, ANCIENTPOWER
 	db 60, OUTRAGE
 	db 0 ; no more level-up moves
 
@@ -2833,7 +2833,7 @@ TogepiEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, TOGETIC
 	db 0 ; no more evolutions
 	db 1, METRONOME
-	db 1, TRI_ATTACK
+	db 1, MOONBLAST
 	db 1, FARORES_WIND
 	db 1, PSYSTRIKE
 	db 5, CHARM
@@ -2884,8 +2884,12 @@ TogekissEvosAttacks:
 	db 1, AIR_SLASH
 	db 1, PLAY_ROUGH ; Sw/Sh move
 	db 1, FUTURE_SIGHT ; Sw/Sh move
-	db 50, FOCUS_BLAST
-	db 57, MOONBLAST
+	db 30, METRONOME
+	db 37, HYPER_VOICE
+	db 41, JABUS_FROST
+	db 45, AURA_SPHERE
+	db 50, MOONBLAST
+	db 57, FARORES_WIND
 	db 61, TRI_ATTACK
 	db 65, PSYSTRIKE
 	db 70, ELDINS_WRATH
@@ -4881,6 +4885,8 @@ ShuckleEvosAttacks:
 	db 1, MUD_SLAP ; Constrict → GSC TM move
 	db 1, DEFENSE_CURL ; Withdraw → similar move
 	db 1, ROLLOUT
+	db 1, TRICK_ROOM
+	db 1, AGILITY
 	db 5, ENCORE
 	db 9, WRAP
 	db 12, STRING_SHOT ; Struggle Bug → HGSS tutor move

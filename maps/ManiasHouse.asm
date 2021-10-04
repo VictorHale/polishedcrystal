@@ -27,6 +27,9 @@ ManiaScript:
 	yesorno
 	iffalse .refusetotakeshuckie
 	givepoke SHUCKLE, MALE | NO_FORM, 25, BERRY_JUICE, NET_BALL, POISON_JAB, TRUE, ShuckieName, ShuckieOTName, ShuckieOTIDAndCaughtGender
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
 	iffalse_jumpopenedtext ManiaText_PartyAndBoxFull
 	writetext ManiaText_TakeCareOfShuckie
 	promptbutton

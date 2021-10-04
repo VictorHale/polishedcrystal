@@ -189,15 +189,16 @@ Goldenrod5FTMMart:
 	db -1
 
 GoldenrodHarborMart:
-	db 14 ; # items
+	db 15 ; # items
 	db ELIXIR
 	db MAX_ELIXIR
 	db PP_MAX
 	db DESTINY_KNOT
-	db PROTECTOR
+	db WEAK_POLICY
 	db HAWKEYE
 	db TRUTH_LENS
 	db ZOOM_LENS
+	db WHITE_HERB
 	db BRIGHTPOWDER
 	db SURF_MAIL
 	db RARE_CANDY

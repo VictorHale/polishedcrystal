@@ -1,7 +1,7 @@
 NAME := polishedrupee
 VERSION := 3.0.0-beta
 
-TITLE := PKPRUPEEM
+TITLE := PKPRUPEE
 MCODE := PKPR
 ROMVERSION := 0x30
 
