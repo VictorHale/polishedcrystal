@@ -7,7 +7,6 @@ If you just want to play Polished Rupee, use one of the .ips patches as describe
 >
 > — Anonymous, [/vp/](https://boards.4channel.org/vp/)
 
-
 ## Windows
 
 To build on Windows, install [**Cygwin**](http://cygwin.com/install.html) with the default settings.
@@ -42,7 +41,6 @@ For example, to build a mononchrome faithful version:
 make faithful monochrome
 ```
 
-
 ## Linux
 
 Python 2.7 is required.
@@ -70,7 +68,6 @@ To build other versions:
 ```bash
 make [rupee] [faithful] [nortc] [hgss|monochrome|noir] [debug]
 ```
-
 
 ## Mac OS X
 
